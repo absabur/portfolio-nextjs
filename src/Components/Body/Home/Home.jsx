@@ -24,7 +24,7 @@ const Home = () => {
 
       <div className="content">
         <span style={{ color: "var(--color4)", fontSize: "24px" }}>
-          Hey there! I'm -
+          Hey there! I&apos;m -
         </span>
 
         <h1 className="home-name">Md Abdus Sabur</h1>
@@ -53,8 +53,8 @@ export default Home;
 const Post = ({ name }) => {
   return (
     <span style={{ padding: "0 4rem" }}>
-      <span className="quote">[ "</span> {name}
-      <span className="quote">" ]</span>
+      <span className="quote">[ &qout;</span> {name}
+      <span className="quote">&qout; ]</span>
     </span>
   );
 };

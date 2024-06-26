@@ -7,7 +7,7 @@ const Others = () => {
   return (
     <>
       <div className="back-text">
-        <span>[ "Other Skills" ]</span>
+        <span>[ &quot;Other Skills&quot; ]</span>
       </div>
       <div className="skills">
         <SkillCard data={others} />

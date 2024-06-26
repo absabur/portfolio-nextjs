@@ -7,7 +7,7 @@ const Backend = () => {
   return (
     <>
       <div className="back-text">
-        <span>[ "Skills for Backend" ]</span>
+        <span>[ &quot;Skills for Backend&quot; ]</span>
       </div>
       <div className="skills">
         <SkillCard data={backend} />

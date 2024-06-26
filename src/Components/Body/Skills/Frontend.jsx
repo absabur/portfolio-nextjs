@@ -5,7 +5,7 @@ const Frontend = () => {
   return (
     <>
       <div className="back-text">
-        <span>[ "Skills for Frontend" ]</span>
+        <span>[ &quot;Skills for Frontend&quot; ]</span>
       </div>
       <div className="skills">
         <SkillCard data={frontend} />
