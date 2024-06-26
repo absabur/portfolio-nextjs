@@ -452,7 +452,7 @@ const Resume = ({ modal, toggle }) => {
                       Fulstack Web Developer
                     </h3>
                     <p className="resume-para">
-                      I'm a self-taught full-stack developer skilled in
+                      I&apos;m a self-taught full-stack developer skilled in
                       JavaScript (MERN stack) and Python (Django). Currently I
                       am pursuing a BSc in <span>Mathematics</span> while also
                       studying for a diploma in{" "}
