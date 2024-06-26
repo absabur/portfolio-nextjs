@@ -1,0 +1,156 @@
+.home {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+
+.home-image {
+  width: 50%;
+  position: relative;
+  display: flex;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.5),
+    transparent,
+    transparent,
+    transparent,
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
+.home-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.hexagon {
+  width: 210px;
+  height: 210px;
+  background-color: inherit;
+  position: relative;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.image-hexa {
+  overflow: hidden;
+  border: 5px solid var(--color2);
+  box-shadow: 0 0 20px var(--color2);
+  transition: all 0.2s;
+}
+.image-hexa:hover {
+  box-shadow: 0 0 40px var(--color2);
+}
+.content {
+  width: 50%;
+}
+
+.home-name {
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color1);
+  font-family: var(--font-base);
+  font-weight: 600;
+}
+.typewrite {
+  color: var(--color4);
+  font-size: 30px;
+  font-family: var(--font-base);
+}
+.quote {
+  color: var(--color1);
+}
+.home-bio {
+  color: var(--color4);
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.6;
+  word-spacing: 10px;
+}
+
+.social-icons {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.social-link {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-link svg {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.cv-download {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  .home {
+    flex-direction: column;
+    padding-top: 0;
+  }
+  .home-image {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+  .content {
+    width: 100%;
+  }
+  .home-name {
+    text-align: center;
+  }
+  .content h3 {
+    text-align: center;
+  }
+  .content h2 {
+    text-align: center;
+  }
+  .home-bio {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .home-image img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .hexagon {
+    width: 190px;
+    height: 190px;
+  }
+
+  .home-name {
+    font-size: 35px;
+  }
+
+  .typewrite {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,109 @@
+.skills-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.skills-header {
+  font-family: var(--font-base);
+  font-size: 35px;
+  color: var(--color4);
+  text-align: center;
+  padding: 10px 30px;
+  box-shadow: 0 0 180px 1px var(--color1);
+  border-radius: 10px;
+  margin: 0 !important;
+}
+
+.all-skills {
+  width: 100%;
+}
+
+.skills {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 20px 0;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.5),
+    transparent,
+    transparent,
+    transparent,
+    rgba(0, 0, 0, 0.5)
+  );
+  margin-bottom: 40px;
+}
+
+.back-text {
+  width: 100%;
+  z-index: 0;
+  font-weight: bold;
+  color: var(--color1);
+  background-clip: text;
+  font-size: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-base);
+}
+
+.skill {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px var(--color4);
+  margin: 15px;
+}
+
+.skill-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 30%;
+  background-color: var(--color4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px var(--color3);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.skill-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.click-image {
+  position: absolute;
+}
+
+@media screen and (max-width: 420px) {
+  .skill {
+    width: 110px;
+    height: 110px;
+  }
+  .skill-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .skill-image img {
+    width: 60px;
+    height: 60px;
+  }
+}

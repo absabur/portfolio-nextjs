@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lugrasimo&family=Rowdies:wght@300;400;700&display=swap");
+
+.djangoSection {
+  width: 100%;
+  border: 1px solid white;
+  position: relative;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.backImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 255, 170, 0.253);
+  backdrop-filter: blur(2px);
+  padding: 20px;
+  font-family: "Rowdies", sans-serif;
+}
+
+.header {
+  letter-spacing: 10px;
+  word-spacing: 20px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--color1);
+  margin-bottom: 20px;
+  background-color: var(--color3);
+  border-radius: 10px;
+  padding: 20px;
+  border: 3px dotted white;
+  font-family: "Lugrasimo", cursive;
+}
+
+.body {
+  width: 100%;
+}
+
+.alltech {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech {
+  width: fit-content;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 5px;
+  background-color: var(--color3);
+  margin: 5px;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--color1);
+  border-radius: 10px;
+  border: 5px double white;
+}
+
+.techImg {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+}

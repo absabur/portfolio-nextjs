@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://absabur.vercel.app
+
+# Sitemaps
+Sitemap: https://absabur.vercel.app/sitemap.xml
