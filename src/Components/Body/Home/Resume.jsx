@@ -1,4 +1,5 @@
-import  { useRef } from "react";
+'use client'
+import  { useEffect, useRef } from "react";
 import "./Resume.css";
 
 import { MdPhoneIphone } from "react-icons/md";
@@ -249,10 +250,21 @@ const education = [
 const Resume = ({ modal, toggle }) => {
   const componentRef = useRef(null);
 
+  useEffect(() => {
+    if (modal) {
+      document.body.style.overflowY = 'hidden';
+    } else {
+      document.body.style.overflowY = '';
+    }
+    return () => {
+      document.body.style.overflowY = '';
+    };
+  }, [modal]);
+  
+
   return (
-    <div>
-      <Modal isOpen={modal} toggle={toggle}>
-        <div className="resume-header">Resume Preview</div>
+      <div className={`${modal ? "open-modal": "close-modal"} modal-resume`}>
+        <div className="inner-resume">
         <div className="preview-border">
           <div className="resume-parent" ref={componentRef}>
             <div className="resume">
@@ -511,11 +523,8 @@ const Resume = ({ modal, toggle }) => {
             </div>
           </div>
         </div>
-        <ModalFooter>
-          <div className="d-flex w-100" style={{ gap: "10px" }}>
+        <div className="modal-footer">
             <button
-              
-              
               className="button1 social-link"
               style={{
                 border: "1px solid var(--color3)",
@@ -542,10 +551,9 @@ const Resume = ({ modal, toggle }) => {
               )}
               content={() => componentRef.current}
             />
-          </div>
-        </ModalFooter>
-      </Modal>
-    </div>
+        </div>
+        </div>
+      </div>
   );
 };
 

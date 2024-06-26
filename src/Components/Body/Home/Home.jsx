@@ -5,9 +5,9 @@ import SocialClient from "./SocialClient.js"
 import Icons from "./Icons";
 import Image from "next/image";
 import SectionsHead from "../SectionsTop";
+import image from "@/app/me.png"
 
-const image =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1714625498/skills/me_fmuyx1.png";
+// "https://res.cloudinary.com/dh96uxb54/image/upload/v1714625498/skills/me_fmuyx1.png";
 
 const Home = () => {
   return (

@@ -20,6 +20,15 @@
 
 .educations {
   width: 100%;
+  color: white;
+}
+
+.vertical-timeline--animate .vertical-timeline-element-content.is-hidden{
+  visibility: visible !important;
+}
+
+.vertical-timeline::before {
+  background: var(--color2) !important;
 }
 
 .vertical-timeline.vertical-timeline--two-columns {

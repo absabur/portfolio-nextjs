@@ -11,11 +11,14 @@ import { TbInfoSquareRoundedFilled } from "react-icons/tb";
 import { GrTasks } from "react-icons/gr";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
+import usePageMetrics from "./usePageMetrics";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [lessScroll] = useState(50);
+  const { scrollbarWidth } = usePageMetrics();
 
+  
   
 
   useEffect(() => {
@@ -23,12 +26,13 @@ const Header = () => {
       let active = sessionStorage.getItem("active");
       setActiveSection(active);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
 
   const scrollToTop = () => {
     window.scrollTo({ behavior: "smooth", top: 0 });
@@ -99,14 +103,12 @@ const Header = () => {
   ];
   return (
     <div className="header-div">
-      {/* <div
+      <div
         className="scrollbar"
         style={{
-          width:
-            (window.scrollY / (state.mainHeight - window.innerHeight)) * 100 +
-            "%",
+          width: `${scrollbarWidth}%`,
         }}
-      ></div> */}
+      ></div>
       <header className="inner-header">
         <a
           className="logo-name"
