@@ -66,6 +66,7 @@
   color: var(--color4);
   font-size: 30px;
   font-family: var(--font-base);
+  margin-bottom: 10px;
 }
 .quote {
   color: var(--color1);
@@ -127,7 +128,8 @@
   .content h3 {
     text-align: center;
   }
-  .content h2 {
+  .content .h2 {
+    display: block;
     text-align: center;
   }
   .home-bio {

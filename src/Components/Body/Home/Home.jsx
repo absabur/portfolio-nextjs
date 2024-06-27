@@ -23,7 +23,7 @@ const Home = () => {
       </div>
 
       <div className="content">
-        <span style={{ color: "var(--color4)", fontSize: "24px" }}>
+        <span className="h2" style={{ color: "var(--color4)", fontSize: "24px" }}>
           Hey there! I&apos;m -
         </span>
 
@@ -38,7 +38,7 @@ const Home = () => {
         </span>
 
         <p className="home-bio">
-        Md Abdus Sabur - Full-Stack Web Developer | Expert in JavaScript ( MERN Stack ) & Python ( Django ). Specializing in front-end and back-end development with React.js, Next.js, Redux, Django, MongoDB, MySQL, PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework. Explore my portfolio for dynamic and robust web solutions.
+          Md Abdus Sabur - Full-Stack Web Developer | Expert in JavaScript (MERN Stack) & Python (Django). Specializing in front-end and back-end development with React.js, Next.js, Redux, Django, MongoDB, MySQL, PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework. Explore my portfolio for dynamic and robust web solutions.
         </p>
 
         <SocialClient />
@@ -53,8 +53,8 @@ export default Home;
 const Post = ({ name }) => {
   return (
     <span style={{ padding: "0 4rem" }}>
-      <span className="quote">[ &qout;</span> {name}
-      <span className="quote">&qout; ]</span>
+      <span className="quote">[ &quot;</span> {name}
+      <span className="quote">&quot; ]</span>
     </span>
   );
 };

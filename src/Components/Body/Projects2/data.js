@@ -1,4 +1,4 @@
-import cgpaimage from "./cgpa.png"
+import cgpaimage from "@/Components/Body/Projects2/cgpa.png"
 
 const stream =
   "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973852/projects/tavexktgf3eqzjje3scy.png";
@@ -274,7 +274,7 @@ export const next = [
     title: "CGPA Calculator",
     description:
       "An autometic CGPA calculator for national university students.",
-    image: cgpaimage,
+    image: cgpaimage.src,
     url: "https://nu-cgpa.pro",
     admin: "",
     password: "",

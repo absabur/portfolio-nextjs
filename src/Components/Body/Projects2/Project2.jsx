@@ -14,10 +14,8 @@ const Project2 = () => {
   const [currentProject, setCurrentProject] = useState("all");
 
   const scrollToProjects = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    let element1 = document.querySelector(".project-section-scroll");
+    window.scrollTo({ behavior: "smooth", top: element1.getBoundingClientRect().top + window.pageYOffset +100 });
   };
   return (
     <div className="project-section" id="projects">
