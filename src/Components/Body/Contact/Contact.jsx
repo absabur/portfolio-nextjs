@@ -181,10 +181,9 @@ const Contact = () => {
           </div>
           <div className="buttons">
             <button
-              
-              
               className="button2"
               type="reset"
+              onClick={()=> {setEmail(""); setMessage(""); setName("")}}
             >
               Reset
             </button>
