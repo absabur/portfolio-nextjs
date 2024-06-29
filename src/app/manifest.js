@@ -3,7 +3,7 @@ export default function manifest() {
     name: "Portfolio of Md Abdus Sabur",
     short_name: "Md Abdus Sabur",
     description:
-      "Md Abdus Sabur - Full-Stack Web Developer | Expert in JavaScript (MERN Stack) & Python (Django). Specializing in front-end and back-end development with React.js, Next.js, Redux, Django, MongoDB, MySQL, PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework. Explore my portfolio for dynamic and robust web solutions.",
+      "Md Abdus Sabur - Full-Stack Web Developer.",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",
@@ -15,12 +15,12 @@ export default function manifest() {
         type: "image/x-icon",
       },
       {
-        src: "meSquare.png",
+        src: "1410x1410.png",
         sizes: "1410x1410",
         type: "image/png",
       },
       {
-        src: "me.png",
+        src: "1410x1880.png",
         sizes: "1410x1880",
         type: "image/png",
       },
