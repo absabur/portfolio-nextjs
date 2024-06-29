@@ -13,7 +13,8 @@ const withPWA = withPWAInit({
   },
 });
 const nextConfig = {
-  // output: 'export',
+  output: 'export',
+  trailingSlash: true,
   images: {
     remotePatterns: [
       {

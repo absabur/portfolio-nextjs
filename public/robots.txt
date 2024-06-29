@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://absabur.vercel.app
+Host: https://absaur.pro
 
 # Sitemaps
-Sitemap: https://absabur.vercel.app/sitemap.xml
+Sitemap: https://absaur.pro/sitemap.xml

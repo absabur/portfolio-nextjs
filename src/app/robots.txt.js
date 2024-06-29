@@ -5,6 +5,6 @@ export default function handler(req, res) {
   res.write(`User-agent: *
 Allow: /
 
-Sitemap: https://absabur.vercel.app/sitemap.xml`);
+Sitemap: https://absabur.pro/sitemap.xml`);
   res.end();
 }
