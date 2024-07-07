@@ -4,8 +4,6 @@ import ResumeClient from "./ResumeClient.js"
 import SocialClient from "./SocialClient.js"
 import Icons from "./Icons";
 import SectionsHead from "../SectionsTop";
-import image from "/1410x1880.png"
-
 
 // const image = "https://res.cloudinary.com/dh96uxb54/image/upload/v1714625498/skills/me_fmuyx1.png"
 
@@ -17,7 +15,7 @@ const Home = () => {
         <div className="hexagon">
           <Icons />
           <div className="hexagon image-hexa">
-            <img src={image} alt="Md Abdus Sabur" width={220} height={220}/>
+            <img src="/1410x1880.png" alt="Md Abdus Sabur" width={220} height={220}/>
           </div>
         </div>
       </div>

@@ -5,6 +5,16 @@
   justify-content: center;
   flex-direction: column;
   padding: 30px 0;
+  overflow-x: hidden;
+  background: linear-gradient(
+    to left,
+    rgba(0, 32, 71),
+    rgba(0, 32, 71, 0.8),
+    rgba(0, 32, 71, 0.7),
+    rgba(0, 32, 71, 0.8),
+    rgba(0, 32, 71)
+  );
+  border-radius: 5px;
 }
 
 .education-header {
@@ -31,9 +41,6 @@
   background: var(--color2) !important;
 }
 
-.vertical-timeline.vertical-timeline--two-columns {
-  width: 100% !important;
-}
 .vertical-timeline-element-subtitle {
   margin: 5px 0;
 }
@@ -46,15 +53,3 @@
   font-size: 17px;
 }
 
-@media screen and (min-width: 1400px) {
-  .educations {
-    background: linear-gradient(
-      to left,
-      rgba(0, 0, 0, 0.5),
-      transparent,
-      transparent,
-      transparent,
-      rgba(0, 0, 0, 0.5)
-    );
-  }
-}

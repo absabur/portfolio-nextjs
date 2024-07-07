@@ -5,7 +5,7 @@
   padding: 30px 0;
 
   gap: 20px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to left,
     rgba(0, 0, 0, 0.5),
     transparent,
@@ -13,7 +13,17 @@
     transparent,
     rgba(0, 0, 0, 0.5)
   );
-  border-radius: 10px;
+  border-radius: 10px; */
+  
+  background: linear-gradient(
+    to left,
+    rgba(0, 32, 71),
+    rgba(0, 32, 71, 0.8),
+    rgba(0, 32, 71, 0.7),
+    rgba(0, 32, 71, 0.8),
+    rgba(0, 32, 71)
+  );
+  border-radius: 5px;
 }
 
 .about-head {
@@ -66,9 +76,5 @@
   .about {
     flex-direction: column;
     align-items: center;
-    background: transparent;
-  }
-  .about-text {
-    padding: 0;
   }
 }

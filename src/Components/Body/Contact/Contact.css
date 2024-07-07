@@ -4,7 +4,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 30px 0;
+  padding: 30px 10px;
+  background: linear-gradient(
+    to left,
+    rgba(0, 32, 71),
+    rgba(0, 32, 71, 0.8),
+    rgba(0, 32, 71, 0.7),
+    rgba(0, 32, 71, 0.8),
+    rgba(0, 32, 71)
+  );
+  border-radius: 5px;
 }
 
 .contact-heading {

@@ -1,7 +1,6 @@
+"use client"
 import { useEffect, useState } from "react";
-
 import CopyToClipboard from "react-copy-to-clipboard";
-
 import { MdVerified } from "react-icons/md";
 
 const Copy = ({ data, icon, label = "" }) => {

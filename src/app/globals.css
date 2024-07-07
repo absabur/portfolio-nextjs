@@ -38,7 +38,7 @@ code {
   margin: auto;
   padding: 20px !important;
   max-width: 100vw;
-  background: rgba(0, 32, 71, 0.7);
+  /* background: rgba(0, 32, 71, 0.7); */
   display: flex;
   flex-direction: column;
   gap: 40px;

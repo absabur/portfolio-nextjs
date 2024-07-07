@@ -11,19 +11,27 @@ export default function manifest() {
     icons: [
       {
         src: "favicon.ico",
-        sizes: "any",
+        sizes: "1410x1410 any",
         type: "image/x-icon",
       },
       {
         src: "1410x1410.png",
         sizes: "1410x1410",
         type: "image/png",
+        purpose: "any"
       },
       {
-        src: "1410x1880.png",
-        sizes: "1410x1880",
+        src: "192x192.png",
+        sizes: "192x192",
         type: "image/png",
+        purpose: "any"
       },
+      {
+        src: "512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "any"
+      }
     ],
     id: "md-abdus-sabur",
     launch_handler: {

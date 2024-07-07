@@ -8,14 +8,23 @@
   padding: 30px 0;
   position: relative;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     to left,
     rgba(0, 0, 0, 0.5),
     transparent,
     transparent,
     transparent,
     rgba(0, 0, 0, 0.5)
+  ); */
+  background: linear-gradient(
+    to left,
+    rgba(0, 32, 71),
+    rgba(0, 32, 71, 0.8),
+    rgba(0, 32, 71, 0.7),
+    rgba(0, 32, 71, 0.8),
+    rgba(0, 32, 71)
   );
+  border-radius: 5px;
 }
 
 .projects-header {

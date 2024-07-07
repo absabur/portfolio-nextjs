@@ -13,9 +13,15 @@ const Skills = () => {
       <SectionsHead section="skills"/>
       <h1 className="skills-header">Skills</h1>
       <div className="all-skills">
-        <Frontend />
-        <Backend />
-        <Others />
+        <div className="each-skills">
+          <Frontend />
+        </div>
+        <div className="each-skills">
+          <Backend />
+        </div>
+        <div style={{marginBottom: 0}} className="each-skills">
+          <Others />
+        </div>
       </div>
 
       <Tooltip

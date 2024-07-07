@@ -21,11 +21,8 @@ const Project2 = () => {
     <div className="project-section" id="projects">
       <SectionsHead section="project"/>
       <h1 className="projects-header">Projects</h1>
-
       <div
         className="switch-project"
-        
-        
       >
         {[
           { value: "all", title: "All" },
