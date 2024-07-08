@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 30px 0 0 0;
+  padding: 0;
 }
 
 .skills-header {
@@ -27,12 +27,13 @@
   padding-top: 20px;
   background: linear-gradient(
     to left,
-    rgba(0, 32, 71),
-    rgba(0, 32, 71, 0.8),
-    rgba(0, 32, 71, 0.7),
-    rgba(0, 32, 71, 0.8),
-    rgba(0, 32, 71)
+    rgba(0, 17, 41),
+    rgba(0, 17, 41, 0.8),
+    rgba(0, 17, 41, 0.7),
+    rgba(0, 17, 41, 0.8),
+    rgba(0, 17, 41)
   );
+  box-shadow: 0 0 5px var(--color2);
   border-radius: 5px;
   margin-bottom: 40px;
 }

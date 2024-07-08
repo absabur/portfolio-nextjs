@@ -16,15 +16,6 @@
     transparent,
     rgba(0, 0, 0, 0.5)
   ); */
-  background: linear-gradient(
-    to left,
-    rgba(0, 32, 71),
-    rgba(0, 32, 71, 0.8),
-    rgba(0, 32, 71, 0.7),
-    rgba(0, 32, 71, 0.8),
-    rgba(0, 32, 71)
-  );
-  border-radius: 5px;
 }
 
 .projects-header {
@@ -36,6 +27,20 @@
   padding: 10px 30px;
   box-shadow: 0 0 180px 1px var(--color1);
   border-radius: 10px;
+}
+
+.all-projects{
+  width: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(0, 17, 41),
+    rgba(0, 17, 41, 0.8),
+    rgba(0, 17, 41, 0.7),
+    rgba(0, 17, 41, 0.8),
+    rgba(0, 17, 41)
+    );
+    box-shadow: 0 0 5px var(--color2);
+  border-radius: 5px;
 }
 
 .particular-project {
