@@ -81,7 +81,7 @@
   align-items: flex-start;
   justify-content: center;
   margin: auto;
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
 }
 
 .resume {
@@ -91,36 +91,10 @@
   padding: 20px;
 }
 
-.shape1 {
-  opacity: 0.6;
-}
-
-.shape2 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0.6;
-}
-
-.shape3 {
-  position: absolute;
-  bottom: 30%;
-  left: 0;
-  width: 100%;
-  opacity: 0.6;
-}
-.shape4 {
-  position: absolute;
-  top: 27%;
-  left: 0;
-  width: 100%;
-  opacity: 0.6;
-}
 
 .resume-content {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
   padding: 10px;
   width: 100%;
@@ -139,28 +113,30 @@
 }
 
 .resume-sidebar-content {
-  background-color: rgba(0, 0, 0, 0.281);
   width: 100%;
-  height: 75%;
+  height: 850px;
   border-radius: 10px;
+  box-shadow: 0 0 5px var(--color3);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-bottom: 10px;
 }
 
 .resume-image {
   width: 100%;
-  height: 25%;
+  height: 270px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 .resume-image img {
   width: 250px;
   height: 250px;
   object-fit: cover;
-  border-radius: 50px;
-  border: 10px solid black;
-  box-shadow: 0 0 20px rgb(0, 0, 0);
+  border-radius: 100%;
+  box-shadow: 0 0 10px var(--color3);
 }
 
 .resume-skills-header {
@@ -258,7 +234,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
+  padding: 10px 0 20px 20px;
 }
 
 .resume-section-header {
@@ -266,6 +242,7 @@
   padding-bottom: 5px;
   border-bottom: 2px solid rgb(95, 35, 0);
   color: rgb(95, 35, 0);
+  margin-bottom: 10px;
 }
 
 .resume-para {

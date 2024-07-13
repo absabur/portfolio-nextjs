@@ -51,8 +51,9 @@ export default Home;
 const Post = ({ name }) => {
   return (
     <span style={{ padding: "0 4rem" }}>
-      <span className="quote">[ &quot;</span> {name}
-      <span className="quote">&quot; ]</span>
+      [ <span className="quote">&quot;</span>
+      {name}
+      <span className="quote">&quot;</span> ]
     </span>
   );
 };

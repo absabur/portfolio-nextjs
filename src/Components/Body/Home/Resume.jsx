@@ -7,7 +7,6 @@ import { IoIosMailOpen } from "react-icons/io";
 import { TbWorldWww } from "react-icons/tb";
 import { RxCross2 } from "react-icons/rx";
 import { FaDownload } from "react-icons/fa";
-import { Modal, ModalFooter } from "reactstrap";
 import ReactToPrint from "react-to-print";
 
 const Image =
@@ -292,7 +291,7 @@ const Resume = ({ modal, toggle }) => {
                     </div>
                     <h4
                       className="resume-skills-header"
-                      style={{ margin: "20px auto 10px auto" }}
+                      style={{ margin: "20px auto 0 auto" }}
                     >
                       Contact Info
                     </h4>
@@ -313,7 +312,7 @@ const Resume = ({ modal, toggle }) => {
                           https://absabur.pro
                         </a>
                       </div>
-                      <img src={qrcode} alt="" width={180} className="mt-2" />
+                      <img style={{padding: "10px 0"}} src='/qrcode_absabur.pro.png' alt="" width={180} className="mt-2" />
                     </div>
                   </div>
                 </div>
@@ -324,11 +323,7 @@ const Resume = ({ modal, toggle }) => {
                       Fulstack Web Developer
                     </h3>
                     <p className="resume-para">
-                      I&apos;m a self-taught full-stack developer skilled in
-                      JavaScript (MERN stack) and Python (Django). Currently I
-                      am pursuing a BSc in <span>Mathematics</span> while also
-                      studying for a diploma in{" "}
-                      <span>Computer Science and Technology</span>.
+                    I am Md Abdus Sabur, Expert in JavaScript (MERN Stack) & Python (Django). Specializing in front-end and back-end development with React.js, Next.js, Redux, Django, MongoDB, MySQL, PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework.
                     </p>
                     <p className="resume-para">
                       In addition to my programming endeavors, I am a certified{" "}
@@ -410,8 +405,6 @@ const Resume = ({ modal, toggle }) => {
               trigger={() => (
                 <button
                   onClick={toggle}
-                  
-                  
                   className="button2 social-link"
                   style={{
                     border: "1px solid var(--color3)",

@@ -145,7 +145,7 @@
 .label-active {
   opacity: 1;
   z-index: 1;
-  top: -7px;
+  top: -4px;
   background-color: var(--color3);
   padding: 0 5px;
   border-radius: 10px;

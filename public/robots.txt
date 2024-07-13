@@ -1,9 +1,10 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /manifest.webmanifest
 
 # Host
 Host: https://absaur.pro
 
 # Sitemaps
-Sitemap: https://absaur.pro/sitemap.xml
+Sitemap: https://absaur.pro/sitemap-absabur.xml

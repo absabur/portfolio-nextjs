@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
-import { MdVerified } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const Copy = ({ data, icon, label = "" }) => {
   const [copy, setCopy] = useState("");
@@ -10,6 +10,16 @@ const Copy = ({ data, icon, label = "" }) => {
       setTimeout(() => {
         setCopy("");
       }, 2000);
+      toast.success(`"${data}" copied!`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      })
     }
   }, [copy]);
 
@@ -26,11 +36,6 @@ const Copy = ({ data, icon, label = "" }) => {
           </span>
         </CopyToClipboard>
       </div>
-      {copy === data && (
-        <span className="copied">
-          Copied! <MdVerified />
-        </span>
-      )}
     </div>
   );
 };
