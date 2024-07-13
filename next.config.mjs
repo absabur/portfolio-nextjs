@@ -25,6 +25,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: 'https://absabur.pro',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 export default withPWA(nextConfig);
