@@ -1,7 +1,7 @@
 import Marquee from "react-fast-marquee";
 import "./Home.css";
-import ResumeClient from "./ResumeClient.js"
-import SocialClient from "./SocialClient.js"
+import ResumeClient from "./ResumeClient.js";
+import SocialClient from "./SocialClient.js";
 import Icons from "./Icons";
 import SectionsHead from "../SectionsTop";
 
@@ -10,18 +10,26 @@ import SectionsHead from "../SectionsTop";
 const Home = () => {
   return (
     <div className="home">
-      <SectionsHead section="home"/>
+      <SectionsHead section="home" />
       <div className="home-image">
         <div className="hexagon">
           <Icons />
           <div className="hexagon image-hexa">
-            <img src="/1410x1880.png" alt="Md Abdus Sabur" width={220} height={220}/>
+            <img
+              src="/1410x1880.png"
+              alt="Md Abdus Sabur"
+              width={220}
+              height={220}
+            />
           </div>
         </div>
       </div>
 
       <div className="content">
-        <span className="h2" style={{ color: "var(--color4)", fontSize: "24px" }}>
+        <span
+          className="h2"
+          style={{ color: "var(--color4)", fontSize: "24px" }}
+        >
           Hey there! I&apos;m -
         </span>
 
@@ -36,7 +44,11 @@ const Home = () => {
         </span>
 
         <p className="home-bio">
-          Md Abdus Sabur - Full-Stack Web Developer | Expert in JavaScript (MERN Stack) & Python (Django). Specializing in front-end and back-end development with React.js, Next.js, Redux, Django, MongoDB, MySQL, PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework. Explore my portfolio for dynamic and robust web solutions.
+          Md Abdus Sabur - Full-Stack Web Developer | Expert in JavaScript (MERN
+          Stack) & Python (Django). Specializing in front-end and back-end
+          development with React.js, Next.js, Redux, Django, MongoDB, MySQL,
+          PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework.
+          Explore my portfolio for dynamic and robust web solutions.
         </p>
 
         <SocialClient />

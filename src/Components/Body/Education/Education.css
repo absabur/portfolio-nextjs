@@ -22,20 +22,21 @@
 .educations {
   padding: 10px 0;
   width: 100%;
-  color: white;overflow-x: hidden;
+  color: white;
+  overflow-x: hidden;
   background: linear-gradient(
     to left,
     rgba(0, 17, 41),
-    rgba(0, 17, 41, 0.8),
-    rgba(0, 17, 41, 0.7),
-    rgba(0, 17, 41, 0.8),
+    rgba(0, 17, 41, 0.9),
+    rgba(0, 17, 41, 0.9),
+    rgba(0, 17, 41, 0.9),
     rgba(0, 17, 41)
   );
   box-shadow: 0 0 5px var(--color2);
   border-radius: 5px;
 }
 
-.vertical-timeline--animate .vertical-timeline-element-content.is-hidden{
+.vertical-timeline--animate .vertical-timeline-element-content.is-hidden {
   visibility: visible !important;
 }
 
@@ -54,4 +55,3 @@
 .h-4 {
   font-size: 17px;
 }
-

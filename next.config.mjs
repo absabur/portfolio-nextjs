@@ -13,27 +13,27 @@ const withPWA = withPWAInit({
   },
 });
 const nextConfig = {
-  output: 'export',
+  // output: "export",
   trailingSlash: true,
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        port: "",
+        pathname: "/**",
       },
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: 'https://absabur.pro',
-        permanent: true,
-      },
-    ]
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: 'https://absabur.pro',
+  //       permanent: true,
+  //     },
+  //   ]
+  // },
 };
 
 export default withPWA(nextConfig);

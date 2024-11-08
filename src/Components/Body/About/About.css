@@ -33,9 +33,9 @@
   background: linear-gradient(
     to left,
     rgba(0, 17, 41),
-    rgba(0, 17, 41, 0.8),
-    rgba(0, 17, 41, 0.7),
-    rgba(0, 17, 41, 0.8),
+    rgba(0, 17, 41, 0.9),
+    rgba(0, 17, 41, 0.9),
+    rgba(0, 17, 41, 0.9),
     rgba(0, 17, 41)
   );
   box-shadow: 0 0 5px var(--color2);
