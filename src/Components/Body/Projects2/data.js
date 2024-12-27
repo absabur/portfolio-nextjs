@@ -1,57 +1,29 @@
-import cgpaimage from "@/Components/Body/Projects2/cgpa.png"
+import cgpaimage from "@/Images/cgpa.png"
 
-const stream =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973852/projects/tavexktgf3eqzjje3scy.png";
-const elearning =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973409/projects/mlrc3x1bpjfujw10bs0k.png";
-const ecommercedjango =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973301/projects/wbaso6a2ryct3gacyfzm.png";
-const housesecurity =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973470/projects/l39lrrl1tfxkdk9kp6mi.png";
+import stream from "@/Images/streaming.png"
+import housesecurity from "@/Images/security.png"
 
-const rent_a_car =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713975427/projects/dvugysuz1jnhjgxmdzdz.png";
+import gpt from "@/Images/gpt.png"
+import wave from "@/Images/veg.png"
+import rugby from "@/Images/rugby.png"
+import validation from "@/Images/validation.png"
+import number_guess from "@/Images/number.png"
+import cart from "@/Images/cart.png"
+import todo from "@/Images/todo.png"
+import stopwatch from "@/Images/stopwatch.png"
+import quiz from "@/Images/quiz.png"
+import countdown from "@/Images/event.png"
+import calculator from "@/Images/calculator.png"
+import rock from "@/Images/rps.png"
+import blog from "@/Images/blog.png"
+import portfolio from "@/Images/portfolio.png"
 
-const gpt =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973690/projects/xlhnhlzc6kdqfhcpgifj.png";
-const wave =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713976359/projects/pwcij8en5othgkvam8i7.png";
-const rugby =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973676/projects/russmetiuhj6plmkfk0s.png";
-const validation =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973261/projects/anvylyqm6gpulukxsmrn.png";
-const number_guess =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973474/projects/a2abjhkvuhwtsqlp1l2n.png";
-const cart =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973204/projects/i55ljhui7of0fcqp4yda.png";
-const todo =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973694/projects/hnmrqwaihhq1lmneglvo.png";
-const stopwatch =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973684/projects/b5qxme4fhqusar8cofff.png";
-const quiz =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973552/projects/c1r9n7y87rptq3sylkyy.png";
-const countdown =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973255/projects/uyyxkopatb2wfrqv3ekf.png";
-const calculator =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973188/projects/qxak4ddlrwkzlct5nz09.png";
-const rock =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973647/projects/rmj4izhjaefy48xd9m3k.png";
-const blog =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973291/projects/o5ojmemucwywq1hg99rg.png";
-const portfolio =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973624/projects/epjohk7vuuqbnsc0bhxj.png";
+import ecommerce from "@/Images/ecommerce.png"
 
-const ecommerce =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973391/projects/emue7erxffk3kcbzdyqy.png";
-
-const hotel =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713976227/projects/gyvnd4uc1tla6ssbv3mr.png";
-const gallery =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973545/projects/x0coasjanhrws7fzdwtl.png";
-const gericht =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1714013034/projects/gerich_cjn2tk.png";
-const routine =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1713973702/projects/je4pgf1c7bewv8sxr6fx.png";
+import hotel from "@/Images/hotel.png"
+import gallery from "@/Images/gallery.png"
+import gericht from "@/Images/restront.png"
+import routine from "@/Images/routine.png"
 
 export const django = [
   {
@@ -64,26 +36,26 @@ export const django = [
     url: "https://streaming-app-0h28.onrender.com",
     github: "https://github.com/absabur/streaming-app",
   },
-  {
-    title: "E Learning App",
-    description:
-      "This is site for learning purpose. There are two types of account, one is teacher account another is student account. Only teacher can post article and arrange a quiz. Student can ask question to qna section.",
-    image: elearning,
-    admin: "testuser",
-    password: "Q1w2e3r$",
-    url: "https://absabursayam.pythonanywhere.com",
-    github: "https://github.com/absabur/E-Learning-Django",
-  },
-  {
-    title: "Ecommerce",
-    description:
-      "Seller can create his own shop and add products. Also they can create coupon for his product with start date and end date. User can use the coupon on the certain time duraion of a coupon on the specific seller product. ",
-    image: ecommercedjango,
-    admin: "seller@gmail.com",
-    password: "Q1w2e3r$",
-    url: "http://absabur.pythonanywhere.com/",
-    github: "https://github.com/absabur/ecommerce-django",
-  },
+  // {
+  //   title: "E Learning App",
+  //   description:
+  //     "This is site for learning purpose. There are two types of account, one is teacher account another is student account. Only teacher can post article and arrange a quiz. Student can ask question to qna section.",
+  //   image: elearning,
+  //   admin: "testuser",
+  //   password: "Q1w2e3r$",
+  //   url: "https://absabursayam.pythonanywhere.com",
+  //   github: "https://github.com/absabur/E-Learning-Django",
+  // },
+  // {
+  //   title: "Ecommerce",
+  //   description:
+  //     "Seller can create his own shop and add products. Also they can create coupon for his product with start date and end date. User can use the coupon on the certain time duraion of a coupon on the specific seller product. ",
+  //   image: ecommercedjango,
+  //   admin: "seller@gmail.com",
+  //   password: "Q1w2e3r$",
+  //   url: "http://absabur.pythonanywhere.com/",
+  //   github: "https://github.com/absabur/ecommerce-django",
+  // },
   {
     title: "House Security",
     description:
@@ -97,20 +69,20 @@ export const django = [
 ];
 
 export const djangoReact = [
-  {
-    title: "Rent a car",
-    description:
-      "This is a web application for rent a car. Owner can create account and post car. User can book a car. A User can not book a car on a date when car is already book.",
-    image: rent_a_car,
-    url: "https://abs-rent-a-car.vercel.app/",
-    admin: "absabur929@gmail.com",
-    password: "q1w2e3r4",
-    django: true,
-    github: {
-      backend: "https://github.com/absabur/rent-a-car-api",
-      frontend: "https://github.com/absabur/rent-a-car-frontend",
-    },
-  },
+  // {
+  //   title: "Rent a car",
+  //   description:
+  //     "This is a web application for rent a car. Owner can create account and post car. User can book a car. A User can not book a car on a date when car is already book.",
+  //   image: rent_a_car,
+  //   url: "https://abs-rent-a-car.vercel.app/",
+  //   admin: "absabur929@gmail.com",
+  //   password: "q1w2e3r4",
+  //   django: true,
+  //   github: {
+  //     backend: "https://github.com/absabur/rent-a-car-api",
+  //     frontend: "https://github.com/absabur/rent-a-car-frontend",
+  //   },
+  // },
 ];
 
 export const hcjs = [
@@ -274,7 +246,7 @@ export const next = [
     title: "CGPA Calculator",
     description:
       "An autometic CGPA calculator for national university students.",
-    image: cgpaimage.src,
+    image: cgpaimage,
     url: "https://nu-cgpa.pro",
     admin: "",
     password: "",
