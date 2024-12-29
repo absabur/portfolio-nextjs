@@ -8,18 +8,6 @@
   gap: 40px;
 }
 
-
-::-moz-selection {
-  /* Code for Firefox */
-  color: var(--color3);
-  background: var(--color1);
-}
-
-::selection {
-  color: var(--color3);
-  background: var(--color1);
-}
-
 .button1,
 .button2 {
   padding: 5px 20px;
