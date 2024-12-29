@@ -11,11 +11,11 @@ export default function manifest() {
     icons: [
       {
         src: "favicon.ico",
-        sizes: "1410x1410 any",
+        sizes: "2374x2374 any",
         type: "image/x-icon",
       },
       {
-        src: "1410x1410.png",
+        src: "me.png",
         sizes: "1410x1410",
         type: "image/png",
         purpose: "any"

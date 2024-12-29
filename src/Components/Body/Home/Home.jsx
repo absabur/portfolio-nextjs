@@ -16,7 +16,6 @@ const Home = () => {
           <Icons />
           <div
             className="hexagon image-hexa"
-            style={{ backgroundColor: "var(--color2" }}
           >
             <img src="/me.png" alt="Md Abdus Sabur" width={220} height={220} />
           </div>
