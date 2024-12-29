@@ -37,7 +37,7 @@
 
 .home-image img {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -45%);
   width: 220px;
@@ -55,12 +55,12 @@
 
 .image-hexa {
   overflow: hidden;
-  border: 5px solid var(--color2);
-  box-shadow: 0 0 20px var(--color2);
+  border: 5px solid var(--color3);
+  box-shadow: 0 0 10px var(--color2);
   transition: all 0.2s;
 }
 .image-hexa:hover {
-  box-shadow: 0 0 40px var(--color2);
+  box-shadow: 0 0 20px var(--color2);
 }
 .content {
   width: 50%;
