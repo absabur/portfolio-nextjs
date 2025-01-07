@@ -9,8 +9,7 @@ import { RxCross2 } from "react-icons/rx";
 import { FaDownload } from "react-icons/fa";
 import ReactToPrint from "react-to-print";
 
-const Image =
-  "https://res.cloudinary.com/dh96uxb54/image/upload/v1714625498/skills/me_fmuyx1.png";
+import Image from '@/Images/me.png'
 const qrcode =
   "https://res.cloudinary.com/dh96uxb54/image/upload/v1714625510/skills/urlqrcode_yypete.png";
 
@@ -270,7 +269,7 @@ const Resume = ({ modal, toggle }) => {
               <div className="resume-content">
                 <div className="resume-side-section">
                   <div className="resume-image">
-                    <img src={Image} alt="" />
+                    <img src={Image.src} alt="" />
                   </div>
                   <div className="resume-sidebar-content">
                     <h4 className="resume-skills-header">Skills</h4>
