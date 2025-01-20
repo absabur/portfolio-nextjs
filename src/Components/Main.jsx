@@ -9,7 +9,7 @@ import StarBack from "./StarBack";
 const Main = () => {
   return (
     <div className="main container">
-      {/* <StarBack /> */}
+      <StarBack />
       <Home />
       <About />
       <Skills />
