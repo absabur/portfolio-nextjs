@@ -129,10 +129,18 @@
   position: relative;
   border-radius: 10px;
   border: 1px solid var(--color1);
-  transition: position 1s ease-out;
+  transition: all 1s ease-out;
   overflow: hidden;
+  transform: scale(0.97);
 }
 
+
+.project:hover {
+  transform: scale(1);
+  box-shadow: 0 0 20px var(--color1) !important;
+  z-index: 2;
+  transition: all 0.3s;
+}
 
 .project-image {
   width: 100%;
@@ -151,7 +159,6 @@
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
-
 
 .project-name {
   width: 100%;

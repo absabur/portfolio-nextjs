@@ -46,6 +46,10 @@ const cloudinary =
   "https://res.cloudinary.com/dh96uxb54/image/upload/v1714625415/skills/cloudinary_lkerxb.jpg";
 const sass =
   "https://res.cloudinary.com/dh96uxb54/image/upload/v1714625493/skills/sass_uyvoi6.png";
+const selenium =
+  "https://res.cloudinary.com/dh96uxb54/image/upload/v1737442215/skills/download_gj9lrt.png";
+const beautifulsoup =
+  "https://res.cloudinary.com/dh96uxb54/image/upload/v1737442407/skills/download_1_bte7ce.png";
 
 export const others = [
   {
@@ -61,6 +65,20 @@ export const others = [
     parcentage: 85,
     description:
       "Git is a distributed version control system used for version control and collaboration on software development projects. It utilizes the Git version control system, allowing developers to track changes in their code, collaborate with others, and manage their projects efficiently.",
+  },
+  {
+    id: 8,
+    title: selenium,
+    parcentage: 75,
+    description:
+      "Selenium is a portable framework for testing web applications. Selenium provides a playback tool for authoring functional tests without the need to learn a test scripting language.",
+  },
+  {
+    id: 9,
+    title: beautifulsoup,
+    parcentage: 75,
+    description:
+      "Beautiful Soup is a Python library for pulling data out of HTML and XML files. It provides Pythonic idioms for iterating, searching, and modifying the parse tree.",
   },
   {
     id: 3,

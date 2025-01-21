@@ -40,6 +40,8 @@
   );
   box-shadow: 0 0 5px var(--color2);
   border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
 }
 
 .about-header {
@@ -56,20 +58,26 @@
   color: var(--color3);
 }
 
-.about-text {
-  max-width: 600px;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: 500;
-  opacity: 0.8;
-  line-height: 1.5;
-  text-align: left;
-  text-align: justify;
-}
 
-.about-text span {
+.section span {
   color: var(--color1);
   font-weight: 600;
+}
+
+hr {
+  border: 1px solid #ddd;
+}
+.section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section ul{
+  text-align: left;
+}
+.section ul li{
+  list-style: none;
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 800px) {
