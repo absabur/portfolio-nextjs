@@ -64,7 +64,7 @@ const About = () => {
             My mission is to craft practical and visually appealing user-centric
             solutions. I am dedicated to delivering exceptional value, ensuring
             that each project reflects a personal touch, making it unique and
-            engaging. Whether it's developing software, automating tasks, or
+            engaging. Whether it&apos;s developing software, automating tasks, or
             building interactive systems, my goal is to communicate ideas in the
             most creative and impactful way.
           </p>
