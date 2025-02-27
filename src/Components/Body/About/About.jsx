@@ -25,25 +25,25 @@ const About = () => {
 
         <div className="section">
           <ul>
-            <li>
-              <span>Web Development:</span> Specializing in the <span>MERN</span> stack
+            <li style={{textIndent: "-40px", paddingLeft: "40px"}}>
+              <span style={{textDecoration: "underline"}}>Web Development:</span> Specializing in the <span>MERN</span> stack
               and <span>Django</span>, I excel in building scalable and efficient web
               applications.
             </li>
-            <li>
-              <span>Web Scraping:</span> Proficient in extracting valuable
+            <li style={{textIndent: "-40px", paddingLeft: "40px"}}>
+              <span style={{textDecoration: "underline"}}>Web Scraping:</span> Proficient in extracting valuable
               insights and data using tools like <span>Selenium</span> and <span>Beautiful Soup</span>.
             </li>
-            <li>
-              <span>Automation:</span> Experience in automating tasks and
+            <li style={{textIndent: "-40px", paddingLeft: "40px"}}>
+              <span style={{textDecoration: "underline"}}>Automation:</span> Experience in automating tasks and
               processes to enhance efficiency and productivity.
             </li>
-            <li>
-              <span>UI/UX Design:</span> Crafting user-centric, functional,
+            <li style={{textIndent: "-40px", paddingLeft: "40px"}}>
+              <span style={{textDecoration: "underline"}}>UI/UX Design:</span> Crafting user-centric, functional,
               and visually appealing designs that enhance user experiences.
             </li>
-            <li>
-              <span>IoT Projects:</span> Engaged in innovative projects that
+            <li style={{textIndent: "-40px", paddingLeft: "40px"}}>
+              <span style={{textDecoration: "underline"}}>IoT Projects:</span> Engaged in innovative projects that
               integrate web technologies with IoT solutions.
             </li>
           </ul>

@@ -56,6 +56,10 @@
   ); */
 }
 
+.skills div{
+  transition: all 0.3s ease-out;
+}
+
 .back-text {
   width: 100%;
   z-index: 0;

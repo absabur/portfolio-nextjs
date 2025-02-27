@@ -157,6 +157,9 @@
     display: block;
     text-align: center;
   }
+  .home-bio {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 470px) {
