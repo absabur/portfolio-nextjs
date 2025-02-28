@@ -1,5 +1,5 @@
-'use client'
-import  { useEffect, useState } from "react";
+"use client";
+import { useEffect, useState } from "react";
 
 import { FaCode } from "react-icons/fa6";
 import { FaCodeBranch } from "react-icons/fa6";
@@ -94,27 +94,27 @@ const icons = [
 ];
 const position = [
   {
-    top: -25,
+    top: -20,
     left: -20,
   },
   {
-    top: -25,
+    top: -20,
     left: 5,
   },
   {
-    top: -25,
+    top: -20,
     left: 30,
   },
   {
-    top: -25,
+    top: -20,
     left: 55,
   },
   {
-    top: -25,
+    top: -20,
     left: 80,
   },
   {
-    top: -25,
+    top: -20,
     left: 110,
   },
   {
@@ -138,27 +138,27 @@ const position = [
     left: 110,
   },
   {
-    top: 105,
+    top: 110,
     left: 110,
   },
   {
-    top: 105,
+    top: 110,
     left: 80,
   },
   {
-    top: 105,
+    top: 110,
     left: 55,
   },
   {
-    top: 105,
+    top: 110,
     left: 30,
   },
   {
-    top: 105,
+    top: 110,
     left: 5,
   },
   {
-    top: 105,
+    top: 110,
     left: -20,
   },
   {
