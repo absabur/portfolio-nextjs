@@ -138,27 +138,27 @@ const position = [
     left: 110,
   },
   {
-    top: 110,
+    top: 107,
     left: 110,
   },
   {
-    top: 110,
+    top: 107,
     left: 80,
   },
   {
-    top: 110,
+    top: 107,
     left: 55,
   },
   {
-    top: 110,
+    top: 107,
     left: 30,
   },
   {
-    top: 110,
+    top: 107,
     left: 5,
   },
   {
-    top: 110,
+    top: 107,
     left: -20,
   },
   {
