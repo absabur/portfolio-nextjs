@@ -301,8 +301,8 @@ const Resume = ({ modal, toggle }) => {
                       </div>
                       <div className="resume-email">
                         <IoIosMailOpen />
-                        <a href="mailto:abdussabursayam@gmail.com">
-                          abdussabursayam@gmail.com
+                        <a href="mailto:absabur929@gmail.com">
+                          absabur929@gmail.com
                         </a>
                       </div>
                       <div className="resume-portfolio">

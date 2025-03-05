@@ -16,7 +16,7 @@ const Contact = () => {
         <div className="links">
           <Copy
             label={"Email"}
-            data={"abdussabursayam@gmail.com"}
+            data={"absabur929@gmail.com"}
             icon={<MdMail />}
           />
           <Copy label={"Phone"} data={"+8801773277050"} icon={<FaPhone />} />
