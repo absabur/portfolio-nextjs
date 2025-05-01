@@ -4,7 +4,7 @@ Allow: /
 Disallow: /manifest.webmanifest
 
 # Host
-Host: https://absaur.pro
+Host: https://absaur.vercel.app
 
 # Sitemaps
-Sitemap: https://absaur.pro/sitemap-absabur.xml
+Sitemap: https://absaur.vercel.app/sitemap-absabur.xml

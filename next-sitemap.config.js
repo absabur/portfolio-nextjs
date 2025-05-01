@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://absaur.pro",
+  siteUrl: "https://absaur.vercel.app",
   generateRobotsTxt: true, // Enable generating robots.txt
   sitemapBaseFileName: "sitemap-absabur", // Change the base file name of the sitemap
   transform: async (config, path) => {
@@ -25,7 +25,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      "https://absaur.pro/sitemap-absabur.xml", // Update the URL to reflect the new sitemap name
+      "https://absaur.vercel.app/sitemap-absabur.xml", // Update the URL to reflect the new sitemap name
     ],
   },
   // Additional options can be added here
