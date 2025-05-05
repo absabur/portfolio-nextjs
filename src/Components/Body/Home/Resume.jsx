@@ -307,11 +307,11 @@ const Resume = ({ modal, toggle }) => {
                       </div>
                       <div className="resume-portfolio">
                         <TbWorldWww />
-                        <a href="https://absabur.pro">
-                          https://absabur.pro
+                        <a href="https://absabur.vercel.app">
+                          https://absabur.vercel.app
                         </a>
                       </div>
-                      <img style={{padding: "10px 0"}} src='/qrcode_absabur.pro.png' alt="" width={180} className="mt-2" />
+                      <img style={{padding: "10px 0"}} src='/qrcode_absabur.vercel.app.png' alt="" width={180} className="mt-2" />
                     </div>
                   </div>
                 </div>

@@ -29,7 +29,7 @@ const nextConfig = {
   //   return [
   //     {
   //       source: '/',
-  //       destination: 'https://absabur.pro',
+  //       destination: 'https://absabur.vercel.app',
   //       permanent: true,
   //     },
   //   ]

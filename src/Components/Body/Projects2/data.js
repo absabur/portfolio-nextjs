@@ -247,7 +247,7 @@ export const next = [
     description:
       "An autometic CGPA calculator for national university students.",
     image: cgpaimage,
-    url: "https://nu-cgpa.pro",
+    url: "https://nu-cgpa.vercel.app",
     admin: "",
     password: "",
     node: true,
