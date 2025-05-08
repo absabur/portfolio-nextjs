@@ -19,7 +19,7 @@ const Contact = () => {
             data={"absabur929@gmail.com"}
             icon={<MdMail />}
           />
-          <Copy label={"Phone"} data={"+8801773277050"} icon={<FaPhone />} />
+          <Copy label={"Phone"} data={"+88 01773277050"} icon={<FaPhone />} />
           <div className="location">
             <span className="icon">
               <FaLocationDot />
