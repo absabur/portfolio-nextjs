@@ -121,25 +121,22 @@
 }
 
 .project {
-  min-width: 250px;
-  width: 250px;
-  height: 300px;
+  width: 100%;
+  max-width: 500px;
   background-color: var(--color3);
   margin: 10px;
   position: relative;
   border-radius: 10px;
-  border: 1px solid var(--color1);
   transition: all 1s ease-out;
   overflow: hidden;
-  transform: scale(0.97);
+  border: 1px solid #747474 !important;
+  transition: all 0.3s ease-out;
 }
 
 
 .project:hover {
-  transform: scale(1);
-  box-shadow: 0 0 20px var(--color1) !important;
   z-index: 2;
-  transition: all 0.3s;
+  box-shadow: 0 0 10px var(--color2);
 }
 
 .project-image {
@@ -170,9 +167,6 @@
   padding: 10px;
   border-radius: 10px;
   font-size: 20px;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
 }
 .project-content {
   position: absolute;
@@ -287,11 +281,6 @@
   padding: 20px 0;
 }
 
-.project {
-  border: 1px solid var(--color4) !important;
-  box-shadow: 0 0 5px var(--color4) !important;
-  transition: transform 0.3s ease-out;
-}
 
 .left-click {
   transform: perspective(200px) rotate3d(0, 1, 0, -50deg) scale(0.6) !important;

@@ -1,41 +1,32 @@
-import cgpaimage from "@/Images/cgpa.png"
+import cgpaimage from "@/Images/cgpa.png";
 
-import stream from "@/Images/streaming.png"
-import housesecurity from "@/Images/security.png"
+import validation from "@/Images/validation.png";
+import number_guess from "@/Images/number.png";
+import cart from "@/Images/cart.png";
+import todo from "@/Images/todo.png";
+import stopwatch from "@/Images/stopwatch.png";
+import countdown from "@/Images/event.png";
+import rock from "@/Images/rps.png";
 
-import gpt from "@/Images/gpt.png"
-import wave from "@/Images/veg.png"
-import rugby from "@/Images/rugby.png"
-import validation from "@/Images/validation.png"
-import number_guess from "@/Images/number.png"
-import cart from "@/Images/cart.png"
-import todo from "@/Images/todo.png"
-import stopwatch from "@/Images/stopwatch.png"
-import quiz from "@/Images/quiz.png"
-import countdown from "@/Images/event.png"
-import calculator from "@/Images/calculator.png"
-import rock from "@/Images/rps.png"
-import blog from "@/Images/blog.png"
-import portfolio from "@/Images/portfolio.png"
+import ecommerce from "@/Images/ecommerce.png";
+import lmsAdmin from "@/Images/lmsAdmin.png";
+import lmsUser from "@/Images/lmsUser.png";
 
-import ecommerce from "@/Images/ecommerce.png"
-
-import hotel from "@/Images/hotel.png"
-import gallery from "@/Images/gallery.png"
-import gericht from "@/Images/restront.png"
-import routine from "@/Images/routine.png"
+import hotel from "@/Images/hotel.png";
+import gallery from "@/Images/gallery.png";
+import routine from "@/Images/routine.png";
 
 export const django = [
-  {
-    title: "Streaming App",
-    description:
-      "This is a streaming app made with Django. Videos are coming from Youtube. User Can watch videos, likes, and comment. For like and comment user must be logged in.",
-    image: stream,
-    admin: "testuser",
-    password: "Q1w2e3r$",
-    url: "https://streaming-app-0h28.onrender.com",
-    github: "https://github.com/absabur/streaming-app",
-  },
+  // {
+  //   title: "Streaming App",
+  //   description:
+  //     "This is a streaming app made with Django. Videos are coming from Youtube. User Can watch videos, likes, and comment. For like and comment user must be logged in.",
+  //   image: stream,
+  //   admin: "testuser",
+  //   password: "Q1w2e3r$",
+  //   url: "https://streaming-app-0h28.onrender.com",
+  //   github: "https://github.com/absabur/streaming-app",
+  // },
   // {
   //   title: "E Learning App",
   //   description:
@@ -56,16 +47,16 @@ export const django = [
   //   url: "http://absabur.pythonanywhere.com/",
   //   github: "https://github.com/absabur/ecommerce-django",
   // },
-  {
-    title: "House Security",
-    description:
-      "This is a demo of house security system. Home owner can create a password. If room is locked it will give 3 chance to unlock it with correct password, unless it will show alart and play alerm.",
-    image: housesecurity,
-    admin: "",
-    password: "",
-    url: "https://abs-house-security.onrender.com",
-    github: "https://github.com/absabur/abs-house-security",
-  },
+  // {
+  //   title: "House Security",
+  //   description:
+  //     "This is a demo of house security system. Home owner can create a password. If room is locked it will give 3 chance to unlock it with correct password, unless it will show alart and play alerm.",
+  //   image: housesecurity,
+  //   admin: "",
+  //   password: "",
+  //   url: "https://abs-house-security.onrender.com",
+  //   github: "https://github.com/absabur/abs-house-security",
+  // },
 ];
 
 export const djangoReact = [
@@ -86,15 +77,15 @@ export const djangoReact = [
 ];
 
 export const hcjs = [
-  {
-    title: "GPT Project",
-    description: "This is normal frontend design created with html and css.",
-    image: gpt,
-    admin: "",
-    password: "",
-    url: "https://absabur.github.io/gpt-project/",
-    github: "https://github.com/absabur/gpt-project",
-  },
+  // {
+  //   title: "GPT Project",
+  //   description: "This is normal frontend design created with html and css.",
+  //   image: gpt,
+  //   admin: "",
+  //   password: "",
+  //   url: "https://absabur.github.io/gpt-project/",
+  //   github: "https://github.com/absabur/gpt-project",
+  // },
   // {
   //   title: "Wave Project",
   //   description: "This is normal frontend design created with html and css.",
@@ -163,16 +154,16 @@ export const hcjs = [
     url: "https://absabur.github.io/stop-watch/",
     github: "https://github.com/absabur/stop-watch",
   },
-  {
-    title: "Quiz App",
-    description:
-      "This is quiz application. User can perticipate in quiz and will get only one chance for each quiz. It will give 15 second for every question.",
-    image: quiz,
-    admin: "",
-    password: "",
-    url: "https://absabur.github.io/quiz-app/",
-    github: "https://github.com/absabur/quiz-app",
-  },
+  // {
+  //   title: "Quiz App",
+  //   description:
+  //     "This is quiz application. User can perticipate in quiz and will get only one chance for each quiz. It will give 15 second for every question.",
+  //   image: quiz,
+  //   admin: "",
+  //   password: "",
+  //   url: "https://absabur.github.io/quiz-app/",
+  //   github: "https://github.com/absabur/quiz-app",
+  // },
   {
     title: "Count Down",
     description:
@@ -183,16 +174,16 @@ export const hcjs = [
     url: "https://count-down-abs.netlify.app/",
     github: "https://github.com/absabur/count-down",
   },
-  {
-    title: "Calculator",
-    description:
-      "This is a simple calculator project created with html, css and js.",
-    image: calculator,
-    admin: "",
-    password: "",
-    url: "https://absabur.github.io/Calculator/",
-    github: "https://github.com/absabur/Calculator",
-  },
+  // {
+  //   title: "Calculator",
+  //   description:
+  //     "This is a simple calculator project created with html, css and js.",
+  //   image: calculator,
+  //   admin: "",
+  //   password: "",
+  //   url: "https://absabur.github.io/Calculator/",
+  //   github: "https://github.com/absabur/Calculator",
+  // },
   {
     title: "Rock Paper Scissor",
     description:
@@ -225,6 +216,34 @@ export const hcjs = [
 
 export const mern = [
   {
+    title: "LMS",
+    description:
+    "This a Library Management System. Students and Teachers can borrow books and return them.",
+    image: lmsUser,
+    url: "https://bpi-lms.vercel.app/",
+    admin: "abdussabur929@gmail.com",
+    password: "q1w2e3r4",
+    node: true,
+    github: {
+      backend: "https://github.com/absabur/lms-backend",
+      frontend: "https://github.com/absabur/lms-frontend",
+    },
+  },
+  {
+    title: "LMS",
+    description:
+    "This a Library Management System. Admin can add books, approve students and teachers, create students and teachers account and manage all the books.",
+    image: lmsAdmin,
+    url: "https://bpi-lms-admin.vercel.app/",
+    admin: "bogura.polytechnic.library@gmail.com",
+    password: "111111",
+    node: true,
+    github: {
+      backend: "https://github.com/absabur/lms-backend",
+      frontend: "https://github.com/absabur/lms-frontend-admin",
+    },
+  },
+  {
     title: "Ecommerce",
     description:
       "This is a multi functional ecommerce website for single shop. It is a complete ecommerce website.",
@@ -240,7 +259,6 @@ export const mern = [
   },
 ];
 
-
 export const next = [
   {
     title: "CGPA Calculator",
@@ -255,9 +273,17 @@ export const next = [
   },
 ];
 
-
-
 export const react = [
+  {
+    title: "Class Routine",
+    description:
+      "This is a realtime class routine of an educational institute. Students can select their own class and see their class routine. The routine will show active period also. This is offline also by service worker and progresive web app.",
+    image: routine,
+    admin: "",
+    password: "",
+    url: "https://bpi-routine.vercel.app/",
+    github: "https://github.com/absabur/bpi_routine",
+  },
   {
     title: "Hotel Booking App",
     description:
@@ -278,23 +304,13 @@ export const react = [
     url: "https://abs-photo-gallery.vercel.app/gallery",
     github: "https://github.com/absabur/photo-gallery",
   },
-  {
-    title: "Class Routine",
-    description:
-      "This is a realtime class routine of an educational institute. Students can select their own class and see their class routine. The routine will show active period also. This is offline also by service worker and progresive web app.",
-    image: routine,
-    admin: "",
-    password: "",
-    url: "https://bpi-routine.vercel.app/",
-    github: "https://github.com/absabur/bpi_routine",
-  },
-  {
-    title: "Gericht",
-    description: "This is a practice project of react js with amezing design.",
-    image: gericht,
-    admin: "",
-    password: "",
-    url: "https://absabur.github.io/gericht/",
-    github: "https://github.com/absabur/gericht",
-  },
+  // {
+  //   title: "Gericht",
+  //   description: "This is a practice project of react js with amezing design.",
+  //   image: gericht,
+  //   admin: "",
+  //   password: "",
+  //   url: "https://absabur.github.io/gericht/",
+  //   github: "https://github.com/absabur/gericht",
+  // },
 ];
