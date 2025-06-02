@@ -41,6 +41,7 @@ const Project2 = () => {
                           <div style={{width: "100%", margin: "10px 0"}}>
                             <Copy
                               data={item.admin}
+                              key={item.admin}
                               icon={
                                 <>
                                   <RiAdminFill /> / <IoIosMailOpen />

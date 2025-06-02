@@ -9,42 +9,15 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name === "") {
-      toast.warning("Enter Your Name", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      toast.warning("Enter Your Name");
       return;
     }
     if (email === "") {
-      toast.warning("Enter Your Email", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      toast.warning("Enter Your Email");
       return;
     }
     if (message === "") {
-      toast.warning("Write some message", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      toast.warning("Write some message");
       return;
     }
     const sendMessage = async (name, email, message) => {
