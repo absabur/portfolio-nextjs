@@ -1,10 +1,9 @@
 import Marquee from "react-fast-marquee";
 import "./Home.css";
-import ResumeClient from "./ResumeClient.js";
+
 import SocialClient from "./SocialClient.js";
 import Icons from "./Icons";
 import SectionsHead from "../SectionsTop";
-
 
 // const image = "https://res.cloudinary.com/dh96uxb54/image/upload/v1714625498/skills/me_fmuyx1.png"
 
@@ -28,10 +27,9 @@ const Home = () => {
 
           <p className="home-bio">
             <span className="highlight">Full-Stack Web Developer</span> | Expert
-            in {" "}
-            <span className="highlight">JavaScript (MERN Stack)</span> &
+            in <span className="highlight">JavaScript (MERN Stack)</span> &
             <span className="highlight">Python (Django)</span>. Specializing in
-            front-end and back-end development with {" "}
+            front-end and back-end development with{" "}
             <span className="highlight">React.js</span>,{" "}
             <span className="highlight">Next.js</span>,
             <span className="highlight">Redux</span>,{" "}
@@ -41,14 +39,13 @@ const Home = () => {
             <span className="highlight">PostgreSQL</span>,{" "}
             <span className="highlight">SQLite</span>,
             <span className="highlight">Selenium</span>,{" "}
-            <span className="highlight">REST APIs</span>, and {" "}
+            <span className="highlight">REST APIs</span>, and{" "}
             <span className="highlight">Django REST Framework</span>. Explore my
             portfolio for dynamic and robust web solutions.
           </p>
 
           <div className="home-actions">
             <SocialClient />
-            <ResumeClient />
           </div>
         </div>
 
