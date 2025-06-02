@@ -1,5 +1,6 @@
-'use client'
-import  { useEffect, useRef } from "react";
+"use client";
+import { useEffect, useRef } from "react";
+
 import "./Resume.css";
 
 import { MdPhoneIphone } from "react-icons/md";
@@ -9,7 +10,7 @@ import { RxCross2 } from "react-icons/rx";
 import { FaDownload } from "react-icons/fa";
 import ReactToPrint from "react-to-print";
 
-import MyImage from '@/Images/me.png'
+import MyImage from "@/Images/me.png";
 
 const qrcode =
   "https://res.cloudinary.com/dh96uxb54/image/upload/v1714625510/skills/urlqrcode_yypete.png";
@@ -251,19 +252,18 @@ const Resume = ({ modal, toggle }) => {
 
   useEffect(() => {
     if (modal) {
-      document.body.style.overflowY = 'hidden';
+      document.body.style.overflowY = "hidden";
     } else {
-      document.body.style.overflowY = '';
+      document.body.style.overflowY = "";
     }
     return () => {
-      document.body.style.overflowY = '';
+      document.body.style.overflowY = "";
     };
   }, [modal]);
-  
 
-  return (
-      <div className={`${modal ? "open-modal": "close-modal"} modal-resume`}>
-        <div className="inner-resume">
+  return ReactDOM.createPortal(
+    <div className={`${modal ? "open-modal" : "close-modal"} modal-resume`}>
+      <div className="inner-resume">
         <div className="preview-border">
           <div className="resume-parent" ref={componentRef}>
             <div className="resume">
@@ -312,7 +312,13 @@ const Resume = ({ modal, toggle }) => {
                           https://absabur.vercel.app
                         </a>
                       </div>
-                      <img style={{padding: "10px 0"}} src='/qrcode_absabur.vercel.app.png' alt="" width={180} className="mt-2" />
+                      <img
+                        style={{ padding: "10px 0" }}
+                        src="/qrcode_absabur.vercel.app.png"
+                        alt=""
+                        width={180}
+                        className="mt-2"
+                      />
                     </div>
                   </div>
                 </div>
@@ -323,7 +329,11 @@ const Resume = ({ modal, toggle }) => {
                       Fulstack Web Developer
                     </h3>
                     <p className="resume-para">
-                    I am Md Abdus Sabur, Expert in JavaScript (MERN Stack) & Python (Django). Specializing in front-end and back-end development with React.js, Next.js, Redux, Django, MongoDB, MySQL, PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework.
+                      I am Md Abdus Sabur, Expert in JavaScript (MERN Stack) &
+                      Python (Django). Specializing in front-end and back-end
+                      development with React.js, Next.js, Redux, Django,
+                      MongoDB, MySQL, PostgreSQL, SQLite, Selenium, REST APIs,
+                      and Django REST Framework.
                     </p>
                     <p className="resume-para">
                       In addition to my programming endeavors, I am a certified{" "}
@@ -391,34 +401,35 @@ const Resume = ({ modal, toggle }) => {
           </div>
         </div>
         <div className="modal-footer">
-            <button
-              className="button1 social-link"
-              style={{
-                border: "1px solid var(--color3)",
-                color: "var(--color3)",
-              }}
-              onClick={toggle}
-            >
-              <RxCross2 /> Cancel
-            </button>
-            <ReactToPrint
-              trigger={() => (
-                <button
-                  onClick={toggle}
-                  className="button2 social-link"
-                  style={{
-                    border: "1px solid var(--color3)",
-                    color: "var(--color3)",
-                  }}
-                >
-                  <FaDownload /> Download Resume
-                </button>
-              )}
-              content={() => componentRef.current}
-            />
-        </div>
+          <button
+            className="button1 social-link"
+            style={{
+              border: "1px solid var(--color3)",
+              color: "var(--color3)",
+            }}
+            onClick={toggle}
+          >
+            <RxCross2 /> Cancel
+          </button>
+          <ReactToPrint
+            trigger={() => (
+              <button
+                onClick={toggle}
+                className="button2 social-link"
+                style={{
+                  border: "1px solid var(--color3)",
+                  color: "var(--color3)",
+                }}
+              >
+                <FaDownload /> Download Resume
+              </button>
+            )}
+            content={() => componentRef.current}
+          />
         </div>
       </div>
+    </div>,
+    document.body
   );
 };
 
