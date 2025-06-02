@@ -79,7 +79,7 @@ const Element = ({ education }) => (
     }}
     contentArrowStyle={{ borderRight: "17px solid  var(--color2)" }}
     date={education.duration}
-    iconStyle={{ background: "var(--color3)", color: "var(--color1)" }}
+    iconStyle={{ background: "var(--color3)", color: "var(--color1)", fontSize: "1.5rem" , display: "flex", alignItems: "center", justifyContent: "center" }}
     icon={education.icon}
   >
     <h3 className="vertical-timeline-element-title h-3">{education.degree}</h3>
