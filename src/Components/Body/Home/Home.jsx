@@ -11,45 +11,59 @@ const Home = () => {
   return (
     <div className="home">
       <SectionsHead section="home" />
-      <div className="home-image">
-        <div className="hexagon">
-          <Icons />
-          <div
-            className="hexagon image-hexa"
-          >
-            <img src="/me.png" alt="Md Abdus Sabur" width={220} height={220} />
+
+      <div className="home-container">
+        <div className="home-content">
+          <span className="home-greeting">Hey there! I'm -</span>
+          <h1 className="home-name">Md Abdus Sabur</h1>
+
+          <div className="home-roles">
+            <Marquee speed={100} pauseOnHover>
+              <div className="role-tag">Frontend Developer</div>
+              <div className="role-tag">Backend Developer</div>
+              <div className="role-tag">FullStack Developer</div>
+            </Marquee>
+          </div>
+
+          <p className="home-bio">
+            <span className="highlight">Full-Stack Web Developer</span> | Expert
+            in
+            <span className="highlight">JavaScript (MERN Stack)</span> &
+            <span className="highlight">Python (Django)</span>. Specializing in
+            front-end and back-end development with
+            <span className="highlight">React.js</span>,{" "}
+            <span className="highlight">Next.js</span>,
+            <span className="highlight">Redux</span>,{" "}
+            <span className="highlight">Django</span>,
+            <span className="highlight">MongoDB</span>,{" "}
+            <span className="highlight">MySQL</span>,
+            <span className="highlight">PostgreSQL</span>,{" "}
+            <span className="highlight">SQLite</span>,
+            <span className="highlight">Selenium</span>,{" "}
+            <span className="highlight">REST APIs</span>, and
+            <span className="highlight">Django REST Framework</span>. Explore my
+            portfolio for dynamic and robust web solutions.
+          </p>
+
+          <div className="home-actions">
+            <SocialClient />
+            <ResumeClient />
           </div>
         </div>
-      </div>
 
-      <div className="content">
-        <span
-          className="h2"
-          style={{ color: "var(--color4)", fontSize: "24px" }}
-        >
-          Hey there! I&apos;m -
-        </span>
-
-        <h1 className="home-name">Md Abdus Sabur</h1>
-
-        <span className="typewrite">
-          <Marquee speed={100} pauseOnHover>
-            <Post name="Frontend Developer" />
-            <Post name="Backend Developer" />
-            <Post name="FullStack Developer" />
-          </Marquee>
-        </span>
-
-        <p className="home-bio">
-          Md Abdus Sabur - Full-Stack Web Developer | Expert in JavaScript (MERN
-          Stack) & Python (Django). Specializing in front-end and back-end
-          development with React.js, Next.js, Redux, Django, MongoDB, MySQL,
-          PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework.
-          Explore my portfolio for dynamic and robust web solutions.
-        </p>
-
-        <SocialClient />
-        <ResumeClient />
+        <div className="home-image">
+          <div className="hexagon">
+            <Icons />
+            <div className="hexagon image-hexa">
+              <img
+                src="/me.png"
+                alt="Md Abdus Sabur"
+                width={220}
+                height={220}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

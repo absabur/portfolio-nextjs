@@ -16,12 +16,12 @@ const Skills = () => {
         <div className="each-skills">
           <Frontend />
         </div>
-        <div className="each-skills">
+        {/* <div className="each-skills">
           <Backend />
         </div>
         <div style={{marginBottom: 0}} className="each-skills">
           <Others />
-        </div>
+        </div> */}
       </div>
 
       <Tooltip
@@ -29,9 +29,9 @@ const Skills = () => {
         style={{
           textAlign: "center",
           width: "250px",
-          backgroundColor: "var(--color2)",
-          boxShadow: "0 0 2px var(--color3)",
-          color: "var(--color3)",
+          backgroundColor: "var(--color5)",
+          boxShadow: "0 0 2px var(--color1)",
+          color: "var(--color4)",
           fontWeight: 600,
           fontSize: "16px",
           zIndex: 1,

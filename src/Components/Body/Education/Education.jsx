@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import "./Education.css";
 
 import {
@@ -13,31 +13,49 @@ import SectionsHead from "../SectionsTop";
 
 const educations = [
   {
+    id: 1,
     degree: "BSC (HONS) in Mathematics",
-    institute: "Govt Azizul Haque College, National University, Bangladesh",
-    duration: "2020-present",
+    institution: "Govt Azizul Haque College, National University, Bangladesh",
+    duration: "2020 - Present",
+    description:
+      "Specializing in advanced mathematics and statistical analysis",
+    icon: "🎓",
+    color: "#4f46e5",
   },
   {
+    id: 2,
     degree: "Diploma in Computer Science and Technology",
-    institute: "Bogra Polytechnic Institute, Bangladesh",
-    duration: "2021-present",
+    institution: "Bogra Polytechnic Institute, Bangladesh",
+    duration: "2018 - 2020",
+    description: "Focused on software development and computer systems",
+    icon: "💻",
+    color: "#10b981",
   },
   {
+    id: 3,
     degree: "HSC in Science",
-    institute: "Govt Shah Sultan College, Bogra",
-    duration: "2018-2020",
+    institution: "Govt Shah Sultan College, Bogra",
+    duration: "2016 - 2018",
+    description:
+      "Higher secondary education with physics, chemistry, and mathematics",
+    icon: "🔬",
+    color: "#f59e0b",
   },
   {
+    id: 4,
     degree: "SSC in Science",
-    institute: "Mortuzapur High School, Dupchanchia, Bogra",
-    duration: "2016-2018",
+    institution: "Mortuzapur High School, Dupchanchis, Bogra",
+    duration: "2014 - 2016",
+    description: "Secondary school certificate with science concentration",
+    icon: "📚",
+    color: "#ec4899",
   },
 ];
 
 const Education = () => {
   return (
     <div className="education-section" id="education">
-      <SectionsHead section="education"/>
+      <SectionsHead section="education" />
       <h1 className="education-header">Education</h1>
 
       <div className="educations">
@@ -56,18 +74,21 @@ const Element = ({ education }) => (
     className="vertical-timeline-element--work"
     contentStyle={{
       background:
-        "linear-gradient(to right, black, var(--color3), var(--color2))",
+        "linear-gradient(90deg, rgba(46, 204, 113, 0.15), rgba(52, 152, 219, 0.15))",
       color: "var(--color4)",
     }}
     contentArrowStyle={{ borderRight: "17px solid  var(--color2)" }}
     date={education.duration}
     iconStyle={{ background: "var(--color3)", color: "var(--color1)" }}
-    icon={<PiGraduationCapFill />}
+    icon={<span>{education.icon}</span>}
   >
     <h3 className="vertical-timeline-element-title h-3">{education.degree}</h3>
-    <h4 className="vertical-timeline-element-subtitle h-4">
-      {education.institute}
-    </h4>
+    <p className="vertical-timeline-element-subtitle h-4">
+      {education.institution}
+    </p>
+    <p style={{fontWeight: "300"}} className="vertical-timeline-element-subtitle">
+      {education.description}
+    </p>
   </VerticalTimelineElement>
 );
 

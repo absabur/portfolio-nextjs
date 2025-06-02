@@ -1,5 +1,5 @@
-'use client'
-import  { useEffect, useState } from "react";
+"use client";
+import { useEffect, useState } from "react";
 import "./Header.css";
 import {
   FaChartPie,
@@ -18,9 +18,6 @@ const Header = () => {
   const [lessScroll] = useState(50);
   const { scrollbarWidth } = usePageMetrics();
 
-  
-  
-
   useEffect(() => {
     const handleScroll = () => {
       let active = sessionStorage.getItem("active");
@@ -32,30 +29,48 @@ const Header = () => {
     };
   }, []);
 
-
-
   const scrollToTop = () => {
     window.scrollTo({ behavior: "smooth", top: 0 });
   };
   const scrollToAbout = () => {
     let element1 = document.querySelector(".about-section-scroll");
-    window.scrollTo({ behavior: "smooth", top: element1.getBoundingClientRect().top + window.pageYOffset - lessScroll });
+    window.scrollTo({
+      behavior: "smooth",
+      top:
+        element1.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+    });
   };
   const scrollToSkills = () => {
     let element1 = document.querySelector(".skills-section-scroll");
-    window.scrollTo({ behavior: "smooth", top: element1.getBoundingClientRect().top + window.pageYOffset - lessScroll });
+    window.scrollTo({
+      behavior: "smooth",
+      top:
+        element1.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+    });
   };
   const scrollToProjects = () => {
     let element1 = document.querySelector(".project-section-scroll");
-    window.scrollTo({ behavior: "smooth", top: element1.getBoundingClientRect().top + window.pageYOffset - lessScroll });
+    window.scrollTo({
+      behavior: "smooth",
+      top:
+        element1.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+    });
   };
   const scrollToEducations = () => {
     let element1 = document.querySelector(".education-section-scroll");
-    window.scrollTo({ behavior: "smooth", top: element1.getBoundingClientRect().top + window.pageYOffset - lessScroll });
+    window.scrollTo({
+      behavior: "smooth",
+      top:
+        element1.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+    });
   };
   const scrollToContact = () => {
     let element1 = document.querySelector(".contact-section-scroll");
-    window.scrollTo({ behavior: "smooth", top: element1.getBoundingClientRect().top + window.pageYOffset - lessScroll });
+    window.scrollTo({
+      behavior: "smooth",
+      top:
+        element1.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+    });
   };
   const navItems = [
     {
@@ -102,48 +117,49 @@ const Header = () => {
     },
   ];
   return (
-    <div className="header-div">
-      <div
-        className="scrollbar"
-        style={{
-          width: `${scrollbarWidth}%`,
-        }}
-      ></div>
-      <header className="inner-header">
-        <a
-          className="logo-name"
-          href="/"
-        >
-          <span style={{ color: "var(--color1)" }}>{`{`}</span>
-          ABS
-          <span style={{ color: "var(--color1)" }}>{`}`}</span>
-        </a>
-        <Tooltip
+    <>
+      <div className="scrollbar-parent">
+        <div
+          className="scrollbar"
           style={{
-            fontSize: "17px",
-            color: "var(--color3)",
-            backgroundColor: "var(--color2)",
-            boxShadow: "0 0 5px var(--color3)",
+            height: `${scrollbarWidth}%`,
           }}
-          id="tooltip"
-        />
-        <nav>
-          {navItems.map((item, index) => (
-            <button
-              key={index}
-              onClick={item.onClick}
-              data-tooltip-id="tooltip"
-              data-tooltip-content={item.tooltipContent}
-              className={`nav-bar-icons ${
-                activeSection === item.section && "nav-active-icon"
-              }`}
-            >
-              {item.icon}
-            </button>
-          ))}
-        </nav>
-      </header>
-    </div>
+        ></div>
+      </div>
+      <div className="header-div">
+        <header className="inner-header">
+          <a className="logo-name" href="/">
+            <span style={{ color: "var(--color1)" }}>{`{`}</span>
+            ABS
+            <span style={{ color: "var(--color1)" }}>{`}`}</span>
+          </a>
+          <Tooltip
+            style={{
+              fontSize: "17px",
+              color: "var(--color3)",
+              backgroundColor: "var(--color2)",
+              boxShadow: "0 0 5px var(--color3)",
+            }}
+            id="tooltip"
+          />
+          <nav>
+            {navItems.map((item, index) => (
+              <button
+                key={index}
+                onClick={item.onClick}
+                data-tooltip-id="tooltip"
+                data-tooltip-content={item.tooltipContent}
+                className={`nav-bar-icons ${
+                  activeSection === item.section && "nav-active-icon"
+                }`}
+              >
+                {item.icon}
+              </button>
+            ))}
+          </nav>
+        </header>
+      </div>
+    </>
   );
 };
 

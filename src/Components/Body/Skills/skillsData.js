@@ -180,6 +180,118 @@ export const frontend = [
     description:
       "Tailwind CSS is a utility-first CSS framework with a focus on speed and accessibility.",
   },
+  {
+    id: 1,
+    title: node,
+    parcentage: 85,
+    description:
+      "Node.js is a JavaScript runtime environment that runs on the server side.",
+  },
+  {
+    id: 2,
+    title: express,
+    parcentage: 80,
+    description:
+      "Express.js is a Node.js framework for building web applications.",
+  },
+  {
+    id: 3,
+    title: mongodb,
+    parcentage: 80,
+    description:
+      "MongoDB is a document-oriented database that stores and organizes data.",
+  },
+  {
+    id: 4,
+    title: Postgres,
+    parcentage: 60,
+    description:
+      "PostgreSQL is a relational database management system that stores and organizes data.",
+  },
+  {
+    id: 5,
+    title: python,
+    parcentage: 85,
+    description:
+      "Python is a high-level, interpreted, object-oriented programming language. It is a scripting language that conforms to the ECMAScript specification.",
+  },
+  {
+    id: 6,
+    title: django,
+    parcentage: 75,
+    description:
+      "Django is an open source web framework for creating web applications.",
+  },
+  {
+    id: 7,
+    title: mysql,
+    parcentage: 70,
+    description:
+      "MySQL is a relational database management system that stores and organizes data.",
+  },
+  {
+    id: 1,
+    title: github,
+    parcentage: 85,
+    description:
+      "GitHub is a web-based platform used for version control and collaboration on software development projects. It utilizes the Git version control system, allowing developers to track changes in their code, collaborate with others, and manage their projects efficiently.",
+  },
+  {
+    id: 2,
+    title: git,
+    parcentage: 85,
+    description:
+      "Git is a distributed version control system used for version control and collaboration on software development projects. It utilizes the Git version control system, allowing developers to track changes in their code, collaborate with others, and manage their projects efficiently.",
+  },
+  {
+    id: 8,
+    title: selenium,
+    parcentage: 75,
+    description:
+      "Selenium is a portable framework for testing web applications. Selenium provides a playback tool for authoring functional tests without the need to learn a test scripting language.",
+  },
+  {
+    id: 9,
+    title: beautifulsoup,
+    parcentage: 75,
+    description:
+      "Beautiful Soup is a Python library for pulling data out of HTML and XML files. It provides Pythonic idioms for iterating, searching, and modifying the parse tree.",
+  },
+  {
+    id: 3,
+    title: aws,
+    parcentage: 25,
+    description:
+      "Amazon Web Services (AWS) is a cloud computing platform that enables developers to build, deploy, and manage applications on the cloud.",
+  },
+  {
+    id: 4,
+    title: docker,
+    parcentage: 78,
+    description:
+      "Docker is an open-source application container platform that enables developers to build, deploy, and manage applications on the cloud.",
+  },
+  {
+    id: 5,
+    title: firebase,
+    parcentage: 30,
+    description:
+      "Firebase is a cloud-based platform that enables developers to build, deploy, and manage applications on the cloud.",
+  },
+  {
+    id: 6,
+    title: postman,
+    parcentage: 90,
+    description:
+      "Postman is a free and open-source API testing tool that enables developers to build, deploy, and manage applications on the cloud.",
+  },
+  {
+    id: 7,
+    title: cloudinary,
+    parcentage: 95,
+    description:
+      "Cloudinary is a cloud-based platform that enables developers to build, deploy, and manage applications on the cloud.",
+  },
 ];
 
 export const backend = [

@@ -216,7 +216,7 @@ export const hcjs = [
 
 export const mern = [
   {
-    title: "LMS",
+    title: "LMS User",
     description:
     "This a Library Management System. Students and Teachers can borrow books and return them.",
     image: lmsUser,
@@ -230,7 +230,7 @@ export const mern = [
     },
   },
   {
-    title: "LMS",
+    title: "LMS Admin Panel",
     description:
     "This a Library Management System. Admin can add books, approve students and teachers, create students and teachers account and manage all the books.",
     image: lmsAdmin,
