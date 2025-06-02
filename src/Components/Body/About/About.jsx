@@ -1,5 +1,9 @@
+import { FaCode, FaMicrochip, FaRobot } from "react-icons/fa6";
+import { GiBullseye } from "react-icons/gi";
 import SectionsHead from "../SectionsTop";
 import "./About.css";
+import { FaCloudDownloadAlt } from "react-icons/fa";
+import { HiPaintBrush } from "react-icons/hi2";
 
 const About = () => {
   return (
@@ -38,7 +42,7 @@ const About = () => {
             <div className="about-skill-card">
               <div className="about-skill-title">
                 <div className="about-skill-icon">
-                  <i className="about-fas fa-code"></i>
+                  <FaCode />
                 </div>
                 Web Development
               </div>
@@ -53,7 +57,7 @@ const About = () => {
             <div className="about-skill-card">
               <div className="about-skill-title">
                 <div className="about-skill-icon">
-                  <i className="about-fas fa-cloud-download-alt"></i>
+                  <FaCloudDownloadAlt />
                 </div>
                 Web Scraping
               </div>
@@ -67,7 +71,7 @@ const About = () => {
             <div className="about-skill-card">
               <div className="about-skill-title">
                 <div className="about-skill-icon">
-                  <i className="about-fas fa-robot"></i>
+                  <FaRobot />
                 </div>
                 Automation
               </div>
@@ -80,7 +84,7 @@ const About = () => {
             <div className="about-skill-card">
               <div className="about-skill-title">
                 <div className="about-skill-icon">
-                  <i className="about-fas fa-paint-brush"></i>
+                  <HiPaintBrush />
                 </div>
                 UI/UX Design
               </div>
@@ -93,7 +97,7 @@ const About = () => {
             <div className="about-skill-card">
               <div className="about-skill-title">
                 <div className="about-skill-icon">
-                  <i className="about-fas fa-microchip"></i>
+                  <FaMicrochip />
                 </div>
                 IoT Projects
               </div>
@@ -120,15 +124,16 @@ const About = () => {
 
           <div className="about-mission-statement">
             <div className="about-mission-icon">
-              <i className="about-fas fa-bullseye"></i>
+              <GiBullseye />
             </div>
             <p>
               My mission is to craft practical and visually appealing
               user-centric solutions. I am dedicated to delivering exceptional
               value, ensuring that each project reflects a personal touch,
-              making it unique and engaging. Whether it's developing software,
-              automating tasks, or building interactive systems, my goal is to
-              communicate ideas in the most creative and impactful way.
+              making it unique and engaging. Whether it&apos;s developing
+              software, automating tasks, or building interactive systems, my
+              goal is to communicate ideas in the most creative and impactful
+              way.
             </p>
             <div className="about-signature">- Md Abdus Sabur</div>
           </div>

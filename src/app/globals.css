@@ -92,6 +92,6 @@ code {
 .button2:hover {
   opacity: 1;
   background-color: transparent;
-  box-shadow: inset 0 0 25px 10px var(--color1);
+  box-shadow: inset 0 0 25px 10px var(--color2);
   color: var(--color4);
 }

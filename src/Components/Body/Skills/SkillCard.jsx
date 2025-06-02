@@ -1,6 +1,7 @@
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
+
 const defaultOptions = {
   max: 50,
   perspective: 200,
@@ -26,12 +27,7 @@ const SkillCard = ({ data }) => {
               }}
             >
               <div className="skill-image">
-                <img
-                  
-                  
-                  src={item.title}
-                  alt={item.description.split(" ")[0]}
-                />
+                <img src={item.title} alt={item.description.split(" ")[0]} />
                 <motion.img
                   initial={{ opacity: 1, scale: 1 }}
                   whileHover={{
@@ -39,8 +35,6 @@ const SkillCard = ({ data }) => {
                     scale: 1.5,
                     transition: { duration: 0.3 },
                   }}
-                  
-                  
                   data-tooltip-content={item.description}
                   data-tooltip-id="skill"
                   data-tooltip-events="click"

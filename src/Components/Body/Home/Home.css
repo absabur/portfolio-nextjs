@@ -60,7 +60,7 @@
   border: 5px solid var(--color3);
   box-shadow: 0 0 10px var(--color2);
   transition: all 0.2s;
-  background-color: #4747477c;
+  background-color: rgba(52, 152, 219, 0.2);
 }
 .image-hexa:hover {
   box-shadow: 0 0 20px var(--color2);

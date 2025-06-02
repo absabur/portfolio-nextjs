@@ -215,7 +215,7 @@ const Icons = () => {
             position: "absolute",
             top: pos[index].top + "%",
             left: pos[index].left + "%",
-            color: "var(--color1)",
+            color: index % 2 === 0 ? "var(--color1)" : "var(--color5)",
             fontSize: "25px",
           }}
         >

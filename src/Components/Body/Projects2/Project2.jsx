@@ -9,6 +9,7 @@ import { django, react, hcjs, djangoReact, mern, next } from "./data";
 import SectionsHead from "../SectionsTop";
 import Link from "next/link";
 
+
 const Project2 = () => {
   return (
     <div className="project-section" id="projects">
