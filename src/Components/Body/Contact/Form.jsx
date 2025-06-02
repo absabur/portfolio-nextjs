@@ -79,7 +79,7 @@ const Form = () => {
     <form
       style={{
         background:
-          "linear-gradient(to left, rgba(46, 204, 113, 0.15), rgba(52, 152, 219, 0.15))",
+          "linear-gradient(to left, rgba(0, 255, 204, 0.15), rgba(52, 152, 219, 0.15))",
         color: "var(--color4)",
       }}
       onSubmit={handleSubmit}

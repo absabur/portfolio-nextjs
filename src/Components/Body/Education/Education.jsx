@@ -74,19 +74,22 @@ const Element = ({ education }) => (
     className="vertical-timeline-element--work"
     contentStyle={{
       background:
-        "linear-gradient(90deg, rgba(46, 204, 113, 0.15), rgba(52, 152, 219, 0.15))",
+        "linear-gradient(90deg, rgba(0, 255, 204, 0.15), rgba(52, 152, 219, 0.15))",
       color: "var(--color4)",
     }}
     contentArrowStyle={{ borderRight: "17px solid  var(--color2)" }}
     date={education.duration}
     iconStyle={{ background: "var(--color3)", color: "var(--color1)" }}
-    icon={<span>{education.icon}</span>}
+    icon={education.icon}
   >
     <h3 className="vertical-timeline-element-title h-3">{education.degree}</h3>
     <p className="vertical-timeline-element-subtitle h-4">
       {education.institution}
     </p>
-    <p style={{fontWeight: "300"}} className="vertical-timeline-element-subtitle">
+    <p
+      style={{ fontWeight: "300" }}
+      className="vertical-timeline-element-subtitle"
+    >
       {education.description}
     </p>
   </VerticalTimelineElement>
