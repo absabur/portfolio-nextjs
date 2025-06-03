@@ -10,13 +10,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@react-three/drei": "^9.105.5",
-    "@react-three/fiber": "^8.16.2",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^11.2.12",
-    "maath": "^0.10.7",
     "next": "14.2.4",
     "next-sitemap": "^4.2.3",
     "react": "^18",
@@ -27,10 +21,8 @@
     "react-router-dom": "^6.22.2",
     "react-scripts": "5.0.1",
     "react-tilt": "^1.0.2",
-    "react-to-print": "^2.15.1",
     "react-tooltip": "^5.26.3",
     "react-vertical-timeline-component": "^3.6.0",
-    "sharp": "^0.34.2",
     "sonner": "^2.0.5",
     "web-vitals": "^2.1.4"
   },
