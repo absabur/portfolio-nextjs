@@ -41,13 +41,13 @@ export default function manifest() {
     screenshots: [
       {
         src: "ss1.png",
-        sizes: "1258x888",
+        sizes: "1917x906",
         type: "image/png",
         label: "Main Screen",
       },
       {
         src: "ss2.png",
-        sizes: "1261x889",
+        sizes: "1916x910",
         type: "image/png",
         form_factor: "wide"
       }
