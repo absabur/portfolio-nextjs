@@ -259,20 +259,9 @@
   justify-content: center;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 420px) {
   .project2 {
-    grid-template-columns: auto auto;
-  }
-}
-
-@media screen and (min-width: 1130px) {
-  .project2 {
-    grid-template-columns: auto auto auto;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .project2 {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   }
 }
 
