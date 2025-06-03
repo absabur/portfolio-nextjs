@@ -2,7 +2,7 @@ import "./project.css";
 
 import { django, react, hcjs, djangoReact, mern, next } from "./data";
 import SectionsHead from "../SectionsTop";
-import FancyProjectCard from "@/Components/FancyProjectCard";
+import FancyProjectCard from "@/Components/Body/Projects2/FancyProjectCard";
 
 const Project2 = () => {
   return (

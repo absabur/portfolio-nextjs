@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaKey } from "react-icons/fa";
 import { RiAdminFill } from "react-icons/ri";
 import { IoIosMailOpen } from "react-icons/io";
-import Copy from "./Body/Contact/Copy";
+import Copy from "../Contact/Copy";
 
 const FancyProjectCard = ({
   title,
