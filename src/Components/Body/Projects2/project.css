@@ -5,16 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 30px 0;
   position: relative;
-  /* background: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.5),
-    transparent,
-    transparent,
-    transparent,
-    rgba(0, 0, 0, 0.5)
-  ); */
 }
 
 .projects-header {
@@ -30,15 +21,7 @@
 
 .all-projects {
   width: 100%;
-  /* background: linear-gradient(
-    to left,
-    rgba(0, 17, 41),
-    rgba(0, 17, 41, 0.9),
-    rgba(0, 17, 41, 0.9),
-    rgba(0, 17, 41, 0.9),
-    rgba(0, 17, 41)
-  );
-  box-shadow: 0 0 5px var(--color2); */
+  padding: 0 10px;
   backdrop-filter: blur(2px);
   border-radius: 5px;
 }
@@ -123,29 +106,17 @@
 .project {
   width: 100%;
   background-color: var(--color3);
-  margin: 5px 10px;
   position: relative;
   border-radius: 10px;
   transition: all 1s ease-out;
   overflow: hidden;
-  border: 2px solid #747474 !important;
+  border: 1px solid var(--color5) !important;
   transition: all 0.3s ease-out;
-}
-
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .project {
-    width: calc(100% / 2 - 20px);
-  }
-}
-@media screen and (min-width: 768px) {
-  .project {
-    width: calc(100% / 3 - 20px);
-  }
 }
 
 .project:hover {
   z-index: 2;
-  box-shadow: 0 0 10px var(--color2);
+  box-shadow: 0 0 10px var(--color5);
 }
 
 .project-image {
@@ -215,12 +186,11 @@
   right: 0;
   transform: translateY(-50%);
 }
-.project-content .copy-component .icon {
-  width: 20%;
+.project .copy-component .icon {
+  width: 41px !important;
   letter-spacing: -2px;
-}
-.project-content .copy-component .links-body {
-  width: 80%;
+  margin-right: 10px;
+  color: var(--color5) !important;
 }
 
 .project-links {
@@ -228,9 +198,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-  gap: 5px;
+  flex-wrap: wrap;
   margin: 5px 0;
+  padding: 5px;
 }
 
 .single-github {
@@ -283,11 +253,27 @@
 
 .project2 {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: auto;
   justify-content: center;
-  padding: 20px 0;
+}
+
+@media screen and (min-width: 760px) {
+  .project2 {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 1130px) {
+  .project2 {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .project2 {
+    grid-template-columns: auto auto auto auto;
+  }
 }
 
 .left-click {

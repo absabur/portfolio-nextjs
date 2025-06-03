@@ -24,18 +24,8 @@
 }
 
 .each-skills {
-  /* background: linear-gradient(
-    to left,
-    rgba(0, 17, 41),
-    rgba(0, 17, 41, 0.9),
-    rgba(0, 17, 41, 0.9),
-    rgba(0, 17, 41, 0.9),
-    rgba(0, 17, 41)
-  );
-  box-shadow: 0 0 5px var(--color2); */
   backdrop-filter: blur(2px);
   border-radius: 5px;
-  margin-bottom: 40px;
 }
 
 .skills {
@@ -45,7 +35,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   position: relative;
-  padding: 20px 10px;
+  padding: 10px;
   gap: 20px;
 }
 
@@ -83,7 +73,10 @@
   width: 130px;
   height: 130px;
   border-radius: 30%;
-  background: linear-gradient(to left,var(--color2));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +90,7 @@
   height: 80px;
   object-fit: contain;
   cursor: pointer;
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5))
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
 }
 .click-image {
   position: absolute;

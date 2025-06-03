@@ -29,9 +29,9 @@ const Skills = () => {
         style={{
           textAlign: "center",
           width: "250px",
-          backgroundColor: "var(--color5)",
-          boxShadow: "0 0 2px var(--color1)",
-          color: "var(--color4)",
+          backgroundColor: "var(--color2)",
+          boxShadow: "0 0 2px var(--color5)",
+          color: "var(--color3)",
           fontWeight: 600,
           fontSize: "16px",
           zIndex: 1,

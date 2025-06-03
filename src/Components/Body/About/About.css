@@ -2,25 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0;
   flex-direction: column;
-  gap: 20px;
-  padding-top: 0;
-  /* background: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.5),
-    transparent,
-    transparent,
-    transparent,
-    rgba(0, 0, 0, 0.5)
-  );
-  border-radius: 10px; */
 }
 
 .about-head {
   flex: 1;
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 .about-para {
   flex: 2;
@@ -102,7 +91,6 @@ hr {
 
 
 .about-header {
-  /* background: linear-gradient(90deg, var(--color5), #2c3e50); */
   padding: 30px 40px;
   position: relative;
   overflow: hidden;

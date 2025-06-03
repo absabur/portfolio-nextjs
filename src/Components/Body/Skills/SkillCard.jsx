@@ -1,7 +1,6 @@
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
-
 const defaultOptions = {
   max: 50,
   perspective: 200,
@@ -17,7 +16,7 @@ const SkillCard = ({ data }) => {
             <motion.div
               className="skill"
               initial={{
-                background: `conic-gradient(var(--color4) 0deg, var(--color4) 0)`,
+                background: `conic-gradient(var(--color3) 0deg, var(--color4) 0)`,
               }}
               whileInView={{
                 background: `conic-gradient(var(--color3) ${
@@ -27,7 +26,20 @@ const SkillCard = ({ data }) => {
               }}
             >
               <div className="skill-image">
-                <img src={item.title} alt={item.description.split(" ")[0]} />
+                <p
+                  style={{
+                    position: "absolute",
+                    bottom: "2px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    whiteSpace: "nowrap",
+                    color: "var(--color3)",
+                    fontWeight: "500"
+                  }}
+                >
+                  {item.title}
+                </p>
+                <img src={item.image} alt={item.description.split(" ")[0]} />
                 <motion.img
                   initial={{ opacity: 1, scale: 1 }}
                   whileHover={{
@@ -39,7 +51,7 @@ const SkillCard = ({ data }) => {
                   data-tooltip-id="skill"
                   data-tooltip-events="click"
                   className="click-image"
-                  src={item.title}
+                  src={item.image}
                   alt={item.description.split(" ")[0]}
                 />
               </div>

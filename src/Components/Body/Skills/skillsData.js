@@ -54,63 +54,72 @@ const beautifulsoup =
 export const others = [
   {
     id: 1,
-    title: github,
+    title: "GitHub",
+    image: github,
     parcentage: 85,
     description:
       "GitHub is a web-based platform used for version control and collaboration on software development projects. It utilizes the Git version control system, allowing developers to track changes in their code, collaborate with others, and manage their projects efficiently.",
   },
   {
     id: 2,
-    title: git,
+    title: "Git",
+    image: git,
     parcentage: 85,
     description:
       "Git is a distributed version control system used for version control and collaboration on software development projects. It utilizes the Git version control system, allowing developers to track changes in their code, collaborate with others, and manage their projects efficiently.",
   },
   {
     id: 8,
-    title: selenium,
+    title: "Selenium",
+    image: selenium,
     parcentage: 75,
     description:
       "Selenium is a portable framework for testing web applications. Selenium provides a playback tool for authoring functional tests without the need to learn a test scripting language.",
   },
   {
     id: 9,
-    title: beautifulsoup,
+    title: "Beautiful Soup",
+    image: beautifulsoup,
     parcentage: 75,
     description:
       "Beautiful Soup is a Python library for pulling data out of HTML and XML files. It provides Pythonic idioms for iterating, searching, and modifying the parse tree.",
   },
   {
     id: 3,
-    title: aws,
+    title: "AWS",
+    image: aws,
     parcentage: 25,
     description:
       "Amazon Web Services (AWS) is a cloud computing platform that enables developers to build, deploy, and manage applications on the cloud.",
   },
   {
     id: 4,
-    title: docker,
+    title: "Docker",
+    image: docker,
     parcentage: 78,
     description:
       "Docker is an open-source application container platform that enables developers to build, deploy, and manage applications on the cloud.",
   },
   {
     id: 5,
-    title: firebase,
+    title: "Firebase",
+    image: firebase,
     parcentage: 30,
     description:
       "Firebase is a cloud-based platform that enables developers to build, deploy, and manage applications on the cloud.",
   },
   {
     id: 6,
-    title: postman,
+    title: "Postman",
+    image: postman,
     parcentage: 90,
     description:
       "Postman is a free and open-source API testing tool that enables developers to build, deploy, and manage applications on the cloud.",
   },
   {
     id: 7,
-    title: cloudinary,
+    title: "Cloudinary",
+    image: cloudinary,
     parcentage: 95,
     description:
       "Cloudinary is a cloud-based platform that enables developers to build, deploy, and manage applications on the cloud.",
@@ -120,174 +129,199 @@ export const others = [
 export const frontend = [
   {
     id: 1,
-    title: html,
+    title: "HTML",
+    image: html,
     parcentage: 95,
     description:
       "HTML is the standard markup language for describing the structure of a document written in a markup language such as HTML.",
   },
   {
     id: 2,
-    title: css,
+    title: "CSS",
+    image: css,
     parcentage: 90,
     description:
       "CSS is a style sheet language used to describe the presentation of a document written in a markup language such as HTML.",
   },
   {
     id: 3,
-    title: js,
+    title: "JavaScript",
+    image: js,
     parcentage: 85,
     description:
       "JavaScript is a high-level, interpreted, object-oriented programming language. It is a scripting language that conforms to the ECMAScript specification.",
   },
   {
     id: 4,
-    title: react,
+    title: "React",
+    image: react,
     parcentage: 90,
     description: "React is a JavaScript library for building user interfaces.",
   },
   {
     id: 5,
-    title: redux,
+    title: "Redux",
+    image: redux,
     parcentage: 90,
     description:
       "Redux is a library for managing state in a Redux application.",
   },
   {
     id: 6,
-    title: next,
+    title: "Next.js",
+    image: next,
     parcentage: 40,
     description:
       "Next.js is a JavaScript framework for building single-page applications.",
   },
   {
     id: 7,
-    title: bootstrap,
+    title: "Bootstrap",
+    image: bootstrap,
     parcentage: 70,
     description:
       "Bootstrap is a front-end framework for developing responsive, mobile first projects on the web.",
   },
   {
     id: 8,
-    title: sass,
+    title: "SASS",
+    image: sass,
     parcentage: 70,
     description:
       "Sass is a preprocessor scripting language that simplifies CSS coding.",
   },
   {
     id: 9,
-    title: tailwind,
+    title: "Tailwind CSS",
+    image: tailwind,
     parcentage: 40,
     description:
       "Tailwind CSS is a utility-first CSS framework with a focus on speed and accessibility.",
   },
   {
     id: 1,
-    title: node,
+    title: "Node.js",
+    image: node,
     parcentage: 85,
     description:
       "Node.js is a JavaScript runtime environment that runs on the server side.",
   },
   {
     id: 2,
-    title: express,
+    title: "Express.js",
+    image: express,
     parcentage: 80,
     description:
       "Express.js is a Node.js framework for building web applications.",
   },
   {
     id: 3,
-    title: mongodb,
+    title: "MongoDB",
+    image: mongodb,
     parcentage: 80,
     description:
       "MongoDB is a document-oriented database that stores and organizes data.",
   },
   {
     id: 4,
-    title: Postgres,
+    title: "PostgreSQL",
+    image: Postgres,
     parcentage: 60,
     description:
       "PostgreSQL is a relational database management system that stores and organizes data.",
   },
   {
     id: 5,
-    title: python,
+    title: "Python",
+    image: python,
     parcentage: 85,
     description:
       "Python is a high-level, interpreted, object-oriented programming language. It is a scripting language that conforms to the ECMAScript specification.",
   },
   {
     id: 6,
-    title: django,
+    title: "Django",
+    image: django,
     parcentage: 75,
     description:
       "Django is an open source web framework for creating web applications.",
   },
   {
     id: 7,
-    title: mysql,
+    title: "MySQL",
+    image: mysql,
     parcentage: 70,
     description:
       "MySQL is a relational database management system that stores and organizes data.",
   },
   {
     id: 1,
-    title: github,
+    title: "GitHub",
+    image: github,
     parcentage: 85,
     description:
       "GitHub is a web-based platform used for version control and collaboration on software development projects. It utilizes the Git version control system, allowing developers to track changes in their code, collaborate with others, and manage their projects efficiently.",
   },
   {
     id: 2,
-    title: git,
+    title: "Git",
+    image: git,
     parcentage: 85,
     description:
       "Git is a distributed version control system used for version control and collaboration on software development projects. It utilizes the Git version control system, allowing developers to track changes in their code, collaborate with others, and manage their projects efficiently.",
   },
   {
     id: 8,
-    title: selenium,
+    title: "Selenium",
+    image: selenium,
     parcentage: 75,
     description:
       "Selenium is a portable framework for testing web applications. Selenium provides a playback tool for authoring functional tests without the need to learn a test scripting language.",
   },
   {
     id: 9,
-    title: beautifulsoup,
+    title: "Beautiful Soup",
+    image: beautifulsoup,
     parcentage: 75,
     description:
       "Beautiful Soup is a Python library for pulling data out of HTML and XML files. It provides Pythonic idioms for iterating, searching, and modifying the parse tree.",
   },
   {
     id: 3,
-    title: aws,
+    title: "AWS",
+    image: aws,
     parcentage: 25,
     description:
       "Amazon Web Services (AWS) is a cloud computing platform that enables developers to build, deploy, and manage applications on the cloud.",
   },
   {
     id: 4,
-    title: docker,
+    title: "Docker",
+    image: docker,
     parcentage: 78,
     description:
       "Docker is an open-source application container platform that enables developers to build, deploy, and manage applications on the cloud.",
   },
   {
     id: 5,
-    title: firebase,
+    title: "Firebase",
+    image: firebase,
     parcentage: 30,
     description:
       "Firebase is a cloud-based platform that enables developers to build, deploy, and manage applications on the cloud.",
   },
   {
     id: 6,
-    title: postman,
+    title: "Postman",
+    image: postman,
     parcentage: 90,
     description:
       "Postman is a free and open-source API testing tool that enables developers to build, deploy, and manage applications on the cloud.",
   },
   {
     id: 7,
-    title: cloudinary,
+    title: "Cloudinary",
+    image: cloudinary,
     parcentage: 95,
     description:
       "Cloudinary is a cloud-based platform that enables developers to build, deploy, and manage applications on the cloud.",
@@ -297,49 +331,56 @@ export const frontend = [
 export const backend = [
   {
     id: 1,
-    title: node,
+    title: "Node.js",
+    image: node,
     parcentage: 85,
     description:
       "Node.js is a JavaScript runtime environment that runs on the server side.",
   },
   {
     id: 2,
-    title: express,
+    title: "Express.js",
+    image: express,
     parcentage: 80,
     description:
       "Express.js is a Node.js framework for building web applications.",
   },
   {
     id: 3,
-    title: mongodb,
+    title: "MongoDB",
+    image: mongodb,
     parcentage: 80,
     description:
       "MongoDB is a document-oriented database that stores and organizes data.",
   },
   {
     id: 4,
-    title: Postgres,
+    title: "PostgreSQL",
+    image: Postgres,
     parcentage: 60,
     description:
       "PostgreSQL is a relational database management system that stores and organizes data.",
   },
   {
     id: 5,
-    title: python,
+    title: "Python",
+    image: python,
     parcentage: 85,
     description:
       "Python is a high-level, interpreted, object-oriented programming language. It is a scripting language that conforms to the ECMAScript specification.",
   },
   {
     id: 6,
-    title: django,
+    title: "Django",
+    image: django,
     parcentage: 75,
     description:
       "Django is an open source web framework for creating web applications.",
   },
   {
     id: 7,
-    title: mysql,
+    title: "MySQL",
+    image: mysql,
     parcentage: 70,
     description:
       "MySQL is a relational database management system that stores and organizes data.",

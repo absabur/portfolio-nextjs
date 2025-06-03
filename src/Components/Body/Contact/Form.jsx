@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -59,7 +59,6 @@ const Form = () => {
       method="POST"
       autoComplete="off"
     >
-      <Toaster richColors position="top-right" />
       <p className="form-subtitle">
         Have a project in mind or just want to say hi? Feel free to reach out!
       </p>

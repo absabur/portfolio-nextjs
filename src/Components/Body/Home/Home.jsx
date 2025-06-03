@@ -27,17 +27,17 @@ const Home = () => {
 
           <p className="home-bio">
             <span className="highlight">Full-Stack Web Developer</span> | Expert
-            in <span className="highlight">JavaScript (MERN Stack)</span> &
+            in <span className="highlight">JavaScript (MERN Stack)</span> & {" "}
             <span className="highlight">Python (Django)</span>. Specializing in
             front-end and back-end development with{" "}
             <span className="highlight">React.js</span>,{" "}
-            <span className="highlight">Next.js</span>,
+            <span className="highlight">Next.js</span>,{" "}
             <span className="highlight">Redux</span>,{" "}
-            <span className="highlight">Django</span>,
+            <span className="highlight">Django</span>,{" "}
             <span className="highlight">MongoDB</span>,{" "}
-            <span className="highlight">MySQL</span>,
+            <span className="highlight">MySQL</span>,{" "}
             <span className="highlight">PostgreSQL</span>,{" "}
-            <span className="highlight">SQLite</span>,
+            <span className="highlight">SQLite</span>,{" "}
             <span className="highlight">Selenium</span>,{" "}
             <span className="highlight">REST APIs</span>, and{" "}
             <span className="highlight">Django REST Framework</span>. Explore my
