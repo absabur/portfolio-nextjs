@@ -52,8 +52,11 @@ const Form = () => {
     <form
       style={{
         background:
-          "linear-gradient(to left, rgba(0, 255, 204, 0.15), rgba(52, 152, 219, 0.15))",
+          "linear-gradient(to left, rgba(52, 152, 219, 0.15), rgba(0, 255, 204, 0.15))",
         color: "var(--color4)",
+        borderLeft: "var(--color1) 5px solid",
+        borderRight: "var(--color5) 5px solid",
+        borderRadius: "20px",
       }}
       onSubmit={handleSubmit}
       method="POST"

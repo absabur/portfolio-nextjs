@@ -76,10 +76,20 @@ const Element = ({ education }) => (
       background:
         "linear-gradient(90deg, rgba(0, 255, 204, 0.15), rgba(52, 152, 219, 0.15))",
       color: "var(--color4)",
+      borderLeft: "var(--color1) 5px solid",
+      borderRight: "var(--color5) 5px solid",
+      borderRadius: "20px"
     }}
-    contentArrowStyle={{ borderRight: "17px solid  var(--color2)" }}
+    contentArrowStyle={{ borderRight: "20px solid  var(--color2)" }}
     date={education.duration}
-    iconStyle={{ background: "var(--color3)", color: "var(--color1)", fontSize: "1.5rem" , display: "flex", alignItems: "center", justifyContent: "center" }}
+    iconStyle={{
+      background: "var(--color3)",
+      color: "var(--color1)",
+      fontSize: "1.5rem",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
     icon={education.icon}
   >
     <h3 className="vertical-timeline-element-title h-3">{education.degree}</h3>

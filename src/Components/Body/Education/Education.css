@@ -24,8 +24,13 @@
   color: white;
   overflow-x: hidden;
   backdrop-filter: blur(2px);
-  
+  padding: 0 10px;
   border-radius: 5px;
+}
+
+.vertical-timeline {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .vertical-timeline--animate .vertical-timeline-element-content.is-hidden {
@@ -46,4 +51,36 @@
 
 .h-4 {
   font-size: 17px;
+}
+.vertical-timeline-element-content {
+  box-shadow: none !important;
+}
+
+.vertical-timeline-element:nth-of-type(even)
+  .vertical-timeline-element-content-arrow {
+  border-right-color: var(--color1) !important;
+}
+
+/* Odd elements */
+.vertical-timeline-element:nth-of-type(odd)
+  .vertical-timeline-element-content-arrow {
+  border-right-color: var(--color5) !important;
+}
+
+@media screen and (max-width: 1169px) {
+  /* Odd elements */
+  .vertical-timeline-element:nth-of-type(odd)
+    .vertical-timeline-element-content-arrow {
+    border-right-color: var(--color1) !important;
+  }
+}
+
+.vertical-timeline-element-date {
+  padding: 5px 20px !important;
+  color: var(--color4);
+  background: var(--color5);
+  border-radius: 5px;
+  margin-top: 10px !important;
+  width: fit-content !important;
+  white-space: nowrap !important;
 }

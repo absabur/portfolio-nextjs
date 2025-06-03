@@ -223,6 +223,7 @@ hr {
   padding: 30px;
   margin-top: 30px;
   border-left: 5px solid var(--color1);
+  border-right: 5px solid var(--color5);
 }
 
 .about-mission-statement p {
@@ -274,10 +275,6 @@ hr {
     font-size: 1.2rem;
   }
 
-  .about-content {
-    padding: 25px;
-  }
-
   .about-skills-container {
     grid-template-columns: 1fr;
   }
@@ -294,10 +291,6 @@ hr {
 
   .about-header p {
     font-size: 1.1rem;
-  }
-
-  .about-content {
-    padding: 20px;
   }
 
   .about-skill-card {

@@ -8,7 +8,7 @@
   border-radius: 5px;
 }
 
-.home-content{
+.home-content {
   width: 50%;
 }
 
@@ -16,19 +16,20 @@
   width: 50%;
   position: relative;
   display: flex;
-  height: 400px;
+  height: 390px;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(2px);
   background: linear-gradient(
     to left,
-    rgba(0, 255, 204, 0.1),
-    rgba(52, 152, 219, 0.1)
+    rgba(52, 152, 219, 0.1),
+    rgba(0, 255, 204, 0.1)
   );
   border-radius: 30px;
   border-left: var(--color1) 5px solid;
   border-right: var(--color5) 5px solid;
 }
+
 
 .home-image img {
   position: absolute;
@@ -179,7 +180,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   border-radius: 20px;
   backdrop-filter: blur(2px);
   padding: 0 10px;
