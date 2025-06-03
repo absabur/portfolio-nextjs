@@ -112,58 +112,58 @@ export const hcjs = [
   //   url: "https://rugby-abs.netlify.app/",
   //   github: "https://github.com/absabur/Rugby",
   // },
-  {
-    title: "Expression Validation",
-    techStack: ["JavaScript", "HTML", "CSS"],
-    description:
-      "This is a expression validation site. User can check email, postcode, credit-card etc formate validation.",
-    image: validation,
-    admin: "",
-    password: "",
-    url: "https://absabur.github.io/Expression-Validation-App/",
-    github: {
-      frontend: "https://github.com/absabur/Expression-Validation-App",
-    },
-  },
-  {
-    title: "Number Guess",
-    techStack: ["JavaScript", "HTML", "CSS"],
-    description:
-      "This is a simple number gussing game, user will get 3 chance to guess a number. It will show some hint also.",
-    image: number_guess,
-    admin: "",
-    password: "",
-    url: "https://absabur.github.io/Number-gussing-game/",
-    github: {
-      frontend: "https://github.com/absabur/Number-gussing-game",
-    },
-  },
-  {
-    title: "Shopping Cart",
-    techStack: ["JavaScript", "HTML", "CSS"],
-    description:
-      "This is a normal add to cart section of an ecommerce website.",
-    image: cart,
-    admin: "",
-    password: "",
-    url: "https://absabur.github.io/A-shopping-Cart-Using-JavaScript/",
-    github: {
-      frontend: "https://github.com/absabur/A-shopping-Cart-Using-JavaScript",
-    },
-  },
-  {
-    title: "Todo App",
-    techStack: ["JavaScript", "HTML", "CSS"],
-    description:
-      "This is a simple todo application that will display a list of tasks. User can add and remove task.",
-    image: todo,
-    admin: "",
-    password: "",
-    url: "https://absabur.github.io/todo-app/",
-    github: {
-      frontend: "https://github.com/absabur/todo-app",
-    },
-  },
+  // {
+  //   title: "Expression Validation",
+  //   techStack: ["JavaScript", "HTML", "CSS"],
+  //   description:
+  //     "This is a expression validation site. User can check email, postcode, credit-card etc formate validation.",
+  //   image: validation,
+  //   admin: "",
+  //   password: "",
+  //   url: "https://absabur.github.io/Expression-Validation-App/",
+  //   github: {
+  //     frontend: "https://github.com/absabur/Expression-Validation-App",
+  //   },
+  // },
+  // {
+  //   title: "Number Guess",
+  //   techStack: ["JavaScript", "HTML", "CSS"],
+  //   description:
+  //     "This is a simple number gussing game, user will get 3 chance to guess a number. It will show some hint also.",
+  //   image: number_guess,
+  //   admin: "",
+  //   password: "",
+  //   url: "https://absabur.github.io/Number-gussing-game/",
+  //   github: {
+  //     frontend: "https://github.com/absabur/Number-gussing-game",
+  //   },
+  // },
+  // {
+  //   title: "Shopping Cart",
+  //   techStack: ["JavaScript", "HTML", "CSS"],
+  //   description:
+  //     "This is a normal add to cart section of an ecommerce website.",
+  //   image: cart,
+  //   admin: "",
+  //   password: "",
+  //   url: "https://absabur.github.io/A-shopping-Cart-Using-JavaScript/",
+  //   github: {
+  //     frontend: "https://github.com/absabur/A-shopping-Cart-Using-JavaScript",
+  //   },
+  // },
+  // {
+  //   title: "Todo App",
+  //   techStack: ["JavaScript", "HTML", "CSS"],
+  //   description:
+  //     "This is a simple todo application that will display a list of tasks. User can add and remove task.",
+  //   image: todo,
+  //   admin: "",
+  //   password: "",
+  //   url: "https://absabur.github.io/todo-app/",
+  //   github: {
+  //     frontend: "https://github.com/absabur/todo-app",
+  //   },
+  // },
   {
     title: "Stop Watch",
     techStack: ["JavaScript", "HTML", "CSS"],
@@ -322,32 +322,32 @@ export const react = [
       frontend: "https://github.com/absabur/bpi_routine",
     },
   },
-  {
-    title: "Hotel Booking App",
-    techStack: ["React", "Firebase"],
-    description:
-      "It is hotel room booking site. There are different categories of room that user can book. Backend data is stored on firbase realtime database.",
-    image: hotel,
-    admin: "absabur929@gmail.com",
-    password: "123456",
-    url: "https://abs-hotel.vercel.app/",
-    github: {
-      frontend: "https://github.com/absabur/abs-hotel",
-    },
-  },
-  {
-    title: "Photo Gallery",
-    techStack: ["React", "Firebase"],
-    description:
-      "This is a photo gallery website. User can give feedback to any photo.",
-    image: gallery,
-    admin: "abs@gmail.com",
-    password: "123456",
-    url: "https://abs-photo-gallery.vercel.app/gallery",
-    github: {
-      frontend: "https://github.com/absabur/photo-gallery",
-    },
-  },
+  // {
+  //   title: "Hotel Booking App",
+  //   techStack: ["React", "Firebase"],
+  //   description:
+  //     "It is hotel room booking site. There are different categories of room that user can book. Backend data is stored on firbase realtime database.",
+  //   image: hotel,
+  //   admin: "absabur929@gmail.com",
+  //   password: "123456",
+  //   url: "https://abs-hotel.vercel.app/",
+  //   github: {
+  //     frontend: "https://github.com/absabur/abs-hotel",
+  //   },
+  // },
+  // {
+  //   title: "Photo Gallery",
+  //   techStack: ["React", "Firebase"],
+  //   description:
+  //     "This is a photo gallery website. User can give feedback to any photo.",
+  //   image: gallery,
+  //   admin: "abs@gmail.com",
+  //   password: "123456",
+  //   url: "https://abs-photo-gallery.vercel.app/gallery",
+  //   github: {
+  //     frontend: "https://github.com/absabur/photo-gallery",
+  //   },
+  // },
   // {
   //   title: "Gericht",
   // techStack: [],
