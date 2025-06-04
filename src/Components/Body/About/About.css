@@ -21,7 +21,7 @@
   border-radius: 20px;
   overflow: hidden;
   backdrop-filter: blur(2px);
-  padding: 10px;
+  padding: 0 10px;
 }
 
 
@@ -81,7 +81,7 @@
 }
 
 .about-skill-card {
-  background: rgba(41, 128, 185, 0.15);
+  background: rgba(52, 152, 219, 0.15);
   border-radius: 15px;
   padding: 25px;
   transition: all 0.3s ease;

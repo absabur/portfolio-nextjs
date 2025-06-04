@@ -30,7 +30,6 @@
   border-right: var(--color5) 5px solid;
 }
 
-
 .home-image img {
   position: absolute;
   top: 45%;
@@ -149,9 +148,6 @@
   }
   .content .h2 {
     display: block;
-    text-align: center;
-  }
-  .home-bio {
     text-align: center;
   }
 }
@@ -313,4 +309,45 @@
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* Global Styles */
+.role-scroller-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.role-scroller-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 10px; /* Prevents clipping */
+}
+
+.role-scroller-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Role Tag Styling */
+.role-tag {
+  scroll-snap-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  background: linear-gradient(145deg, rgba(52, 152, 219, 0.15));
+  color: white;
+  font-weight: 600;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  min-width: fit-content;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+/* Active (Centered) Tag Highlight */
+.role-tag.active {
+  background: linear-gradient(145deg, var(--color5), var(--color1));
+  box-shadow: 0 10px 25px -5px rgba(0, 255, 204, 0.15);
+  color: var(--color3);
 }

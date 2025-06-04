@@ -1,9 +1,9 @@
-import Marquee from "react-fast-marquee";
 import "./Home.css";
 
 import SocialClient from "./SocialClient.js";
 import Icons from "./Icons";
 import SectionsHead from "../SectionsTop";
+import RoleScroller from "./AutoScroll";
 
 // const image = "https://res.cloudinary.com/dh96uxb54/image/upload/v1714625498/skills/me_fmuyx1.png"
 
@@ -18,16 +18,12 @@ const Home = () => {
           <h1 className="home-name">Md Abdus Sabur</h1>
 
           <div className="home-roles">
-            <Marquee speed={100} pauseOnHover>
-              <div className="role-tag">Frontend Developer</div>
-              <div className="role-tag">Backend Developer</div>
-              <div className="role-tag">FullStack Developer</div>
-            </Marquee>
+            <RoleScroller />
           </div>
 
           <p className="home-bio">
             <span className="highlight">Full-Stack Web Developer</span> | Expert
-            in <span className="highlight">JavaScript (MERN Stack)</span> & {" "}
+            in <span className="highlight">JavaScript (MERN Stack)</span> &{" "}
             <span className="highlight">Python (Django)</span>. Specializing in
             front-end and back-end development with{" "}
             <span className="highlight">React.js</span>,{" "}

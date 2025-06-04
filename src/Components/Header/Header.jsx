@@ -15,7 +15,7 @@ import usePageMetrics from "./usePageMetrics";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("home");
-  const [lessScroll] = useState(50);
+  const [lessScroll] = useState(20);
   const { scrollbarWidth } = usePageMetrics();
 
   useEffect(() => {
