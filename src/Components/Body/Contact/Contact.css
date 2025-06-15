@@ -222,6 +222,6 @@
   filter: grayscale(1) invert(1);
 }
 
-.dark .mapbox iframe {
+.light .mapbox iframe {
   filter: grayscale(0) invert(0);
 }

@@ -14,7 +14,7 @@
   --font-alt: "Open Sans", sans-serif;
 }
 
-.dark{
+.light{
   --color1: #00a2ff;
   --color2: #1d2127;
   --color3: #ebf4ff;
@@ -191,21 +191,21 @@ code {
 }
 
 /* Dark mode styles */
-.dark .theme-toggle-track {
+.light .theme-toggle-track {
   background: var(--color1-opacity-15);
 }
 
-.dark .theme-toggle-thumb {
+.light .theme-toggle-thumb {
   background: var(--color5);
   transform: translateX(calc(var(--size) - var(--thumb-size) - var(--padding) * 2.5));
 }
 
-.dark .theme-toggle-icon.sun {
+.light .theme-toggle-icon.sun {
   opacity: 0;
   transform: scale(0.8) rotate(90deg);
 }
 
-.dark .theme-toggle-icon.moon {
+.light .theme-toggle-icon.moon {
   opacity: 1;
   transform: scale(1) rotate(0deg);
   color: var(--color6);

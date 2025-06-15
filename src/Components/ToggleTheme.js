@@ -11,17 +11,19 @@ export default function ThemeToggle() {
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
+    console.log(prefersDark)
     const defaultTheme = savedTheme || (prefersDark ? "dark" : "light");
+    console.log(defaultTheme)
 
     setTheme(defaultTheme);
-    document.documentElement.classList.toggle("dark", defaultTheme === "dark");
+    document.documentElement.classList.toggle("light", defaultTheme === "light");
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    document.documentElement.classList.toggle("light", newTheme === "light");
   };
 
   return (
