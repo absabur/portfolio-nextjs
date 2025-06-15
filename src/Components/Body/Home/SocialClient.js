@@ -13,7 +13,7 @@ const SocialClient = () => {
                 "_blank"
               )
             }
-            className="button2 social-link"
+            className="button1 social-link"
           >
             <FaLinkedin /> LinkedIn
           </button>
@@ -21,7 +21,7 @@ const SocialClient = () => {
             
             
             onClick={() => window.open("https://github.com/absabur", "_blank")}
-            className="button2 social-link"
+            className="button1 social-link"
           >
             <FaGithubSquare /> GitHub
           </button>

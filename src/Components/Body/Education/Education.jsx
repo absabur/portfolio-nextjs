@@ -74,7 +74,7 @@ const Element = ({ education }) => (
     className="vertical-timeline-element--work"
     contentStyle={{
       background:
-        "linear-gradient(90deg, rgba(0, 255, 204, 0.15), rgba(52, 152, 219, 0.15))",
+        "linear-gradient(90deg, var(--color1-opacity-15), var(--color5-opacity-15))",
       color: "var(--color4)",
       borderLeft: "var(--color1) 5px solid",
       borderRight: "var(--color5) 5px solid",

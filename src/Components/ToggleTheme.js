@@ -1,32 +1,46 @@
 "use client";
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa6";
 
-function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(false);
+export default function ThemeToggle() {
+  const [theme, setTheme] = useState("light");
 
-  const handleToggle = () => {
-    setDarkMode(!darkMode);
-    toggleTheme(!darkMode);
+  useEffect(() => {
+    // Check saved theme or system preference
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    const defaultTheme = savedTheme || (prefersDark ? "dark" : "light");
+
+    setTheme(defaultTheme);
+    document.documentElement.classList.toggle("dark", defaultTheme === "dark");
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
-  const toggleTheme = (isDark) => {
-    const root = document.documentElement;
-    if (isDark) {
-      root.style.setProperty("--color1", "#00ffcc");
-      root.style.setProperty("--color2", "#c7daff");
-      root.style.setProperty("--color3", "#001129");
-      root.style.setProperty("--color4", "#ffffff");
-      root.style.setProperty("--color5", "#3498db");
-    } else {
-      root.style.setProperty("--color1", "#222831");
-      root.style.setProperty("--color2", "#00021a");
-      root.style.setProperty("--color3", "#ffffff");
-      root.style.setProperty("--color4", "#000000");
-      root.style.setProperty("--color5", "#6fcf97");
-    }
-  };
-
-  return <button onClick={handleToggle}>Toggle Theme</button>;
+  return (
+    <button
+      className="theme-toggle"
+      onClick={toggleTheme}
+      aria-label="Toggle theme"
+    >
+      <span className="theme-toggle-sr">Toggle dark/light mode</span>
+      <div className="theme-toggle-track">
+        <span className="theme-toggle-thumb">
+          <span className="theme-toggle-icon sun">
+            <FaSun />
+          </span>
+          <span className="theme-toggle-icon moon">
+            <FaMoon />
+          </span>
+        </span>
+      </div>
+    </button>
+  );
 }
-
-export default ThemeToggle;

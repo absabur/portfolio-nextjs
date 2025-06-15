@@ -129,9 +129,9 @@ const Header = () => {
       <div className="header-div">
         <header className="inner-header">
           <a className="logo-name" href="/">
-            <span style={{ color: "var(--color1)" }}>{`{`}</span>
+            {/* <span style={{ color: "var(--color1)" }}>{`{`}</span> */}
             ABS
-            <span style={{ color: "var(--color1)" }}>{`}`}</span>
+            {/* <span style={{ color: "var(--color1)" }}>{`}`}</span> */}
           </a>
           <Tooltip
             style={{

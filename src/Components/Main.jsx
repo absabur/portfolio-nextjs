@@ -5,12 +5,12 @@ import Education from "./Body/Education/Education";
 import Contact from "./Body/Contact/Contact";
 import Project2 from "./Body/Projects2/Project2";
 import { Toaster } from "sonner";
-// import ThemeToggle from "./ToggleTheme";
+import ThemeToggle from "./ToggleTheme";
 
 const Main = () => {
   return (
     <div className="main container">
-      {/* <ThemeToggle /> */}
+      <ThemeToggle />
       <Toaster richColors position="top-right" />
       <Home />
       <About />

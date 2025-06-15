@@ -22,8 +22,8 @@
   backdrop-filter: blur(2px);
   background: linear-gradient(
     to left,
-    rgba(52, 152, 219, 0.1),
-    rgba(0, 255, 204, 0.1)
+    var(--color5-opacity-15),
+    var(--color1-opacity-15)
   );
   border-radius: 30px;
   border-left: var(--color1) 5px solid;
@@ -208,13 +208,12 @@
 
 .role-tag {
   display: inline-block;
-  background: rgba(52, 152, 219, 0.2);
   color: var(--color5);
   padding: 8px 20px;
   border-radius: 30px;
   font-size: 1.2rem;
   font-weight: 600;
-  border: 1px solid rgba(52, 152, 219, 0.5);
+  border: 1px solid var(--color5);
   margin: 0 10px;
   white-space: nowrap;
 }
@@ -336,8 +335,8 @@
   scroll-snap-align: center;
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  background: linear-gradient(145deg, rgba(52, 152, 219, 0.15));
-  color: white;
+  background: linear-gradient(145deg, var(--color5-opacity-15));
+  color: var(--color4);
   font-weight: 600;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   min-width: fit-content;
@@ -348,6 +347,6 @@
 /* Active (Centered) Tag Highlight */
 .role-tag.active {
   background: linear-gradient(145deg, var(--color5), var(--color1));
-  box-shadow: 0 10px 25px -5px rgba(0, 255, 204, 0.15);
+  box-shadow: 0 10px 25px -5px var(--color1-opacity-15);
   color: var(--color3);
 }
