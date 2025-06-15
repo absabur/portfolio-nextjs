@@ -207,7 +207,7 @@
   width: 100%;
   border-radius: 16px;
   margin-top: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(126, 126, 126, 0.3);
   overflow: hidden;
 }
 
@@ -220,4 +220,8 @@
   height: 100%;
   border: none;
   filter: grayscale(1) invert(1);
+}
+
+.dark .mapbox iframe {
+  filter: grayscale(0) invert(0);
 }
