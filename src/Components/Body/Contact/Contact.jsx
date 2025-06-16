@@ -28,7 +28,7 @@ const Contact = () => {
               <span className="link-head">Address</span>
               <span
                 className="copy-text"
-                style={{ color: "white", cursor: "default" }}
+                style={{ cursor: "default" }}
               >
                 Johurul Nagar, Bogura Sadar, Bogura, Bangladesh - (5800)
               </span>

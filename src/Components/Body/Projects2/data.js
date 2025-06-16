@@ -249,7 +249,7 @@ export const hcjs = [
 
 export const mern = [
   {
-    title: "LMS User",
+    title: "Library Management System",
     techStack: ["Next.js", "Node.js", "Express", "MongoDB"],
     description:
       "This a Library Management System. Students and Teachers can borrow books and return them.",
@@ -263,7 +263,7 @@ export const mern = [
     },
   },
   {
-    title: "LMS Admin Panel",
+    title: "Library Management System Admin",
     techStack: ["Next.js", "Node.js", "Express", "MongoDB"],
     description:
       "This a Library Management System. Admin can add books, approve students and teachers, create students and teachers account and manage all the books.",

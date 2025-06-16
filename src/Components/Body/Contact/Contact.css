@@ -65,8 +65,12 @@
   transition: all 0.3s;
   font-size: 17px;
   cursor: pointer;
+}
+
+.project .copy-text{
   color: black;
 }
+
 .copy-component {
   position: relative;
   width: 100%;
@@ -94,7 +98,7 @@
   margin-top: 4px;
 }
 .copy-text:hover {
-  color: var(--color1);
+  color: var(--color5);
 }
 
 .link-head {

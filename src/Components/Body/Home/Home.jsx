@@ -22,10 +22,10 @@ const Home = () => {
           </div>
 
           <p className="home-bio">
-            <span className="highlight">Full-Stack Web Developer</span> | Expert
+            <span className="highlight">Full-Stack Web Developer</span>. Expert
             in <span className="highlight">JavaScript (MERN Stack)</span> &{" "}
             <span className="highlight">Python (Django)</span>. Specializing in
-            front-end and back-end development with{" "}
+            front-end and back-end development. Skilled in{" "}
             <span className="highlight">React.js</span>,{" "}
             <span className="highlight">Next.js</span>,{" "}
             <span className="highlight">Redux</span>,{" "}
