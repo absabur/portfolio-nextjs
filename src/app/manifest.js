@@ -15,7 +15,7 @@ export default function manifest() {
         type: "image/x-icon",
       },
       {
-        src: "me.png",
+        src: "Md_Abdus_Sabur.png",
         sizes: "1410x1410",
         type: "image/png",
         purpose: "any"

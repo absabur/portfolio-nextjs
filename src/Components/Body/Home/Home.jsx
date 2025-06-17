@@ -50,8 +50,8 @@ const Home = () => {
             <Icons />
             <div className="hexagon image-hexa">
               <img
-                src="/me.png"
-                alt="Md Abdus Sabur"
+                src="/Md_Abdus_Sabur.png"
+                alt="Md Abdus Sabur | Full Stack Developer"
                 width={220}
                 height={220}
               />
