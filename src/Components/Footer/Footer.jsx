@@ -17,7 +17,7 @@ const socialMediaLinks = [
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/in/md-abdus-sabur-engineer/",
+    url: "https://www.linkedin.com/in/ab-sabur/",
     icon: <FaLinkedin />,
   },
   {

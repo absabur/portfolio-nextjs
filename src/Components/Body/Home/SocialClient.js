@@ -9,7 +9,7 @@ const SocialClient = () => {
           <button          
             onClick={() =>
               window.open(
-                "https://www.linkedin.com/in/md-abdus-sabur-engineer/",
+                "https://www.linkedin.com/in/ab-sabur/",
                 "_blank"
               )
             }
