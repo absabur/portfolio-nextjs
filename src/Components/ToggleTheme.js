@@ -8,12 +8,12 @@ export default function ThemeToggle() {
   useEffect(() => {
     // Check saved theme or system preference
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    console.log(prefersDark)
-    const defaultTheme = savedTheme || (prefersDark ? "dark" : "light");
-    console.log(defaultTheme)
+    
+    // const prefersDark = window.matchMedia(
+    //   "(prefers-color-scheme: dark)"
+    // ).matches;
+    
+    const defaultTheme = savedTheme || "dark"
 
     setTheme(defaultTheme);
     document.documentElement.classList.toggle("light", defaultTheme === "light");
