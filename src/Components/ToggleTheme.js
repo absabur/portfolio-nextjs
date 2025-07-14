@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa6";
+import { IoSunny } from "react-icons/io5";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState("light");
@@ -8,15 +9,22 @@ export default function ThemeToggle() {
   useEffect(() => {
     // Check saved theme or system preference
     const savedTheme = localStorage.getItem("theme");
-    
-    // const prefersDark = window.matchMedia(
-    //   "(prefers-color-scheme: dark)"
-    // ).matches;
-    
-    const defaultTheme = savedTheme || "dark"
+
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    const defaultTheme = savedTheme
+      ? savedTheme
+      : prefersDark
+      ? "dark"
+      : "light" || "light";
 
     setTheme(defaultTheme);
-    document.documentElement.classList.toggle("light", defaultTheme === "light");
+    document.documentElement.classList.toggle(
+      "light",
+      defaultTheme === "light"
+    );
   }, []);
 
   const toggleTheme = () => {
@@ -36,7 +44,7 @@ export default function ThemeToggle() {
       <div className="theme-toggle-track">
         <span className="theme-toggle-thumb">
           <span className="theme-toggle-icon sun">
-            <FaSun />
+            <IoSunny fontSize={20}/>
           </span>
           <span className="theme-toggle-icon moon">
             <FaMoon />

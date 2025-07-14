@@ -77,8 +77,8 @@
 
 .vertical-timeline-element-date {
   padding: 5px 20px !important;
-  color: var(--color4);
-  background: var(--color5);
+  color: var(--color3);
+  background: var(--color1);
   border-radius: 5px;
   margin-top: 10px !important;
   width: fit-content !important;

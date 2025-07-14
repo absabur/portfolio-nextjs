@@ -5,6 +5,7 @@ import { FaKey } from "react-icons/fa";
 import { RiAdminFill } from "react-icons/ri";
 import { IoIosMailOpen } from "react-icons/io";
 import Copy from "../Contact/Copy";
+import { FaLink, FaSquareGithub } from "react-icons/fa6";
 
 const FancyProjectCard = ({
   title,
@@ -28,7 +29,7 @@ const FancyProjectCard = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              🌐 Live
+              <FaLink /> Live
             </Link>
             <Link
               className="button1 social-link"
@@ -36,7 +37,7 @@ const FancyProjectCard = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              💻 Frontend
+              <FaSquareGithub /> Frontend
             </Link>
             {backendUrl && (
               <Link
@@ -45,7 +46,7 @@ const FancyProjectCard = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ⚙️ Backend
+                <FaSquareGithub /> Backend
               </Link>
             )}
           </div>

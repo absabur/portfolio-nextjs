@@ -4,7 +4,7 @@ import Main from "@/Components/Main";
 
 export default function Home() {
   return (
-    <>
+    <div className="design-bg">
       <Header />
       <Main />
       <Footer />
@@ -14,6 +14,6 @@ export default function Home() {
           backgroundColor: "transpatrent",
         }}
       ></div>
-    </>
+    </div>
   );
 }
