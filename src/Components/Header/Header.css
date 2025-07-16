@@ -37,10 +37,10 @@
   justify-content: space-around;
   align-items: center;
   color: white;
-  width: 100%;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(20px);
   background-color: var(--color1-opacity-15);
   border: 1px solid var(--color1);
+  padding: 0 20px;
 }
 
 .inner-header nav {
@@ -54,59 +54,56 @@
   color: var(--color4);
   margin: 0 5px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 500;
   transition: all 0.3s;
-  transition: transform 0.3s ease-out, color 0.2s;
-  background-color: var(--color1-opacity-15);
+  transition: transform 0.3s ease-out, background-color 0.2s;
+  background-color: var(--color5-opacity-15);
   border: none;
   outline: none;
   height: 35px;
-  width: 35px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: perspective(30px) rotate3d(1, 0, 0, 30deg) translateY(-3px);
+  gap: 5px;
   cursor: pointer;
+}
+
+#tooltip{
+  display: none;
 }
 
 .nav-active-icon {
   animation: activetab 0.5s linear forwards !important;
-  transform: none;
 }
 
-.logo-name {
-  font-size: 25px;
-  font-weight: 700;
-  border-radius: 10px;
-  color: var(--color4);
-  padding: 0 5px;
-  text-decoration: none;
-  transition: all 0.3s;
-  background-color: var(--color1-opacity-15);
-  padding: 0px 10px;
-}
-.logo-name:hover {
-  color: var(--color1);
-}
+
 .nav-bar-icons:hover {
-  color: var(--color1);
+  background-color: var(--color1-opacity-15);
 }
 
-@media screen and (max-width: 600px) {
-  .logo-name {
-    display: none;
-  }
+@media screen and (max-width: 640px) {
   .inner-header nav {
     padding: 5px 0;
     margin: 0;
   }
   .inner-header {
-    border-radius: 20px 20px 0 0;
+    border-radius: 0;
+    width: 100%;
   }
   .header-div {
     bottom: 0;
     padding: 0;
+  }
+  .nav-details{
+    display: none;
+  }
+  .nav-bar-icons{
+    font-size: 20px;
+  }
+  #tooltip{
+    display: block;
   }
 }
 

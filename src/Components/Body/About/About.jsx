@@ -4,6 +4,7 @@ import SectionsHead from "../SectionsTop";
 import "./About.css";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { HiPaintBrush } from "react-icons/hi2";
+import { FiDatabase } from "react-icons/fi";
 
 const About = () => {
   return (
@@ -44,11 +45,26 @@ const About = () => {
                 <div className="about-skill-icon">
                   <FaCode />
                 </div>
-                Web Development
+                Frontend Development
               </div>
               <div className="about-skill-content">
                 Specializing in the{" "}
-                <span className="about-highlight">MERN</span> stack and{" "}
+                <span className="about-highlight">React.js</span> and{" "}
+                <span className="about-highlight">Next.js</span>, I excel in
+                building scalable and efficient web applications.
+              </div>
+            </div>
+
+            <div className="about-skill-card">
+              <div className="about-skill-title">
+                <div className="about-skill-icon">
+                  <FiDatabase />
+                </div>
+                Backend Development
+              </div>
+              <div className="about-skill-content">
+                Experience in{" "}
+                <span className="about-highlight">Node</span>{", "}<span className="about-highlight">Express</span> and{" "}
                 <span className="about-highlight">Django</span>, I excel in
                 building scalable and efficient web applications.
               </div>
@@ -63,21 +79,8 @@ const About = () => {
               </div>
               <div className="about-skill-content">
                 Proficient in extracting valuable insights and data using tools
-                like <span className="about-highlight">Selenium</span> and{" "}
+                like <span className="about-highlight">Python</span>{", "}<span className="about-highlight">Selenium</span> and{" "}
                 <span className="about-highlight">Beautiful Soup</span>.
-              </div>
-            </div>
-
-            <div className="about-skill-card">
-              <div className="about-skill-title">
-                <div className="about-skill-icon">
-                  <FaRobot />
-                </div>
-                Automation
-              </div>
-              <div className="about-skill-content">
-                Experience in automating tasks and processes to enhance
-                efficiency and productivity.
               </div>
             </div>
 

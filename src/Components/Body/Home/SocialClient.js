@@ -21,7 +21,7 @@ const SocialClient = () => {
             
             
             onClick={() => window.open("https://github.com/absabur", "_blank")}
-            className="button1 social-link"
+            className="button2 social-link"
           >
             <FaGithubSquare /> GitHub
           </button>

@@ -128,11 +128,6 @@ const Header = () => {
       </div>
       <div className="header-div">
         <header className="inner-header">
-          <a className="logo-name" href="/">
-            {/* <span style={{ color: "var(--color1)" }}>{`{`}</span> */}
-            ABS
-            {/* <span style={{ color: "var(--color1)" }}>{`}`}</span> */}
-          </a>
           <Tooltip
             style={{
               fontSize: "17px",
@@ -153,7 +148,7 @@ const Header = () => {
                   activeSection === item.section && "nav-active-icon"
                 }`}
               >
-                {item.icon}
+                {item.icon} <span className="nav-details">{item.label}</span>
               </button>
             ))}
           </nav>
