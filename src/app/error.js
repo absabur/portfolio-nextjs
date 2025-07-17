@@ -1,43 +1,55 @@
 "use client";
+
+import { useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import Head from "next/head";
+import "./error.css"
 
-export default function Error() {
-  const router = useRouter();
-
-  const reset = () => {
-    // Define your reset logic here, such as resetting state or performing any necessary actions
-    // For example, you can reload the current page
-    router.reload();
-  };
+export default function page({ error, reset }) {
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
 
   return (
-    <div className="error-body">
-      <div className="sw-error-page-container">
-        <div className="sw-error-page-content">
-          <h1 className="sw-error-page-title">Oops!</h1>
-          <h2 className="sw-error-page-subtitle">Something Went Wrong</h2>
-          <p className="sw-error-page-text">
-            We are sorry, but something went wrong. Please try again later or
-            contact support if the problem persists.
+    <>
+      <Head>
+        <title>Oops! Something went wrong</title>
+      </Head>
+      <div className="error-container">
+        <div className="error-content">
+          <div className="error-graphic">
+            <div className="error-orb"></div>
+            <div className="error-pulse"></div>
+            <div className="error-shards">
+              {[...Array(8)].map((_, i) => (
+                <div key={i} className="error-shard"></div>
+              ))}
+            </div>
+          </div>
+          <h1 className="error-title">Oops! Something went wrong</h1>
+          <p className="error-message">
+            We encountered an unexpected error. Please try again or contact
+            support if the problem persists.
           </p>
-          <button
-            style={{ marginBottom: "20px" }}
-            className="sw-error-page-button"
-            onClick={reset}
-          >
-            Try again
-          </button>
-          <br />
-          <Link
-            style={{ backgroundColor: "green" }}
-            href="/"
-            className="sw-error-page-button"
-          >
-            Return to Homepage
-          </Link>
+          <div className="error-actions">
+            <button onClick={() => reset()} className="error-button primary">
+              Try Again
+            </button>
+            <Link href="/" className="error-button secondary">
+              Return Home
+            </Link>
+          </div>
+          {error.digest && (
+            <div className="error-details">
+              <details>
+                <summary>Error Details</summary>
+                <code>{error.message}</code>
+                <p className="error-digest">Error digest: {error.digest}</p>
+              </details>
+            </div>
+          )}
         </div>
       </div>
-    </div>
+    </>
   );
 }

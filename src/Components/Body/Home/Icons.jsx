@@ -211,7 +211,7 @@ const Icons = () => {
           key={index}
           style={{
             opacity: 1,
-            transition: "all 2s linear",
+            transition: "top 2s linear, left 2s linear, color 0.2s linear",
             position: "absolute",
             top: pos[index].top + "%",
             left: pos[index].left + "%",

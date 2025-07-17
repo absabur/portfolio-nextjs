@@ -24,29 +24,38 @@ const FancyProjectCard = ({
         <div className={styles.overlay}>
           <div className="project-links">
             <Link
-              className="button2 social-link"
+              className="liquid-gradient-button"
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLink /> Live
+              <span className="liquid-text">
+                <FaLink /> Live
+              </span>
+              <div className="liquid-overlay"></div>
             </Link>
             <Link
-              className="button1 social-link"
+              className="neon-glow-button"
               href={frontendUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaSquareGithub /> Frontend
+              <span className="neon-text">
+                <FaSquareGithub /> Frontend
+              </span>
+              <span className="neon-border"></span>
             </Link>
             {backendUrl && (
               <Link
-                className="button1 social-link"
+                className="neon-glow-button"
                 href={backendUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaSquareGithub /> Backend
+                <span className="neon-text">
+                  <FaSquareGithub /> Backend
+                </span>
+                <span className="neon-border"></span>
               </Link>
             )}
           </div>

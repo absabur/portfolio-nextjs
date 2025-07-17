@@ -81,32 +81,7 @@
   margin-bottom: 30px;
 }
 
-.social-icons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
 
-.social-icons .social-link{
-  padding: 20px 30px !important;
-  font-size: 20px;
-}
-
-.social-link {
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.social-link svg {
-  font-size: 20px;
-  margin-right: 5px;
-}
 .cv-download {
   width: 100%;
   display: flex;

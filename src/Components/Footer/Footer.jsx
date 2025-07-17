@@ -40,7 +40,7 @@ const socialMediaLinks = [
 const Footer = () => {
   return (
     <div className="footer-section">
-      <div className="social-links footer-icons">
+      <div className="footer-icons">
         <div className="sec-1">
           {socialMediaLinks.map((link, index) => (
             <div

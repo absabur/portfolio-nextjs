@@ -106,7 +106,7 @@ const Form = () => {
       </div>
       <div className="buttons">
         <button
-          className="button2"
+          className="liquid-gradient-button"
           type="reset"
           onClick={() => {
             setEmail("");
@@ -114,10 +114,12 @@ const Form = () => {
             setName("");
           }}
         >
-          Reset
+          <span className="liquid-text">Reset</span>
+          <div className="liquid-overlay"></div>
         </button>
-        <button className="button1" type="submit">
-          Send Message
+        <button className="neon-glow-button" type="submit">
+          <span className="neon-text">Send Message</span>
+          <span className="neon-border"></span>
         </button>
       </div>
     </form>

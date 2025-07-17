@@ -1,0 +1,221 @@
+.not-found-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color6);
+  color: var(--color2);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 2rem;
+}
+
+.not-found-content {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.not-found-graphic {
+  position: relative;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
+.not-found-orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    var(--color1) 0%,
+    var(--color5) 70%,
+    transparent 100%
+  );
+  box-shadow: 0 0 40px var(--color1-opacity-15);
+  animation: float 6s ease-in-out infinite;
+}
+
+.not-found-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid var(--color1);
+  opacity: 0;
+  animation: pulse 4s ease-out infinite;
+}
+
+.not-found-shards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.not-found-shard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color1);
+  opacity: 0;
+}
+
+.not-found-shard:nth-child(1) {
+  transform: translate(0, -80px);
+  animation: shard 3s ease-in-out infinite;
+}
+.not-found-shard:nth-child(2) {
+  transform: translate(56.6px, -56.6px);
+  animation: shard 3.2s ease-in-out infinite 0.2s;
+}
+.not-found-shard:nth-child(3) {
+  transform: translate(80px, 0);
+  animation: shard 3.4s ease-in-out infinite 0.4s;
+}
+.not-found-shard:nth-child(4) {
+  transform: translate(56.6px, 56.6px);
+  animation: shard 3.6s ease-in-out infinite 0.6s;
+}
+.not-found-shard:nth-child(5) {
+  transform: translate(0, 80px);
+  animation: shard 3.8s ease-in-out infinite 0.8s;
+}
+.not-found-shard:nth-child(6) {
+  transform: translate(-56.6px, 56.6px);
+  animation: shard 4s ease-in-out infinite 1s;
+}
+.not-found-shard:nth-child(7) {
+  transform: translate(-80px, 0);
+  animation: shard 4.2s ease-in-out infinite 1.2s;
+}
+.not-found-shard:nth-child(8) {
+  transform: translate(-56.6px, -56.6px);
+  animation: shard 4.4s ease-in-out infinite 1.4s;
+}
+
+.not-found-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color1);
+  opacity: 0.7;
+}
+
+.not-found-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color4);
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--color1), var(--color2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.not-found-message {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--color2);
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.not-found-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.not-found-button.primary {
+  background-color: var(--color1);
+  color: var(--color3);
+}
+
+.not-found-button.primary:hover {
+  background-color: var(--color4);
+  box-shadow: 0 0 20px var(--color1-opacity-15);
+  transform: translateY(-2px);
+}
+
+.not-found-button.secondary {
+  background-color: transparent;
+  color: var(--color2);
+  border: 2px solid var(--color5);
+}
+
+.not-found-button.secondary:hover {
+  background-color: var(--color5-opacity-03);
+  border-color: var(--color1);
+  color: var(--color1);
+  box-shadow: 0 0 20px var(--color5-opacity-15);
+  transform: translateY(-2px);
+}
+
+/* Reuse the same animations from error page */
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes shard {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

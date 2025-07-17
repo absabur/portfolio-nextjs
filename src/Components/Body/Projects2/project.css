@@ -219,9 +219,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
-  background-color: var(--color5);
-  color: var(--color3);
 }
 
 .project-links a svg {
