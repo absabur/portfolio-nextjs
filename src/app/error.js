@@ -1,15 +1,9 @@
 "use client";
-
-import { useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
-import "./error.css"
+import "./error.css";
 
 export default function page({ error, reset }) {
-  useEffect(() => {
-    console.error(error);
-  }, [error]);
-
   return (
     <>
       <Head>

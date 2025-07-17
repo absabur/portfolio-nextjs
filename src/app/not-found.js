@@ -1,7 +1,7 @@
 // app/not-found.js
 import Link from "next/link";
 import Head from "next/head";
-import "./notfound.css"
+import "./notfound.css";
 
 export default function NotFound() {
   return (
@@ -23,7 +23,8 @@ export default function NotFound() {
           </div>
           <h1 className="not-found-title">Page Not Found</h1>
           <p className="not-found-message">
-            The page you're looking for doesn't exist or has been moved.
+            The page you&apos;re looking for doesn&apos;t exist or has been
+            moved.
           </p>
           <div className="not-found-actions">
             <Link href="/" className="not-found-button primary">
