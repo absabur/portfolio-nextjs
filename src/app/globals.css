@@ -163,6 +163,7 @@ code {
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   animation: borderGlow 3s linear infinite;
+  transition: background 0.3s;
 }
 
 .neon-glow-button:hover {
@@ -170,6 +171,7 @@ code {
     0 0 30px var(--color5-opacity-15);
   transform: translateY(-3px);
 }
+
 
 @keyframes borderGlow {
   0% {

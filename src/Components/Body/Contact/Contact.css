@@ -73,7 +73,7 @@
 
 .copy-component {
   position: relative;
-  width: 100%;
+  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -98,7 +98,7 @@
   margin-top: 4px;
 }
 .copy-text:hover {
-  color: var(--color5);
+  color: var(--color1);
 }
 
 .link-head {
