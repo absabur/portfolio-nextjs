@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
-import Head from "next/head";
 import "./error.css";
+
+export const metadata = {
+  title: "Oops! Something went wrong",
+};
 
 export default function page({ error, reset }) {
   return (
     <>
-      <Head>
-        <title>Oops! Something went wrong</title>
-      </Head>
       <div className="error-container">
         <div className="error-content">
           <div className="error-graphic">

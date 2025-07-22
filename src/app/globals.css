@@ -69,7 +69,7 @@ code {
 .main {
   margin: auto;
   padding: 10px !important;
-  max-width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 100px;
@@ -100,6 +100,10 @@ code {
       transparent 4px
     );
   background-size: 24px 24px, 24px 24px, 8px 8px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 500px) {
@@ -171,7 +175,6 @@ code {
     0 0 30px var(--color5-opacity-15);
   transform: translateY(-3px);
 }
-
 
 @keyframes borderGlow {
   0% {

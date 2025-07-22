@@ -1,14 +1,14 @@
 // app/not-found.js
 import Link from "next/link";
-import Head from "next/head";
 import "./notfound.css";
+
+export const metadata = {
+  title: "Page Not Found",
+};
 
 export default function NotFound() {
   return (
     <>
-      <Head>
-        <title>Page Not Found</title>
-      </Head>
       <div className="not-found-container">
         <div className="not-found-content">
           <div className="not-found-graphic">

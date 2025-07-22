@@ -1,4 +1,8 @@
+import Header from "@/Components/Header/Header";
 import "./globals.css";
+import Footer from "@/Components/Footer/Footer";
+import ThemeToggle from "@/Components/ToggleTheme";
+import { Toaster } from "sonner";
 
 export const metadata = {
   title: "Md Abdus Sabur | Web Scraping Expert – MERN & Django Developer",
@@ -6,7 +10,16 @@ export const metadata = {
     "Md Abdus Sabur - Full-Stack Web Developer | Expert in JavaScript (MERN Stack) & Python (Django). Specializing in front-end and back-end development with React.js, Next.js, Redux, Django, MongoDB, MySQL, PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework. Currently pursuing a BSc in Mathematics and a diploma in Computer Science and Technology. Explore my portfolio for dynamic and robust web solutions.",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+  home,
+  about,
+  skills,
+  projects,
+  education,
+  contact,
+  modal,
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -36,7 +49,31 @@ export default function RootLayout({ children }) {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="design-bg">
+          <Header />
+          {children}
+          <div className="main container">
+            <ThemeToggle />
+            <Toaster richColors position="top-right" />
+            {modal}
+            {home}
+            {about}
+            {skills}
+            {projects}
+            {education}
+            {contact}
+          </div>
+
+          <Footer />
+          <div
+            style={{
+              height: "70px",
+              backgroundColor: "transpatrent",
+            }}
+          ></div>
+        </div>
+      </body>
     </html>
   );
 }

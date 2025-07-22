@@ -12,11 +12,14 @@ import { GrTasks } from "react-icons/gr";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 import usePageMetrics from "./usePageMetrics";
+import { usePathname, useRouter } from "next/navigation";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [lessScroll] = useState(20);
   const { scrollbarWidth } = usePageMetrics();
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +33,9 @@ const Header = () => {
   }, []);
 
   const scrollToTop = () => {
+    if (pathname !== "/") {
+      router.back();
+    }
     window.scrollTo({ behavior: "smooth", top: 0 });
   };
   const scrollToAbout = () => {
@@ -37,7 +43,7 @@ const Header = () => {
     window.scrollTo({
       behavior: "smooth",
       top:
-        element1.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+        element1?.getBoundingClientRect().top + window.pageYOffset - lessScroll,
     });
   };
   const scrollToSkills = () => {
@@ -45,7 +51,7 @@ const Header = () => {
     window.scrollTo({
       behavior: "smooth",
       top:
-        element1.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+        element1?.getBoundingClientRect().top + window.pageYOffset - lessScroll,
     });
   };
   const scrollToProjects = () => {
@@ -53,7 +59,7 @@ const Header = () => {
     window.scrollTo({
       behavior: "smooth",
       top:
-        element1.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+        element1?.getBoundingClientRect().top + window.pageYOffset - lessScroll,
     });
   };
   const scrollToEducations = () => {
@@ -61,7 +67,7 @@ const Header = () => {
     window.scrollTo({
       behavior: "smooth",
       top:
-        element1.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+        element1?.getBoundingClientRect().top + window.pageYOffset - lessScroll,
     });
   };
   const scrollToContact = () => {
@@ -69,7 +75,7 @@ const Header = () => {
     window.scrollTo({
       behavior: "smooth",
       top:
-        element1.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+        element1?.getBoundingClientRect().top + window.pageYOffset - lessScroll,
     });
   };
   const navItems = [
@@ -116,6 +122,15 @@ const Header = () => {
       section: "contact",
     },
   ];
+  const homeOnly = [
+    {
+      label: "Home",
+      onClick: scrollToTop,
+      tooltipContent: "Home",
+      icon: <FaHome />,
+      section: "home",
+    },
+  ];
   return (
     <>
       <div className="scrollbar-parent">
@@ -138,19 +153,39 @@ const Header = () => {
             id="tooltip"
           />
           <nav>
-            {navItems.map((item, index) => (
-              <button
-                key={index}
-                onClick={item.onClick}
-                data-tooltip-id="tooltip"
-                data-tooltip-content={item.tooltipContent}
-                className={`nav-bar-icons ${
-                  activeSection === item.section && "nav-active-icon"
-                }`}
-              >
-                {item.icon} <span className="nav-details">{item.label}</span>
-              </button>
-            ))}
+            {pathname == "/"
+              ? navItems.map((item, index) => (
+                  <button
+                    key={index}
+                    onClick={item.onClick}
+                    data-tooltip-id="tooltip"
+                    data-tooltip-content={item.tooltipContent}
+                    className={`nav-bar-icons ${
+                      activeSection === item.section &&
+                      pathname == "/" &&
+                      "nav-active-icon"
+                    }`}
+                  >
+                    {item.icon}{" "}
+                    <span className="nav-details">{item.label}</span>
+                  </button>
+                ))
+              : homeOnly.map((item, index) => (
+                  <button
+                    key={index}
+                    onClick={item.onClick}
+                    data-tooltip-id="tooltip"
+                    data-tooltip-content={item.tooltipContent}
+                    className={`nav-bar-icons ${
+                      activeSection === item.section &&
+                      pathname == "/" &&
+                      "nav-active-icon"
+                    }`}
+                  >
+                    {item.icon}{" "}
+                    <span className="nav-details">{item.label}</span>
+                  </button>
+                ))}
           </nav>
         </header>
       </div>

@@ -4,6 +4,7 @@ import SocialClient from "./SocialClient.js";
 import Icons from "./Icons";
 import SectionsHead from "../SectionsTop";
 import RoleScroller from "./AutoScroll";
+import Image from "next/image";
 
 // const image = "https://res.cloudinary.com/dh96uxb54/image/upload/v1714625498/skills/me_fmuyx1.png"
 

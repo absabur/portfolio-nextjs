@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { skillsData } from "./skillsData";
 import "./Skills.css"; // Import your CSS styles
 import SectionsHead from "../SectionsTop";
+import Image from "next/image";
 
 const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -88,7 +89,7 @@ const SkillsSection = () => {
                 onClick={() => setSelectedSkill(skill)}
               >
                 <div className="skill-icon">
-                  <img src={skill.image} alt={skill.title} />
+                  <img src={skill.image} alt={skill.title}/>
                 </div>
                 <h3 className="skill-title">{skill.title}</h3>
                 <div className="skill-progress">
@@ -117,7 +118,10 @@ const SkillsSection = () => {
                 </button>
                 <div className="modal-content">
                   <div className="modal-header">
-                    <img src={selectedSkill.image} alt={selectedSkill.title} />
+                    <img
+                      src={selectedSkill.image}
+                      alt={selectedSkill.title}
+                    />
                     <h3>{selectedSkill.title}</h3>
                   </div>
                   <div className="modal-body">

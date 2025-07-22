@@ -166,6 +166,7 @@ export const hcjs = [
   // },
   {
     title: "Stop Watch",
+    slug: "stop-watch",
     techStack: ["JavaScript", "HTML", "CSS"],
     description:
       "This is a stopwatch created with html, css and js. User can take check point while time is running.",
@@ -190,6 +191,7 @@ export const hcjs = [
   // },
   {
     title: "Count Down",
+    slug: "count-down",
     techStack: ["JavaScript", "HTML", "CSS"],
     description:
       "This is a event time count down application. User can set upcoming event date and it will show remaining time.",
@@ -214,6 +216,7 @@ export const hcjs = [
   // },
   {
     title: "Rock Paper Scissor",
+    slug: "rock-paper-scissor",
     techStack: ["JavaScript", "HTML", "CSS"],
     description:
       "This is a rock, paper and scissor game. User will play with computer. It is a 7 round game.",
@@ -250,6 +253,7 @@ export const hcjs = [
 export const mern = [
   {
     title: "Library Management System",
+    slug: "library-management-system",
     techStack: ["Next.js", "Node.js", "Express", "MongoDB"],
     description:
       "This a Library Management System. Students and Teachers can borrow books and return them.",
@@ -264,6 +268,7 @@ export const mern = [
   },
   {
     title: "Library Management System Admin",
+    slug: "library-management-system-admin",
     techStack: ["Next.js", "Node.js", "Express", "MongoDB"],
     description:
       "This a Library Management System. Admin can add books, approve students and teachers, create students and teachers account and manage all the books.",
@@ -278,6 +283,7 @@ export const mern = [
   },
   {
     title: "Ecommerce",
+    slug: "ecommerce",
     techStack: ["React", "Node.js", "Express", "MongoDB"],
     description:
       "This is a multi functional ecommerce website for single shop. It is a complete ecommerce website.",
@@ -295,6 +301,7 @@ export const mern = [
 export const next = [
   {
     title: "CGPA Calculator",
+    slug: "cgpa-calculator",
     techStack: ["Next.js", "SSG"],
     description:
       "An autometic CGPA calculator for national university students.",
@@ -311,6 +318,7 @@ export const next = [
 export const react = [
   {
     title: "Class Routine",
+    slug: "class-routine",
     techStack: ["React", "Service Worker", "PWA"],
     description:
       "This is a realtime class routine of an educational institute. Students can select their own class and see their class routine. The routine will show active period also. This is offline also by service worker and progresive web app.",
