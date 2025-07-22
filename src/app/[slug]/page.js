@@ -146,11 +146,11 @@ const ProjectModal = ({ modalData }) => {
   );
 };
 
-// export async function generateStaticParams() {
-//   const allProjects = djangoReact
-//     .concat(mern, next, django, react, hcjs)
-//     .map((item) => item.slug);
-//   return allProjects.map((project) => ({
-//     slug: project,
-//   }));
-// }
+export async function generateStaticParams() {
+  const allProjects = djangoReact
+    .concat(mern, next, django, react, hcjs)
+    .map((item) => item.slug);
+  return allProjects.map((project) => ({
+    slug: project,
+  }));
+}

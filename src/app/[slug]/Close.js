@@ -5,7 +5,7 @@ import { IoMdArrowBack } from "react-icons/io";
 export default function CloseButton() {
   const router = useRouter();
   return (
-    <button onClick={() => router.back()} className="closeButton">
+    <button onClick={() => router.push("/")} className="closeButton">
       <IoMdArrowBack /> <span>Back</span>
     </button>
   );
