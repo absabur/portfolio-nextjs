@@ -1,5 +1,5 @@
 import React from "react";
-import { FaKey, FaLink, FaGithubSquare, FaTimes } from "react-icons/fa";
+import { FaKey, FaLink, FaGithubSquare } from "react-icons/fa";
 import { RiAdminFill } from "react-icons/ri";
 import { IoIosMailOpen } from "react-icons/io";
 import {
@@ -146,11 +146,11 @@ const ProjectModal = ({ modalData }) => {
   );
 };
 
-export async function generateStaticParams() {
-  const allProjects = djangoReact
-    .concat(mern, next, django, react, hcjs)
-    .map((item) => item.slug);
-  return allProjects.map((project) => ({
-    slug: project,
-  }));
-}
+// export async function generateStaticParams() {
+//   const allProjects = djangoReact
+//     .concat(mern, next, django, react, hcjs)
+//     .map((item) => item.slug);
+//   return allProjects.map((project) => ({
+//     slug: project,
+//   }));
+// }
