@@ -4,7 +4,6 @@ import "./ProjectCard.css";
 import { django, react, hcjs, djangoReact, mern, next } from "./data";
 import SectionsHead from "../SectionsTop";
 import Link from "next/link";
-import Image from "next/image";
 
 const Project = () => {
   return (

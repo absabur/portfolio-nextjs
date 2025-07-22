@@ -1,4 +1,4 @@
-import { FaCode, FaMicrochip, FaRobot } from "react-icons/fa6";
+import { FaCode, FaMicrochip } from "react-icons/fa6";
 import { GiBullseye } from "react-icons/gi";
 import SectionsHead from "../SectionsTop";
 import "./About.css";

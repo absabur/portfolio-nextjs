@@ -12,7 +12,6 @@ import {
 } from "@/Components/Body/Projects/data";
 import "./ProjectCard.css";
 import Copy from "@/Components/Body/Contact/Copy";
-import Link from "next/link";
 import { redirect } from "next/navigation";
 import CloseButton from "./Close";
 

@@ -8,7 +8,6 @@ import {
 
 import "react-vertical-timeline-component/style.min.css";
 
-import { PiGraduationCapFill } from "react-icons/pi";
 import SectionsHead from "../SectionsTop";
 
 const educations = [
@@ -78,7 +77,7 @@ const Element = ({ education }) => (
       color: "var(--color4)",
       borderLeft: "var(--color1) 5px solid",
       borderRight: "var(--color5) 5px solid",
-      borderRadius: "20px"
+      borderRadius: "20px",
     }}
     contentArrowStyle={{ borderRight: "20px solid  var(--color2)" }}
     date={education.duration}

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { toast } from "sonner";
+import "./Contact.css";
 
 const Copy = ({ data, icon, label = "" }) => {
   const [copied, setCopied] = useState(false);
@@ -18,11 +19,18 @@ const Copy = ({ data, icon, label = "" }) => {
   };
 
   return (
-    <div className="copy-component" onClick={handleCopy} role="button" tabIndex={0}>
+    <div
+      className="copy-component"
+      onClick={handleCopy}
+      role="button"
+      tabIndex={0}
+    >
       <span className="icon">{icon}</span>
       <div className="links-body">
         {label && <span className="link-head">{label}</span>}
-        <span title="Click to copy" className="copy-text">{data}</span>
+        <span title="Click to copy" className="copy-text">
+          {data}
+        </span>
       </div>
     </div>
   );
