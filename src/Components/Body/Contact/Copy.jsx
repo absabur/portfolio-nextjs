@@ -1,31 +1,30 @@
 "use client";
-import { useEffect, useState } from "react";
-import CopyToClipboard from "react-copy-to-clipboard";
+import { useState } from "react";
 import { toast } from "sonner";
 
 const Copy = ({ data, icon, label = "" }) => {
-  const [copy, setCopy] = useState("");
-  useEffect(() => {
-    if (copy) {
-      setTimeout(() => {
-        setCopy("");
-      }, 2000);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(data);
+      setCopied(true);
       toast.success(`"${data}" copied!`);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      toast.error("Failed to copy!");
+      console.error("Copy failed:", err);
     }
-  }, [copy]);
+  };
 
   return (
-    <>
-      <div className="copy-component">
-        <span className="icon">{icon}</span>
-        <div className="links-body">
-          {label && <span className="link-head">{label}</span>}
-          <CopyToClipboard text={data} onCopy={() => setCopy(data)}>
-            <span title="Click to copy" className="copy-text">{data}</span>
-          </CopyToClipboard>
-        </div>
+    <div className="copy-component" onClick={handleCopy} role="button" tabIndex={0}>
+      <span className="icon">{icon}</span>
+      <div className="links-body">
+        {label && <span className="link-head">{label}</span>}
+        <span title="Click to copy" className="copy-text">{data}</span>
       </div>
-    </>
+    </div>
   );
 };
 
