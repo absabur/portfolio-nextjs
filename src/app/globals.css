@@ -1,32 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --color1: #00ffcc;
-  --color2: #c7daff;
-  --color3: #001129;
-  --color4: #ffffff;
-  --color5: #3498db;
-  --color6: #04081a;
-  --color1-opacity-15: #00ffcc26;
-  --color5-opacity-15: #3498db26;
-  --color1-opacity-05: #00ffcc0d;
-  --color5-opacity-03: #3498db08;
+  /* Base Colors */
+  --color1: #00ffcc; /* Attractive teal (kept) */
+  --color2: #e6f0ff; /* Lighter soft blue (adjusted from #c7daff) */
+  --color3: #001129; /* Dark navy (kept) */
+  --color4: #f8faff; /* Very light blue-white (adjusted from pure white) */
+  --color5: #ff6b6b; /* Attractive coral red (changed from #3498db for better contrast) */
+  --color6: #0a0f24; /* Dark blue-black (slightly adjusted from #04081a) */
+
+  /* Opacity Variants */
+  --color1-opacity-15: rgba(0, 255, 204, 0.15); /* Teal with 15% opacity */
+  --color5-opacity-15: rgba(255, 107, 107, 0.15); /* Coral with 15% opacity */
+  --color1-opacity-05: rgba(0, 255, 204, 0.05); /* Teal with 5% opacity */
+  --color5-opacity-03: rgba(255, 107, 107, 0.03); /* Coral with 3% opacity */
 
   --font-base: "Cormorant Upright", serif;
   --font-alt: "Open Sans", sans-serif;
 }
 
 .light {
-  --color1: #00a2ff;
-  --color2: #1d2127;
-  --color3: #ebf4ff;
-  --color4: #000000;
-  --color5: #670075;
-  --color6: #eaeef1;
-  --color1-opacity-15: #00366326;
-  --color5-opacity-15: #67007526;
-  --color1-opacity-05: #0036630d;
-  --color5-opacity-03: #67007508;
+  /* Base Colors */
+  --color1: #00a2ff; /* Vibrant azure blue (kept) */
+  --color2: #1d2127; /* Dark charcoal (kept) */
+  --color3: #f5f9ff; /* Lightest blue-white (adjusted from #ebf4ff for better readability) */
+  --color4: #000000; /* Pure black (kept) */
+  --color5: #c000ff; /* Electric purple (adjusted from #670075 for more vibrancy) */
+  --color6: #f0f4f8; /* Soft gray-blue (adjusted from #eaeef1 for smoother contrast) */
+
+  /* Opacity Variants */
+  --color1-opacity-15: rgba(0, 162, 255, 0.15); /* Azure blue 15% */
+  --color5-opacity-15: rgba(192, 0, 255, 0.15); /* Electric purple 15% */
+  --color1-opacity-05: rgba(0, 162, 255, 0.1); /* Azure blue 5% */
+  --color5-opacity-03: rgba(192, 0, 255, 0.03); /* Electric purple 3% */
 }
 
 * {
