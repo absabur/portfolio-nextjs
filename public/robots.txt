@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /manifest.webmanifest
+
+# Host
+Host: https://absaur.vercel.app
+
+# Sitemaps
+Sitemap: https://absaur.vercel.app/sitemap-absabur.xml

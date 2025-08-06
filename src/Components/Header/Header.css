@@ -1,0 +1,119 @@
+.header-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 11;
+  max-width: 1680px;
+  padding: 0 10px;
+}
+
+.scrollbar-parent {
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  width: 2px;
+  /* background: #ffffff56; */
+  border-radius: 40px;
+  z-index: 200;
+}
+
+.scrollbar {
+  border-radius: 40px;
+  background-color: var(--color1);
+  /* background: linear-gradient(to left, var(--color1), #ff00f2, #0468ff); */
+}
+
+.inner-header {
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  backdrop-filter: blur(20px);
+  background-color: var(--color1-opacity-15);
+  border: 1px solid var(--color1);
+  padding: 0 20px;
+}
+
+.inner-header nav {
+  display: flex;
+  height: auto;
+  margin: 8px 0;
+}
+
+.nav-bar-icons {
+  border-radius: 10px;
+  color: var(--color4);
+  margin: 0 5px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s;
+  transition: transform 0.3s ease-out, background-color 0.2s;
+  background-color: var(--color5-opacity-15);
+  border: none;
+  outline: none;
+  height: 35px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+#tooltip{
+  display: none;
+}
+
+.nav-active-icon {
+  animation: activetab 0.5s linear forwards !important;
+}
+
+
+.nav-bar-icons:hover {
+  background-color: var(--color1-opacity-15);
+}
+
+@media screen and (max-width: 640px) {
+  .inner-header nav {
+    padding: 5px 0;
+    margin: 0;
+  }
+  .inner-header {
+    border-radius: 0;
+    width: 100%;
+  }
+  .header-div {
+    bottom: 0;
+    padding: 0;
+  }
+  .nav-details{
+    display: none;
+  }
+  .nav-bar-icons{
+    font-size: 20px;
+  }
+  #tooltip{
+    display: block;
+  }
+}
+
+@keyframes activetab {
+  0% {
+    box-shadow: inset 0 0 5px var(--color1);
+    color: var(--color1);
+  }
+  100% {
+    box-shadow: inset 0 0 30px 20px var(--color1);
+    color: var(--color3);
+  }
+}

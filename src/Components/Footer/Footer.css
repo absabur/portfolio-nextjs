@@ -1,0 +1,70 @@
+.footer-section {
+  width: 100%;
+  background-color: transparent;
+  color: var(--color4);
+  /* max-width: 1320px;
+  margin: 0 auto; */
+}
+
+.footer-icons {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  padding-bottom: 0;
+  /* border-bottom: 1px solid var(--color2); */
+}
+
+.sec-1 {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.footer-icon {
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.footer-icon:hover {
+  transform: perspective(30px) rotate3d(1, 0, 0, 30deg) translateY(-3px);
+}
+
+.facebook:hover {
+  color: #3b5998;
+}
+
+.linkedin:hover {
+  color: #0077b5;
+}
+
+.github:hover {
+  color: #333;
+}
+
+.upwork:hover {
+  color: #6fda44;
+}
+
+.stackoverflow:hover {
+  color: #f48024;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  padding-top: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.copyright span {
+  text-decoration: none;
+  color: var(--color1);
+}

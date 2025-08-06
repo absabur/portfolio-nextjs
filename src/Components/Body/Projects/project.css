@@ -1,0 +1,341 @@
+.project-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.projects-header {
+  font-family: var(--font-base);
+  font-size: 35px;
+  color: var(--color4);
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  box-shadow: 0 0 180px 1px var(--color1);
+  border-radius: 10px;
+}
+
+.all-projects {
+  width: 100%;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.particular-project {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--color2);
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  margin: 20px 0;
+  position: sticky;
+  top: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.particular-project > h3 {
+  padding: 1rem;
+  color: var(--color1);
+  background-color: var(--color3);
+  border-radius: 10px;
+  border-bottom: 1px solid var(--color2);
+  font-family: var(--font-base);
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.projects-parent {
+  position: relative;
+  width: 100%;
+}
+
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.justify-content {
+  justify-content: center;
+}
+
+.arror-button {
+  font-size: 20px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  z-index: 2;
+  outline: none;
+  border: none;
+  background-color: var(--color2);
+  color: var(--color3);
+  transition: all 0.3s;
+  box-shadow: 0 0 5px var(--color3);
+  transform: translateY(-50%);
+}
+.arror-button:hover {
+  background-color: var(--color1);
+  box-shadow: 0 0 10px var(--color3);
+}
+.right {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+}
+
+.project {
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  transition: all 1s ease-out;
+  overflow: hidden;
+  border: 1px solid var(--color5) !important;
+  transition: all 0.3s ease-out;
+}
+
+.project:hover {
+  z-index: 2;
+}
+
+.project-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .project:hover .project-image {
+  top: -100%;
+} */
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.project-name {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: var(--color2);
+  border-top: 1px solid var(--color1);
+  backdrop-filter: blur(2px);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.project-content {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: var(--color4);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s;
+  z-index: 1;
+  opacity: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 10px;
+}
+.project:hover .project-content {
+  transition-delay: 0.1s;
+  opacity: 1;
+  left: 0;
+  box-shadow: 0 0 5px var(--color2);
+}
+
+.project-content p {
+  text-align: justify;
+  font-weight: 600;
+}
+
+.project-content .copied {
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+.project .copy-component .icon {
+  width: 41px !important;
+  letter-spacing: -2px;
+  margin-right: 10px;
+  color: var(--color5) !important;
+}
+
+.project-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.single-github {
+  flex-direction: row;
+}
+
+.project-links div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  gap: 5px;
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-links a svg {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    overflow-x: auto;
+  }
+}
+@media screen and (max-height: 470px) {
+  .particular-project {
+    position: static;
+  }
+}
+
+@media screen and (min-height: 750px) and (min-width: 750px) {
+  .project-section {
+    padding-bottom: 250px;
+  }
+  .particular-project {
+    border: none;
+    box-shadow: 0 -2px 6px var(--color4);
+  }
+}
+
+/* ============================================================================================================ */
+
+.project2 {
+  width: 100%;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+@media screen and (min-width: 420px) {
+  .project2 {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  }
+}
+
+.left-click {
+  transform: perspective(200px) rotate3d(0, 1, 0, -50deg) scale(0.6) !important;
+}
+.right-click {
+  transform: perspective(200px) rotate3d(0, 1, 0, 50deg) scale(0.6) !important;
+}
+.bottom-click {
+  transform: perspective(200px) rotate3d(1, 0, 0, -50deg) scale(0.6) !important;
+}
+
+.project-name {
+  border-radius: 0 0 10px 10px !important;
+  border-color: var(--color4) !important;
+}
+
+.switch-project {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  overflow: hidden;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  backdrop-filter: blur(50px);
+}
+
+.switch-tab {
+  padding: 10px;
+  color: var(--color1);
+  text-align: center;
+  width: 150px;
+  font-size: 17px;
+  font-weight: 600;
+  border: 1px solid var(--color1);
+  border-radius: 5px;
+  margin: 5px;
+  background: linear-gradient(to left, var(--color3), black);
+  animation: deactivetab 0.5s linear forwards;
+  cursor: pointer;
+}
+
+.switch-tab:hover {
+  border: 1px solid var(--color2);
+}
+
+.current {
+  animation: activetab 0.5s linear forwards !important;
+}
+
+@keyframes activetab {
+  0% {
+    box-shadow: inset 0 0 5px var(--color1);
+    color: var(--color1);
+  }
+  100% {
+    box-shadow: inset 0 0 30px 20px var(--color1);
+    color: var(--color3);
+  }
+}
+
+@keyframes deactivetab {
+  0% {
+    box-shadow: inset 0 0 30px 20px var(--color1);
+    color: var(--color3);
+  }
+  100% {
+    box-shadow: inset 0 0 5px var(--color1);
+    color: var(--color1);
+  }
+}
+
+@media screen and (min-height: 750px) and (min-width: 750px) {
+  .project-section {
+    padding-bottom: inherit !important;
+  }
+}

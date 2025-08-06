@@ -1,0 +1,239 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.about-section-header {
+  font-family: var(--font-base);
+  font-size: 35px;
+  color: var(--color4);
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 0 180px 1px var(--color1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.about-about-card {
+  color: var(--color2);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  padding: 0 10px;
+}
+
+
+.about-header {
+  padding: 30px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  z-index: 0;
+}
+.light .about-header::before {
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.about-header p {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.about-section {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid var(--color5);
+  transition: border-color 0.3s ease;
+}
+
+.about-section:hover {
+  border-left-color: var(--color1);
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.about-skill-card {
+  background: var(--color5-opacity-15);
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color5);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-skill-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--color1);
+}
+
+.about-skill-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color5);
+}
+
+.about-skill-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(52, 152, 219, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.about-skill-content {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about-highlight {
+  color: var(--color1);
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.about-highlight::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color1);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.about-highlight:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.about-mission-statement {
+  background: linear-gradient(
+    90deg,
+    var(--color1-opacity-15),
+    var(--color5-opacity-15)
+  );
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 30px;
+  border-left: 5px solid var(--color1);
+  border-right: 5px solid var(--color5);
+}
+
+.about-mission-statement p {
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.about-mission-icon {
+  display: block;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--color1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.about-signature {
+  text-align: right;
+  margin-top: 20px;
+  font-style: italic;
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .about-header {
+    padding: 25px;
+  }
+
+  .about-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-header p {
+    font-size: 1.2rem;
+  }
+
+  .about-skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-header p {
+    font-size: 1.1rem;
+  }
+
+  .about-skill-card {
+    padding: 20px;
+  }
+}
