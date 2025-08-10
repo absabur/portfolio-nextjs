@@ -50,11 +50,17 @@ const Home = () => {
           <div className="hexagon">
             <Icons />
             <div className="hexagon image-hexa">
-              <img
+              <Image
                 src="/Md_Abdus_Sabur.png"
                 alt="Md Abdus Sabur | Full Stack Developer"
                 width={220}
                 height={220}
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABDQottAAAAABJRU5ErkJggg==" // light gray pixel
+                priority
+                quality={100}
+                sizes="(max-width: 220px) 100vw, 220px"
+                style={{ objectFit: "cover" }}
               />
             </div>
           </div>
@@ -65,13 +71,3 @@ const Home = () => {
 };
 
 export default Home;
-
-const Post = ({ name }) => {
-  return (
-    <span style={{ padding: "0 4rem" }}>
-      [ <span className="quote">&quot;</span>
-      {name}
-      <span className="quote">&quot;</span> ]
-    </span>
-  );
-};

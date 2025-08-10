@@ -12,15 +12,6 @@ const nextConfig = {
       },
     ],
   },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/',
-  //       destination: 'https://absabur.vercel.app',
-  //       permanent: true,
-  //     },
-  //   ]
-  // },
 };
 
 export default nextConfig;
