@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import CopyToClipboard from "react-copy-to-clipboard";
 import { toast } from "sonner";
 
 const Copy = ({ data, icon, label = "" }) => {
@@ -20,9 +19,17 @@ const Copy = ({ data, icon, label = "" }) => {
         <span className="icon">{icon}</span>
         <div className="links-body">
           {label && <span className="link-head">{label}</span>}
-          <CopyToClipboard text={data} onCopy={() => setCopy(data)}>
-            <span title="Click to copy" className="copy-text">{data}</span>
-          </CopyToClipboard>
+          <span
+            title="Click to copy"
+            className="copy-text"
+            onClick={() => {
+              navigator.clipboard.writeText(data);
+              setCopy(data);
+            }}
+            style={{ cursor: "pointer" }}
+          >
+            {data}
+          </span>
         </div>
       </div>
     </>
