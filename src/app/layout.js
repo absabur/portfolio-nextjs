@@ -3,12 +3,17 @@ import "./globals.css";
 import Footer from "@/Components/Footer/Footer";
 import ThemeToggle from "@/Components/ToggleTheme";
 import { Toaster } from "sonner";
+import ProtectedButton from "@/Components/ProtectedButton";
+import Link from "next/link";
+import { FaLock } from "react-icons/fa6";
 
 export const metadata = {
   title: "Md Abdus Sabur | Web Scraping Expert – MERN & Django Developer",
   description:
     "Md Abdus Sabur - Full-Stack Web Developer | Expert in JavaScript (MERN Stack) & Python (Django). Specializing in front-end and back-end development with React.js, Next.js, Redux, Django, MongoDB, MySQL, PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework. Currently pursuing a BSc in Mathematics and a diploma in Computer Science and Technology. Explore my portfolio for dynamic and robust web solutions.",
 };
+
+export const dynamic = "force-static";
 
 export default function RootLayout({
   children,
@@ -68,6 +73,20 @@ export default function RootLayout({
       </head>
       <body>
         <div className="design-bg">
+          <ProtectedButton>
+            <Link
+              style={{
+                position: "absolute",
+                top: "5px",
+                left: "5px",
+                fontSize: "20px",
+                color: "var(--color5)",
+              }}
+              href={`/admin`}
+            >
+              <FaLock />
+            </Link>
+          </ProtectedButton>
           <Header />
           {children}
           <div className="main container">

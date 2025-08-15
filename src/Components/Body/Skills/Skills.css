@@ -80,6 +80,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1.5rem;
+  padding-bottom: 5px;
 }
 
 .skill-card {
@@ -94,10 +95,21 @@
   flex-direction: column;
   align-items: center;
   backdrop-filter: blur(2px);
+  position: relative;
+}
+
+.skill-type {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: var(--color3);
+  font-size: 12px;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(5px);
   background-color: var(--color1-opacity-15);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-color: var(--color1);

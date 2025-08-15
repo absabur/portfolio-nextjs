@@ -11,17 +11,18 @@ module.exports = {
     // Default transform
     return {
       loc: path, // Use the default location
-      changefreq: 'daily',
+      changefreq: "daily",
       priority: 0.7,
       lastmod: new Date().toISOString(),
     };
   },
+  exclude: ["/login", "/admin/*", "/admin"],
   robotsTxtOptions: {
     policies: [
       {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/manifest.webmanifest',], // Add directories you want to disallow
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/manifest.webmanifest"], // Add directories you want to disallow
       },
     ],
     additionalSitemaps: [

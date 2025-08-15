@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.1",
     "next": "15.4.2",
     "next-sitemap": "^4.2.3",
     "or": "^0.2.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-hook-form": "^7.62.0",
     "react-icons": "^5.0.1",
     "react-scripts": "5.0.1",
     "react-tooltip": "^5.26.3",

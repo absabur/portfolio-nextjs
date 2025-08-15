@@ -13,6 +13,7 @@ import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 import usePageMetrics from "./usePageMetrics";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -171,9 +172,9 @@ const Header = () => {
                   </button>
                 ))
               : homeOnly.map((item, index) => (
-                  <button
+                  <Link
                     key={index}
-                    onClick={item.onClick}
+                    href={`/`}
                     data-tooltip-id="tooltip"
                     data-tooltip-content={item.tooltipContent}
                     className={`nav-bar-icons ${
@@ -184,7 +185,7 @@ const Header = () => {
                   >
                     {item.icon}{" "}
                     <span className="nav-details">{item.label}</span>
-                  </button>
+                  </Link>
                 ))}
           </nav>
         </header>
