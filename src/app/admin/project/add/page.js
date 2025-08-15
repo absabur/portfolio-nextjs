@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import "./addProject.css";
 import { clientCloudinary } from "@/config/cloudinaryClient";
 import { revalidate } from "../action";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const AddProjectPage = () => {
   const router = useRouter();

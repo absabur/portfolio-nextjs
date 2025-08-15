@@ -6,7 +6,7 @@ import { clientCloudinary } from "@/config/cloudinaryClient";
 import { useParams } from "next/navigation";
 import "../../../project/add/addProject.css";
 import { revalidate } from "../../action";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const UpdateSkillPage = () => {
   const router = useRouter();
