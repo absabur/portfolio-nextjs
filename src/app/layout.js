@@ -23,7 +23,6 @@ export default function RootLayout({
   projects,
   education,
   contact,
-  modal,
 }) {
   const setInitialTheme = `
 (function() {
@@ -92,7 +91,6 @@ export default function RootLayout({
           <div className="main container">
             <ThemeToggle />
             <Toaster richColors position="top-right" />
-            {modal}
             {home}
             {about}
             {skills}
