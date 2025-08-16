@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { FaKey, FaLink, FaGithubSquare } from "react-icons/fa";
+import { FaKey, FaLink, FaGithubSquare, FaEdit } from "react-icons/fa";
 import { RiAdminFill } from "react-icons/ri";
 import { IoIosMailOpen } from "react-icons/io";
 import "./ProjectCard.css";
@@ -11,6 +11,7 @@ import Overlay from "./Overlay";
 import { AllProjects } from "@/serverAction";
 import Link from "next/link";
 import Image from "next/image";
+import ProtectedButton from "@/Components/ProtectedButton";
 
 export default function ProjectCard({ project }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,6 +58,22 @@ const ProjectModal = ({ project, setIsOpen }) => {
       <CloseButton setIsOpen={setIsOpen} />
 
       <div className={`ic-modalGrid`}>
+        <ProtectedButton>
+          <Link
+            style={{
+              fontSize: "30px",
+              color: "var(--color5)",
+              position: "absolute",
+              top: "10px",
+              left: "10px",
+              zIndex: 10,
+            }}
+            href={`/admin/project/update/${project._id}`}
+            onClick={() => setIsOpen(false)}
+          >
+            <FaEdit />
+          </Link>
+        </ProtectedButton>
         <div className={`ic-modalImageContainer`}>
           <img
             src={project?.images[0].url}
