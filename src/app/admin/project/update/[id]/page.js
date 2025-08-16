@@ -137,7 +137,7 @@ const UpdateProjectPage = () => {
 
       if (!res.ok) throw new Error("Failed to update project");
       const result = await res.json();
-      await revalidate(result.data.title.replace(/ /g, "__"));
+      await revalidate();
       toast.success("Project updated successfully!", { id: toastId });
       router.push("/");
     } catch (err) {

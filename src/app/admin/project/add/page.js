@@ -87,7 +87,7 @@ const AddProjectPage = () => {
 
       if (!res.ok) throw new Error("Failed to create project");
       const result = await res.json();
-      await revalidate(result.data.title.replace(/ /g, "__"));
+      await revalidate();
       toast.success("Project created successfully!", { id: toastId });
       reset();
       setTechnologies([]);

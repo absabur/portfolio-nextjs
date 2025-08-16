@@ -170,10 +170,3 @@ const ProjectModal = ({ project, setIsOpen }) => {
     </Overlay>
   );
 };
-
-export async function generateStaticParams() {
-  const { projects } = await AllProjects();
-  return projects.map((project) => ({
-    slug: project?.title.replace(/ /g, "__"),
-  }));
-}
