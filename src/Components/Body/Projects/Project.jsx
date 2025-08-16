@@ -5,7 +5,6 @@ import SectionsHead from "../SectionsTop";
 import Link from "next/link";
 import Image from "next/image";
 import { AllProjects } from "@/serverAction";
-import ProtectedButton from "@/Components/ProtectedButton";
 
 const Project = async () => {
   const { projects } = await AllProjects();

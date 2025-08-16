@@ -8,6 +8,7 @@ import CloseButton from "./Close";
 import Overlay from "./Overlay";
 import { redirect } from "next/navigation";
 import { AllProjects, GetProjectByTitle } from "@/serverAction";
+import Link from "next/link";
 
 export default async function Page({ params }) {
   const { slug } = await params;
@@ -50,7 +51,7 @@ const ProjectModal = ({ project }) => {
           </div>
 
           <div className={`ic-buttonGroup`}>
-            <a
+            <Link
               className={`neon-glow-button`}
               href={project.liveUrl}
               target="_blank"
@@ -60,9 +61,9 @@ const ProjectModal = ({ project }) => {
                 <FaLink /> Live Demo
               </span>
               <span className="neon-border"></span>
-            </a>
+            </Link>
             {project.frontendCodeUrl && (
-              <a
+              <Link
                 className={`liquid-gradient-button`}
                 href={project.frontendCodeUrl}
                 target="_blank"
@@ -72,10 +73,10 @@ const ProjectModal = ({ project }) => {
                   <FaGithubSquare /> Frontend Code
                 </span>
                 <div className="liquid-overlay"></div>
-              </a>
+              </Link>
             )}
             {project.backendCodeUrl && (
-              <a
+              <Link
                 className={`liquid-gradient-button`}
                 href={project.backendCodeUrl}
                 target="_blank"
@@ -85,10 +86,10 @@ const ProjectModal = ({ project }) => {
                   <FaGithubSquare /> Backend Code
                 </span>
                 <div className="liquid-overlay"></div>
-              </a>
+              </Link>
             )}
             {project.fullstackCodeUrl && (
-              <a
+              <Link
                 className={`liquid-gradient-button`}
                 href={project.fullstackCodeUrl}
                 target="_blank"
@@ -98,7 +99,7 @@ const ProjectModal = ({ project }) => {
                   <FaGithubSquare /> FullStack Code
                 </span>
                 <div className="liquid-overlay"></div>
-              </a>
+              </Link>
             )}
           </div>
           {project.user && (
