@@ -1,5 +1,5 @@
-import "./project.css";
 import React from "react";
+import "./project.css";
 import "./ProjectCard.css";
 import SectionsHead from "../SectionsTop";
 import Link from "next/link";
