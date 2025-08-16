@@ -6,6 +6,7 @@ import { Toaster } from "sonner";
 import ProtectedButton from "@/Components/ProtectedButton";
 import Link from "next/link";
 import { FaLock } from "react-icons/fa6";
+import { AuthProvider } from "@/Components/AuthContextProvider";
 
 export const metadata = {
   title: "Md Abdus Sabur | Web Scraping Expert – MERN & Django Developer",
@@ -71,42 +72,44 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body>
-        <div className="design-bg">
-          <ProtectedButton>
-            <Link
-              style={{
-                position: "absolute",
-                top: "5px",
-                left: "5px",
-                fontSize: "20px",
-                color: "var(--color5)",
-              }}
-              href={`/admin`}
-            >
-              <FaLock />
-            </Link>
-          </ProtectedButton>
-          <Header />
-          {children}
-          <div className="main container">
-            <ThemeToggle />
-            <Toaster richColors position="top-right" />
-            {home}
-            {about}
-            {skills}
-            {projects}
-            {education}
-            {contact}
-          </div>
+        <AuthProvider>
+          <div className="design-bg">
+            <ProtectedButton>
+              <Link
+                style={{
+                  position: "absolute",
+                  top: "5px",
+                  left: "5px",
+                  fontSize: "20px",
+                  color: "var(--color5)",
+                }}
+                href={`/admin`}
+              >
+                <FaLock />
+              </Link>
+            </ProtectedButton>
+            <Header />
+            {children}
+            <div className="main container">
+              <ThemeToggle />
+              <Toaster richColors position="top-right" />
+              {home}
+              {about}
+              {skills}
+              {projects}
+              {education}
+              {contact}
+            </div>
 
-          <Footer />
-          <div
-            style={{
-              height: "70px",
-              backgroundColor: "transpatrent",
-            }}
-          ></div>
-        </div>
+            <Footer />
+            <div
+              style={{
+                height: "70px",
+                backgroundColor: "transpatrent",
+              }}
+            ></div>
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );

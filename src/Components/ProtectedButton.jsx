@@ -1,21 +1,18 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useAuth } from "./AuthContextProvider";
 
 const ProtectedButton = ({ children }) => {
-  const [admin, setAdmin] = useState(false);
-  useEffect(() => {
-    const authCheck = async () => {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_CLIENT_URL}/api/isLoggedin`
-      );
-      const result = await res.json();
-      setAdmin(result.success);
-    };
-    authCheck();
-  }, []);
-  if (admin) {
-    return <div onClick={(e) => e.stopPropagation()}>{children}</div>;
-  } else return null;
+  const { admin, loading } = useAuth();
+
+  if (loading) return null; // or show spinner
+  if (!admin) return null;
+
+  return (
+    <React.Fragment onClick={(e) => e.stopPropagation()}>
+      {children}
+    </React.Fragment>
+  );
 };
 
 export default ProtectedButton;
