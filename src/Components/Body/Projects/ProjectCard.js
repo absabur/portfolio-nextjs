@@ -4,7 +4,7 @@ import { FaKey, FaLink, FaGithubSquare } from "react-icons/fa";
 import { RiAdminFill } from "react-icons/ri";
 import { IoIosMailOpen } from "react-icons/io";
 import "./ProjectCard.css";
-import "./project?.css";
+import "./project.css";
 import Copy from "@/Components/Body/Contact/Copy";
 import CloseButton from "./Close";
 import Overlay from "./Overlay";
