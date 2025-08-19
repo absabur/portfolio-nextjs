@@ -1,5 +1,4 @@
-
-'use client'
+import Link from "next/link";
 import "./Footer.css";
 import {
   FaFacebookSquare,
@@ -30,11 +29,11 @@ const socialMediaLinks = [
     url: "https://www.upwork.com/freelancers/~01e234a7c4eb21e7f6",
     icon: <SiUpwork />,
   },
-  {
-    name: "stackoverflow",
-    url: "https://stackoverflow.com/users/21513901/abdus-sabur",
-    icon: <FaStackOverflow />,
-  },
+  // {
+  //   name: "stackoverflow",
+  //   url: "https://stackoverflow.com/users/21513901/abdus-sabur",
+  //   icon: <FaStackOverflow />,
+  // },
 ];
 
 const Footer = () => {
@@ -43,18 +42,20 @@ const Footer = () => {
       <div className="footer-icons">
         <div className="sec-1">
           {socialMediaLinks.map((link, index) => (
-            <div
+            <Link
+              href={link.url}
+              target="_blank"
               key={index}
               className={`footer-icon ${link.name}`}
-              onClick={() => window.open(link.url, "_blank")}
             >
               {link.icon}
-            </div>
+            </Link>
           ))}
         </div>
       </div>
       <div className="copyright">
-        &copy; {new Date().getFullYear()} <span>Md Abdus Sabur</span>. All rights reserved.
+        &copy; {new Date().getFullYear()} <span>Md Abdus Sabur</span>. All
+        rights reserved.
       </div>
     </div>
   );
