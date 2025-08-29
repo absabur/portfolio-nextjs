@@ -28,9 +28,9 @@ const SkillsSection = async () => {
                     style={{
                       backgroundColor:
                         skill.type == "Frontend"
-                          ? "var(--color1)"
-                          : skill.type == "Backend"
                           ? "var(--color5)"
+                          : skill.type == "Backend"
+                          ? "var(--color1)"
                           : "var(--color1)",
                     }}
                   >

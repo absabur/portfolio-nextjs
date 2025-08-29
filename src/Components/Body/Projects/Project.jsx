@@ -2,7 +2,7 @@ import React from "react";
 import "./project.css";
 import "./ProjectCard.css";
 import SectionsHead from "../SectionsTop";
-import { AllProjects } from "@/serverAction";
+import { AllProjects } from "../../../serverAction";
 import ProjectCard from "./ProjectCard";
 
 const Project = async () => {

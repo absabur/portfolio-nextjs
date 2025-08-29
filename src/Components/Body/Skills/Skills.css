@@ -131,7 +131,7 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 0 10px var(--color2));
+  filter: drop-shadow(0 0 10px var(--color4));
 }
 
 .skill-title {
@@ -218,7 +218,7 @@
   height: 50px;
   margin-right: 1rem;
   object-fit: contain;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  filter: drop-shadow(0 0 10px var(--color4));
 }
 
 .modal-header h3 {

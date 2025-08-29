@@ -25,7 +25,7 @@ export const GetProjectByTitle = async (title) => {
 export const AllSkills = async () => {
   try {
     await connectDB();
-    const skills = await Skill.find();
+    const skills = await Skill.find().sort({ type: 1, updateDate: 1 });
     return { skills };
   } catch (error) {
     return { error };
