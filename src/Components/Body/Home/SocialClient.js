@@ -30,13 +30,29 @@ const SocialClient = () => {
       </button>
       <button
         onClick={() =>
-          window.open("/Md Abdus Sabur MERN Stack Developer Resume.pdf", "_blank")
+          window.open(
+            "/Md Abdus Sabur MERN Stack Developer Resume.pdf",
+            "_blank"
+          )
         }
         className="neon-glow-button"
         style={{ flex: 1 }}
       >
         <span className="neon-text">Resume</span>
         <span className="neon-border"></span>
+      </button>
+      <button
+        onClick={() =>
+          window.open(
+            "/Md Abdus Sabur MERN Stack Developer CV.pdf",
+            "_blank"
+          )
+        }
+        className="liquid-gradient-button"
+        style={{ flex: 1 }}
+      >
+        <span className="liquid-text">CV</span>
+        <div className="liquid-overlay"></div>
       </button>
     </div>
   );
