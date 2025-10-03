@@ -1,5 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import { AllProjects } from "../../../serverAction";
+import SectionsHead from "../SectionsTop";
 
 const Project = async () => {
   const { projects } = await AllProjects();
@@ -9,6 +10,7 @@ const Project = async () => {
 
   return (
     <div className="project-section" id="projects">
+      <SectionsHead section="project" />
       <h1 className="projects-header">Projects</h1>
       <div className="all-projects">
         <div className="project2">
