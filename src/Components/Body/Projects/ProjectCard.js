@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import { FaKey, FaLink, FaGithubSquare, FaEdit, FaTimes } from "react-icons/fa";
 import { RiAdminFill } from "react-icons/ri";
 import { IoIosMailOpen } from "react-icons/io";
+
 import "./ProjectCard.css";
 import "./project.css";
+
 import Copy from "../../Body/Contact/Copy";
 import Link from "next/link";
 import Image from "next/image";

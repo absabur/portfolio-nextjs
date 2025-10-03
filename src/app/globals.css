@@ -1,32 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --color1: #00ffcc;
+  --color1: #00f7ff;
   --color2: #c7daff;
   --color3: #001129;
   --color4: #ffffff;
-  --color5: #d9ff00;
+  --color5: #00ff6a;
   --color6: #04081a;
-  --color1-opacity-15: #00ffcc26;
-  --color5-opacity-15: #d9ff0026;
-  --color1-opacity-05: #00ffcc0d;
-  --color5-opacity-03: #d9ff0008;
+  --color1-opacity-15: #00f7ff26;
+  --color5-opacity-15: #00ff6a26;
+  --color1-opacity-05: #00f7ff0d;
+  --color5-opacity-03: #00ff6a08;
 
   --font-base: "Cormorant Upright", serif;
   --font-alt: "Open Sans", sans-serif;
 }
 
 .light {
-  --color1: #ff2600;
+  --color1: #008b2a;
   --color2: #1d2127;
   --color3: #ebf4ff;
   --color4: #000000;
-  --color5: #670075;
+  --color5: #005075;
   --color6: #eaeef1;
-  --color1-opacity-15: #ff260026;
-  --color5-opacity-15: #67007526;
-  --color1-opacity-05: #ff26000d;
-  --color5-opacity-03: #67007508;
+  --color1-opacity-15: #008b2a26;
+  --color5-opacity-15: #00507526;
+  --color1-opacity-05: #008b2a0d;
+  --color5-opacity-03: #00507508;
 }
 
 * {
