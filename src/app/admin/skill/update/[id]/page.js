@@ -36,6 +36,8 @@ const UpdateSkillPage = () => {
           description: skill.description || "",
           proficiency: skill.proficiency || 0,
           type: skill.type || "",
+          order: skill.order || 0,
+          published: skill.published || true,
         });
 
         if (skill.images) {

@@ -3,12 +3,10 @@ import "./Skills.css"; // Import your CSS styles
 import SectionsHead from "../SectionsTop";
 import { AllSkills } from "@/serverAction";
 import SkillCard from "./SkillCard";
-import ProtectedButton from "@/Components/ProtectedButton";
-import Link from "next/link";
-import { FaEdit } from "react-icons/fa";
+import AllSkillForAdmin from "./AllSkillForAdmin";
 
 const SkillsSection = async () => {
-  const { skills } = await AllSkills();
+  const { skills } = JSON.parse(JSON.stringify(await AllSkills()));
 
   return (
     <div>
@@ -16,6 +14,7 @@ const SkillsSection = async () => {
       <h1 className="skills-header">Skills</h1>
       <section className="skills-section" id="skills">
         <div className="container">
+          <AllSkillForAdmin skills={skills} />
           <div className="skills-grid">
             {skills
               ?.sort((a, b) => a.order - b.order)
@@ -38,19 +37,6 @@ const SkillsSection = async () => {
                     >
                       {skill.type}
                     </p>
-                    <ProtectedButton>
-                      <Link
-                        style={{
-                          position: "absolute",
-                          top: "5px",
-                          left: "5px",
-                          color: "var(--color5)",
-                        }}
-                        href={`/admin/skill/update/${skill._id}`}
-                      >
-                        <FaEdit />
-                      </Link>
-                    </ProtectedButton>
                     <div className="skill-icon">
                       <img src={skill?.images?.url} alt={skill?.name} />
                     </div>

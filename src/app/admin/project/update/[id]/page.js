@@ -41,6 +41,8 @@ const UpdateProjectPage = () => {
           user: project.user || "",
           password: project.password || "",
           youtubeLink: project.youtubeLink || "",
+          order: project.order || 0,
+          published: project.published || true,
         });
 
         setTechnologies(project.technologies || []);
