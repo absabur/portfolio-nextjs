@@ -18,39 +18,42 @@ const SkillsSection = async () => {
           <div className="skills-grid">
             {skills
               ?.sort((a, b) => a.order - b.order)
-              ?.map((skill) => (
-                <SkillCard
-                  key={skill._id}
-                  skill={JSON.parse(JSON.stringify(skill))}
-                >
-                  <div className="skill-card">
-                    <p
-                      className="skill-type"
-                      style={{
-                        backgroundColor:
-                          skill.type == "Frontend"
-                            ? "var(--color5)"
-                            : skill.type == "Backend"
-                            ? "var(--color1)"
-                            : "var(--color1)",
-                      }}
-                    >
-                      {skill.type}
-                    </p>
-                    <div className="skill-icon">
-                      <img src={skill?.images?.url} alt={skill?.name} />
+              ?.map((skill) => {
+                if (skill.published)
+                  <SkillCard
+                    key={skill._id}
+                    skill={JSON.parse(JSON.stringify(skill))}
+                  >
+                    <div className="skill-card">
+                      <p
+                        className="skill-type"
+                        style={{
+                          backgroundColor:
+                            skill.type == "Frontend"
+                              ? "var(--color5)"
+                              : skill.type == "Backend"
+                              ? "var(--color1)"
+                              : "var(--color1)",
+                        }}
+                      >
+                        {skill.type}
+                      </p>
+                      <div className="skill-icon">
+                        <img src={skill?.images?.url} alt={skill?.name} />
+                      </div>
+                      <h3 className="skill-title">{skill?.name}</h3>
+                      <div className="skill-progress">
+                        <div
+                          className="progress-bar"
+                          style={{ width: `${skill?.proficiency}%` }}
+                        ></div>
+                        <span className="percentage">
+                          {skill?.proficiency}%
+                        </span>
+                      </div>
                     </div>
-                    <h3 className="skill-title">{skill?.name}</h3>
-                    <div className="skill-progress">
-                      <div
-                        className="progress-bar"
-                        style={{ width: `${skill?.proficiency}%` }}
-                      ></div>
-                      <span className="percentage">{skill?.proficiency}%</span>
-                    </div>
-                  </div>
-                </SkillCard>
-              ))}
+                  </SkillCard>;
+              })}
           </div>
         </div>
       </section>
