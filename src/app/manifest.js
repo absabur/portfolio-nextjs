@@ -3,7 +3,7 @@ export default function manifest() {
     name: "Portfolio of Md Abdus Sabur",
     short_name: "Md Abdus Sabur",
     description:
-      "Md Abdus Sabur - Full-Stack Web Developer.",
+      "Md Abdus Sabur - Full-Stack Web Application Developer.",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",

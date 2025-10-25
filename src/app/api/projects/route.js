@@ -9,6 +9,7 @@ export async function POST(request) {
     const data = await request.json();
     const project = await new Project({
       ...data,
+      published: data.published === "true" || data.published === true, 
       createDate: localTime(),
       updateDate: localTime(),
     });

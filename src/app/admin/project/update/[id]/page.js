@@ -276,6 +276,33 @@ const UpdateProjectPage = () => {
             />
           </div>
 
+          {/* Order */}
+          <div className="form-group">
+            <label htmlFor="order" className="form-label">
+              Order
+            </label>
+            <input
+              id="order"
+              type="number"
+              {...register("order")}
+              className="form-input"
+              placeholder="0"
+            />
+          </div>
+
+          {/* published */}
+          <div className="form-group">
+            <label htmlFor="published" className="form-label">
+              Published
+            </label>
+            <input
+              id="published"
+              type="checkbox"
+              {...register("published")}
+              className="form-input"
+            />
+          </div>
+
           {/* Image Upload */}
           <div className="form-group">
             <label className="form-label">Project Images *</label>

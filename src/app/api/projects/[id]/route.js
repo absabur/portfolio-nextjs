@@ -29,6 +29,7 @@ export async function PUT(request, { params }) {
     if (!exists) throw new Error("Project does't exists");
     const updated = await Project.findByIdAndUpdate(id, {
       ...data,
+      published: data.published === "true" || data.published === true,
       updateDate: localTime(),
     });
 

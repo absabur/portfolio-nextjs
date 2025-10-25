@@ -11,6 +11,7 @@ export async function POST(request) {
 
     const skill = new Skill({
       ...data,
+      published: data.published === "true" || data.published === true,
       createDate: localTime(),
       updateDate: localTime(),
     });

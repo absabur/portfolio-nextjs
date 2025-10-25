@@ -26,7 +26,9 @@ const About = () => {
             <p>
               I am <span className="about-highlight">Md Abdus Sabur</span>, a
               passionate{" "}
-              <span className="about-highlight">Fullstack Web Developer</span>{" "}
+              <span className="about-highlight">
+                Fullstack Web Application Developer
+              </span>{" "}
               from Bangladesh, currently pursuing a BSc in{" "}
               <span className="about-highlight">Mathematics</span> while also
               studying for a diploma in{" "}
@@ -63,10 +65,29 @@ const About = () => {
                 Backend Development
               </div>
               <div className="about-skill-content">
-                Experience in{" "}
-                <span className="about-highlight">Node</span>{", "}<span className="about-highlight">Express</span> and{" "}
+                Experience in <span className="about-highlight">Node</span>
+                {", "}
+                <span className="about-highlight">Express</span> and{" "}
                 <span className="about-highlight">Django</span>, I excel in
                 building scalable and efficient web applications.
+              </div>
+            </div>
+
+            <div className="about-skill-card">
+              <div className="about-skill-title">
+                <div className="about-skill-icon">
+                  <FaMicrochip />
+                </div>
+                Full Stack Development
+              </div>
+              <div className="about-skill-content">
+                Full Stack Web Application using{" "}
+                <span className="about-highlight">React.js</span>{" "}
+                <span className="about-highlight">Next.js</span>{" "}
+                <span className="about-highlight">Node</span>,{" "}
+                <span className="about-highlight">Express</span> and{" "}
+                <span className="about-highlight">MongoDB</span> via
+                <span className="about-highlight"> REST Api</span>{" "}
               </div>
             </div>
 
@@ -79,34 +100,10 @@ const About = () => {
               </div>
               <div className="about-skill-content">
                 Proficient in extracting valuable insights and data using tools
-                like <span className="about-highlight">Python</span>{", "}<span className="about-highlight">Selenium</span> and{" "}
+                like <span className="about-highlight">Python</span>
+                {", "}
+                <span className="about-highlight">Selenium</span> and{" "}
                 <span className="about-highlight">Beautiful Soup</span>.
-              </div>
-            </div>
-
-            <div className="about-skill-card">
-              <div className="about-skill-title">
-                <div className="about-skill-icon">
-                  <HiPaintBrush />
-                </div>
-                UI/UX Design
-              </div>
-              <div className="about-skill-content">
-                Crafting user-centric, functional, and visually appealing
-                designs that enhance user experiences.
-              </div>
-            </div>
-
-            <div className="about-skill-card">
-              <div className="about-skill-title">
-                <div className="about-skill-icon">
-                  <FaMicrochip />
-                </div>
-                IoT Projects
-              </div>
-              <div className="about-skill-content">
-                Engaged in innovative projects that integrate web technologies
-                with IoT solutions.
               </div>
             </div>
           </div>

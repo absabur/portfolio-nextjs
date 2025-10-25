@@ -8,11 +8,7 @@ const ProtectedButton = ({ children }) => {
   if (loading) return null; // or show spinner
   if (!admin) return null;
 
-  return (
-    <React.Fragment onClick={(e) => e.stopPropagation()}>
-      {children}
-    </React.Fragment>
-  );
+  return <button onClick={(e) => e.stopPropagation()}>{children}</button>;
 };
 
 export default ProtectedButton;

@@ -18,10 +18,10 @@
 }
 
 .sec-1 {
-  width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 30px;
   margin: 10px 0;
 }
 
@@ -32,28 +32,82 @@
   color: var(--color1);
 }
 
-.footer-icon:hover {
-  transform: perspective(30px) rotate3d(1, 0, 0, 30deg) translateY(-3px);
+.footer-icon svg {
+  transition: all 0.3s;
 }
+
+/* .footer-icon:hover {
+  transform: perspective(30px) rotate3d(1, 0, 0, 30deg) translateY(-3px);
+} */
 
 .facebook:hover {
   color: #3b5998;
+}
+
+.facebook svg {
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.facebook svg:hover {
+  background-color: white;
+  box-shadow: 0 0 5px black;
 }
 
 .linkedin:hover {
   color: #0077b5;
 }
 
+.linkedin svg {
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.linkedin svg:hover {
+  background-color: white;
+  box-shadow: 0 0 5px black;
+}
+
 .github:hover {
   color: #333;
+}
+
+.github svg {
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.github svg:hover {
+  background-color: white;
+  box-shadow: 0 0 5px black;
 }
 
 .upwork:hover {
   color: #6fda44;
 }
 
+.upwork svg {
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.upwork svg:hover {
+  background-color: white;
+  box-shadow: 0 0 5px black;
+}
+
 .stackoverflow:hover {
   color: #f48024;
+}
+
+.stackoverflow svg {
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.stackoverflow svg:hover {
+  background-color: white;
+  box-shadow: 0 0 5px black;
 }
 
 .copyright {

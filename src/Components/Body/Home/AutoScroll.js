@@ -4,10 +4,9 @@ import { useState, useEffect, useRef } from "react";
 export default function RoleScroller() {
   const roles = [
     "MERN Stack Developer",
-    "Python Developer",
-    "Django Developer",
-    "Web Scraping Specialist",
-    "Automation Specialist",
+    "Frontend Developer",
+    "Backend Developer",
+    "MERN Stack Developer"
   ];
 
   const containerRef = useRef(null);

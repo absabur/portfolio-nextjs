@@ -17,47 +17,54 @@ const SkillsSection = async () => {
       <section className="skills-section" id="skills">
         <div className="container">
           <div className="skills-grid">
-            {skills.map((skill) => (
-              <SkillCard
-                key={skill._id}
-                skill={JSON.parse(JSON.stringify(skill))}
-              >
-                <div className="skill-card">
-                  <p
-                    className="skill-type"
-                    style={{
-                      backgroundColor:
-                        skill.type == "Frontend"
-                          ? "var(--color5)"
-                          : skill.type == "Backend"
-                          ? "var(--color1)"
-                          : "var(--color1)",
-                    }}
-                  >
-                    {skill.type}
-                  </p>
-                  <ProtectedButton>
-                    <Link
-                      style={{ position: "absolute", top: "5px", left: "5px", color: "var(--color5)" }}
-                      href={`/admin/skill/update/${skill._id}`}
+            {skills
+              ?.sort((a, b) => a.order - b.order)
+              ?.map((skill) => (
+                <SkillCard
+                  key={skill._id}
+                  skill={JSON.parse(JSON.stringify(skill))}
+                >
+                  <div className="skill-card">
+                    <p
+                      className="skill-type"
+                      style={{
+                        backgroundColor:
+                          skill.type == "Frontend"
+                            ? "var(--color5)"
+                            : skill.type == "Backend"
+                            ? "var(--color1)"
+                            : "var(--color1)",
+                      }}
                     >
-                      <FaEdit />
-                    </Link>
-                  </ProtectedButton>
-                  <div className="skill-icon">
-                    <img src={skill?.images?.url} alt={skill?.name} />
+                      {skill.type}
+                    </p>
+                    <ProtectedButton>
+                      <Link
+                        style={{
+                          position: "absolute",
+                          top: "5px",
+                          left: "5px",
+                          color: "var(--color5)",
+                        }}
+                        href={`/admin/skill/update/${skill._id}`}
+                      >
+                        <FaEdit />
+                      </Link>
+                    </ProtectedButton>
+                    <div className="skill-icon">
+                      <img src={skill?.images?.url} alt={skill?.name} />
+                    </div>
+                    <h3 className="skill-title">{skill?.name}</h3>
+                    <div className="skill-progress">
+                      <div
+                        className="progress-bar"
+                        style={{ width: `${skill?.proficiency}%` }}
+                      ></div>
+                      <span className="percentage">{skill?.proficiency}%</span>
+                    </div>
                   </div>
-                  <h3 className="skill-title">{skill?.name}</h3>
-                  <div className="skill-progress">
-                    <div
-                      className="progress-bar"
-                      style={{ width: `${skill?.proficiency}%` }}
-                    ></div>
-                    <span className="percentage">{skill?.proficiency}%</span>
-                  </div>
-                </div>
-              </SkillCard>
-            ))}
+                </SkillCard>
+              ))}
           </div>
         </div>
       </section>

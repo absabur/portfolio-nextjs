@@ -9,9 +9,9 @@ import { FaLock } from "react-icons/fa6";
 import { AuthProvider } from "@/Components/AuthContextProvider";
 
 export const metadata = {
-  title: "Md Abdus Sabur | Web Scraping Expert – MERN & Django Developer",
+  title: "Md Abdus Sabur — Full Stack MERN Stack Developer in Bangladesh",
   description:
-    "Md Abdus Sabur - Full-Stack Web Developer | Expert in JavaScript (MERN Stack) & Python (Django). Specializing in front-end and back-end development with React.js, Next.js, Redux, Django, MongoDB, MySQL, PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework. Currently pursuing a BSc in Mathematics and a diploma in Computer Science and Technology. Explore my portfolio for dynamic and robust web solutions.",
+    "I’m Abdus Sabur, a professional Full Stack Developer and MERN Stack Developer from Bangladesh, based in Dhaka from Bogura (Bogra). I specialize in building high-performance web applications using MongoDB, Express.js, React.js, and Node.js. As a React Developer and Next.js Developer, I focus on delivering fast, scalable, and SEO-friendly solutions with clean UI and smooth user experience. If you are looking for a dedicated Full Stack Developer in Bogura or anywhere in Bangladesh, I’m here to help bring your digital ideas to life.",
 };
 
 export const dynamic = "force-static";
@@ -53,11 +53,11 @@ export default function RootLayout({
         <meta name="author" content="Md Abdus Sabur" />
         <meta
           property="og:title"
-          content="Md Abdus Sabur – Web Scraping Expert – MERN & Django Developer"
+          content="Md Abdus Sabur — Full Stack MERN Stack Developer in Bangladesh"
         />
         <meta
           property="og:description"
-          content="Md Abdus Sabur - Full-Stack Web Developer | Expert in JavaScript (MERN Stack) & Python (Django). Specializing in front-end and back-end development with React.js, Next.js, Redux, Django, MongoDB, MySQL, PostgreSQL, SQLite, Selenium, REST APIs, and Django REST Framework. Currently pursuing a BSc in Mathematics and a diploma in Computer Science and Technology. Explore my portfolio for dynamic and robust web solutions."
+          content="Md Abdus Sabur - Full-Stack Web Application Developer | Expert in JavaScript (MERN Stack) & Next.js. Specializing in front-end and back-end development with React.js, Next.js, Redux, MongoDB, MySQL, PostgreSQL, SQLite, and REST APIs. Currently pursuing a BSc in Mathematics and a diploma in Computer Science and Technology. Explore my portfolio for dynamic and robust web solutions."
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Md Abdus Sabur" />

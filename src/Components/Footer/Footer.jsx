@@ -10,11 +10,6 @@ import { SiUpwork } from "react-icons/si";
 
 const socialMediaLinks = [
   {
-    name: "facebook",
-    url: "https://www.facebook.com/profile.php?id=100027012382655",
-    icon: <FaFacebookSquare />,
-  },
-  {
     name: "linkedin",
     url: "https://www.linkedin.com/in/ab-sabur/",
     icon: <FaLinkedin />,
@@ -28,6 +23,11 @@ const socialMediaLinks = [
     name: "upwork",
     url: "https://www.upwork.com/freelancers/~01e234a7c4eb21e7f6",
     icon: <SiUpwork />,
+  },
+  {
+    name: "facebook",
+    url: "https://www.facebook.com/profile.php?id=100027012382655",
+    icon: <FaFacebookSquare />,
   },
   // {
   //   name: "stackoverflow",
@@ -48,7 +48,7 @@ const Footer = () => {
               key={index}
               className={`footer-icon ${link.name}`}
             >
-              {link.icon}
+              <span>{link.icon}</span>
             </Link>
           ))}
         </div>

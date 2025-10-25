@@ -26,17 +26,14 @@ const Contact = () => {
             </span>
             <div className="links-body">
               <span className="link-head">Address</span>
-              <span
-                className="copy-text"
-                style={{ cursor: "default" }}
-              >
-                Johurul Nagar, Bogura Sadar, Bogura, Bangladesh - (5800)
+              <span className="copy-text" style={{ cursor: "default" }}>
+                Bosila, Mohammodpur, Dhaka - (1207), Bangladesh
               </span>
             </div>
           </div>
           <section className="mapbox">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d226.25881877836196!2d89.34647432342385!3d24.85903000947636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sbd!4v1748978327314!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d228.24624951458637!2d90.3497049006094!3d23.749519203681558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1761366035997!5m2!1sen!2sbd"
               width="100%"
               height="100%"
               loading="lazy"

@@ -23,10 +23,12 @@ const Home = () => {
           </div>
 
           <p className="home-bio">
-            <span className="highlight">Full-Stack Web Developer</span>. Expert
-            in <span className="highlight">JavaScript (MERN Stack)</span> &{" "}
-            <span className="highlight">Python (Django)</span>. Specializing in
-            front-end and back-end development. Skilled in{" "}
+            <span className="highlight">
+              Full-Stack Web Application Developer
+            </span>
+            . Expert in{" "}
+            <span className="highlight">JavaScript (MERN Stack)</span>.
+            Specializing in front-end and back-end development. Skilled in{" "}
             <span className="highlight">React.js</span>,{" "}
             <span className="highlight">Next.js</span>,{" "}
             <span className="highlight">Redux</span>,{" "}
@@ -35,10 +37,9 @@ const Home = () => {
             <span className="highlight">MySQL</span>,{" "}
             <span className="highlight">PostgreSQL</span>,{" "}
             <span className="highlight">SQLite</span>,{" "}
-            <span className="highlight">Selenium</span>,{" "}
-            <span className="highlight">REST APIs</span>, and{" "}
-            <span className="highlight">Django REST Framework</span>. Explore my
-            portfolio for dynamic and robust web solutions.
+            <span className="highlight">Selenium</span> and{" "}
+            <span className="highlight">REST APIs</span>. Explore my portfolio
+            for dynamic and robust web solutions.
           </p>
 
           <div className="home-actions">

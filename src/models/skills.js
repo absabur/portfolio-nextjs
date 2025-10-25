@@ -21,6 +21,8 @@ const skillSchema = new Schema({
       required: true,
     },
   },
+  order: { type: Number, default: 0 },
+  published: { type: Boolean, default: true },
   createDate: {
     type: Object,
   },

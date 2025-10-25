@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import { AllProjects } from "../../../serverAction";
 import SectionsHead from "../SectionsTop";
+import AllProjectForAdmin from "./AllProjectForAdmin";
 
 const Project = async () => {
   const { projects } = await AllProjects();
@@ -13,10 +14,14 @@ const Project = async () => {
       <SectionsHead section="project" />
       <h1 className="projects-header">Projects</h1>
       <div className="all-projects">
+        <AllProjectForAdmin safeProjects={safeProjects}/>
         <div className="project2">
-          {safeProjects.map((item) => (
-            <ProjectCard key={item._id} project={item} />
-          ))}
+          {safeProjects
+            ?.sort((a, b) => a.order - b.order)
+            ?.map((item) => {
+              if (item.published)
+                return <ProjectCard key={item._id} project={item} />;
+            })}
         </div>
       </div>
     </div>

@@ -34,6 +34,7 @@ export async function PUT(request, { params }) {
 
     await Skill.findByIdAndUpdate(id, {
       ...data,
+      published: data.published === "true" || data.published === true, 
       updateDate: localTime(),
     });
 
