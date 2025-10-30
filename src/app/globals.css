@@ -1,32 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Righteous&display=swap");
 
 :root {
-  --color1: #00f7ff;
+  --color1: #7cdaff;
   --color2: #c7daff;
   --color3: #001129;
   --color4: #ffffff;
-  --color5: #00ff6a;
+  --color5: #7cdaff;
   --color6: #04081a;
-  --color1-opacity-15: #00f7ff26;
-  --color5-opacity-15: #00ff6a26;
-  --color1-opacity-05: #00f7ff0d;
-  --color5-opacity-03: #00ff6a08;
+  --color1-opacity-15: #7cdaff26;
+  --color5-opacity-15: #7cdaff26;
+  --color1-opacity-05: #7cdaff0d;
+  --color5-opacity-03: #7cdaff08;
 
-  --font-base: "Cormorant Upright", serif;
-  --font-alt: "Open Sans", sans-serif;
+  --font-base: "Righteous", sans-serif;
+  --font-alt: "Karla", sans-serif;
 }
 
 .light {
-  --color1: #008b2a;
+  --color1: #0078a8;
   --color2: #1d2127;
   --color3: #ebf4ff;
   --color4: #000000;
-  --color5: #005075;
+  --color5: #0078a8;
   --color6: #eaeef1;
-  --color1-opacity-15: #008b2a26;
-  --color5-opacity-15: #00507526;
-  --color1-opacity-05: #008b2a0d;
-  --color5-opacity-03: #00507508;
+  --color1-opacity-15: #0078a826;
+  --color5-opacity-15: #0078a826;
+  --color1-opacity-05: #0078a80d;
+  --color5-opacity-03: #0078a808;
 }
 
 * {
@@ -38,9 +38,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: var(--font-alt);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--color6) !important;
@@ -61,11 +59,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 .main {
   margin: auto;
   padding: 10px !important;
@@ -73,7 +66,7 @@ code {
   display: flex;
   flex-direction: column;
   gap: 100px;
-  max-width: 1700px;
+  max-width: 1500px;
   z-index: 1;
 }
 
@@ -353,7 +346,6 @@ code {
   white-space: nowrap;
   border-width: 0;
 }
-
 
 /* another button desing */
 
