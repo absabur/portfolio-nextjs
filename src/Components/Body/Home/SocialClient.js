@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
@@ -6,10 +7,9 @@ import { FaLinkedin } from "react-icons/fa6";
 const SocialClient = () => {
   return (
     <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-      <button
-        onClick={() =>
-          window.open("https://www.linkedin.com/in/ab-sabur/", "_blank")
-        }
+      <Link
+        href={`https://www.linkedin.com/in/ab-sabur/`}
+        target="_blank"
         className="neon-glow-button"
         style={{ flex: 1 }}
       >
@@ -17,43 +17,34 @@ const SocialClient = () => {
           <FaLinkedin /> LinkedIn
         </span>
         <span className="neon-border"></span>
-      </button>
-      <button
-        onClick={() => window.open("https://github.com/absabur", "_blank")}
+      </Link>
+      <Link
+        href={`https://github.com/absabur/`}
+        target="_blank"
         className="liquid-gradient-button"
         style={{ flex: 1 }}
       >
-        <span className="liquid-text">
-          <FaGithubSquare /> GitHub
-        </span>
+        <span className="liquid-text">GitHub</span>
         <div className="liquid-overlay"></div>
-      </button>
-      <button
-        onClick={() =>
-          window.open(
-            "/Md Abdus Sabur MERN Stack Developer Resume.pdf",
-            "_blank"
-          )
-        }
+      </Link>
+      <Link
+        href={`/Md_Abdus_Sabur_MERN_Stack_Developer_Resume.pdf`}
+        target="_blank"
         className="neon-glow-button"
         style={{ flex: 1 }}
       >
         <span className="neon-text">Resume</span>
         <span className="neon-border"></span>
-      </button>
-      <button
-        onClick={() =>
-          window.open(
-            "/Md Abdus Sabur MERN Stack Developer CV.pdf",
-            "_blank"
-          )
-        }
+      </Link>
+      <Link
+        href={`/Md_Abdus_Sabur_MERN_Stack_Developer_CV.pdf`}
+        target="_blank"
         className="liquid-gradient-button"
         style={{ flex: 1 }}
       >
         <span className="liquid-text">CV</span>
         <div className="liquid-overlay"></div>
-      </button>
+      </Link>
     </div>
   );
 };

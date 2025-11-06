@@ -59,6 +59,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .main {
   margin: auto;
   padding: 10px !important;
@@ -117,7 +121,7 @@ body::-webkit-scrollbar {
 
 /* =================================== */
 
-/* .neon-glow-button {
+.neon-glow-button {
   position: relative;
   padding: 1rem 2rem;
   border: none;
@@ -242,7 +246,7 @@ body::-webkit-scrollbar {
   100% {
     background-position: 20px 20px;
   }
-} */
+}
 
 /* =================================== */
 
@@ -345,74 +349,4 @@ body::-webkit-scrollbar {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
-}
-
-/* another button desing */
-
-.neon-glow-button {
-  background: linear-gradient(
-    to top,
-    var(--color1-opacity-05),
-    var(--color1-opacity-15)
-  );
-  padding: 10px 15px;
-  border-radius: 10px;
-  transition: all 0.3s;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 0 2px var(--color2);
-}
-
-.neon-text {
-  background: linear-gradient(
-    to top,
-    var(--color1-opacity-15),
-    var(--color1-opacity-05)
-  );
-  padding: 10px 15px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  color: var(--color4);
-}
-
-.neon-glow-button:hover {
-  box-shadow: 0 0 15px var(--color1-opacity-15),
-    0 0 20px var(--color1-opacity-05);
-}
-
-.liquid-gradient-button {
-  background: linear-gradient(
-    to top,
-    var(--color5-opacity-03),
-    var(--color5-opacity-15)
-  );
-  padding: 10px 15px;
-  border-radius: 10px;
-  transition: all 0.3s;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 0 2px var(--color2);
-}
-
-.liquid-text {
-  background: linear-gradient(
-    to top,
-    var(--color5-opacity-15),
-    var(--color5-opacity-03)
-  );
-  padding: 10px 15px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  color: var(--color4);
-}
-
-.liquid-gradient-button:hover {
-  box-shadow: 0 0 15px var(--color5-opacity-15),
-    0 0 20px var(--color5-opacity-03);
 }
