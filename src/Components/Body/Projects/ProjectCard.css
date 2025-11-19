@@ -309,6 +309,10 @@
   .ic-buttonGroup {
     flex-direction: column;
   }
+  
+  .ic-buttonGroup a {
+    width: 100%;
+  }
 
   .ic-liveButton,
   .ic-githubButton {

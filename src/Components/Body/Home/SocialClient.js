@@ -13,9 +13,8 @@ const SocialClient = () => {
         className="neon-glow-button"
         style={{ flex: 1 }}
       >
-        <span className="neon-text">
-          <FaLinkedin /> LinkedIn
-        </span>
+        <FaLinkedin />
+        <span className="neon-text">LinkedIn</span>
         <span className="neon-border"></span>
       </Link>
       <Link
@@ -24,6 +23,7 @@ const SocialClient = () => {
         className="liquid-gradient-button"
         style={{ flex: 1 }}
       >
+        <FaGithubSquare />
         <span className="liquid-text">GitHub</span>
         <div className="liquid-overlay"></div>
       </Link>

@@ -123,7 +123,7 @@ a {
 
 .neon-glow-button {
   position: relative;
-  padding: 1rem 2rem;
+  padding: 15px 20px;
   border: none;
   background-color: var(--color6);
   color: var(--color1);
@@ -133,11 +133,15 @@ a {
   overflow: hidden;
   transition: all 0.3s ease;
   z-index: 1;
+  width: fit-content;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .neon-text {
-  position: relative;
-  z-index: 2;
   text-shadow: 0 0 5px var(--color1);
   display: flex;
   align-items: center;
@@ -186,7 +190,7 @@ a {
 }
 .liquid-gradient-button {
   position: relative;
-  padding: 1rem 2rem;
+  padding: 15px 20px;
   border: none;
   background: linear-gradient(45deg, var(--color3), var(--color6));
   color: var(--color4);
@@ -196,11 +200,15 @@ a {
   transition: all 0.4s ease;
   z-index: 1;
   box-shadow: 0 0 2px var(--color5);
+  width: fit-content;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .liquid-text {
-  position: relative;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;

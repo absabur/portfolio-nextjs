@@ -2,8 +2,7 @@
   width: 100%;
   background-color: transparent;
   color: var(--color4);
-  /* max-width: 1320px;
-  margin: 0 auto; */
+  padding-top: 80px;
 }
 
 .footer-icons {
