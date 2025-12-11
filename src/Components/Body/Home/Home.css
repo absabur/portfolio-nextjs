@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
 .home {
   width: 100%;
   display: flex;
@@ -80,7 +82,6 @@
   line-height: 25px;
   margin-bottom: 30px;
 }
-
 
 .cv-download {
   width: 100%;
@@ -170,7 +171,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-bottom: 15px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   font-weight: 700;
   font-family: var(--font-alt);
@@ -191,7 +191,6 @@
   margin: 0 10px;
   white-space: nowrap;
 }
-
 
 .highlight {
   color: var(--color1);
@@ -278,43 +277,150 @@
   }
 }
 
-/* Global Styles */
-.role-scroller-wrapper {
-  width: 100%;
-  overflow: hidden;
-}
-
-.role-scroller-container {
+.glitch-wrapper {
   display: flex;
-  gap: 1.5rem;
-  overflow-x: scroll;
-  scroll-snap-type: x proximity;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-bottom: 10px; /* Prevents clipping */
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Aligns to left, or use 'center' */
+  font-family: "Space Mono", monospace; /* The "Hacker" Font */
 }
 
-.role-scroller-container::-webkit-scrollbar {
-  display: none;
+.glitch-container {
+  position: relative;
+  display: inline-block;
 }
 
-/* Role Tag Styling */
-.role-tag {
-  scroll-snap-align: center;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  background: linear-gradient(145deg, var(--color5-opacity-15));
-  color: var(--color4);
-  font-weight: 600;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-  min-width: fit-content;
-  transition: all 0.3s ease;
-  transform-style: preserve-3d;
+.glitch-text {
+  font-size: 2rem; /* Big bold text */
+  font-weight: 700;
+  color: var(--color1); /* Main Brand Color */
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  position: relative;
+  margin: 0;
+
+  /* The Glitch Animation */
+  animation: glitch-skew 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite both;
 }
 
-/* Active (Centered) Tag Highlight */
-.role-tag.active {
-  background: linear-gradient(145deg, var(--color5), var(--color1));
-  box-shadow: 0 10px 25px -5px var(--color1-opacity-15);
-  color: var(--color3);
+/* This creates two copies of the text (Red and Blue) 
+   that sit behind the main text and shift slightly
+*/
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text); /* Grabs the text from React */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+/* The Blue/Purple Ghost Layer */
+.glitch-text::before {
+  color: var(--color5);
+  z-index: -1;
+  animation: glitch-anim-1 4s infinite linear alternate-reverse;
+}
+
+/* The Red/Warning Ghost Layer (Using a hardcoded red or a variable) */
+.glitch-text::after {
+  color: #ff0055; /* Use a stark contrast color or var(--color3) */
+  z-index: -2;
+  animation: glitch-anim-2 4s infinite linear alternate-reverse;
+}
+
+/* --- ANIMATIONS --- */
+
+/* Randomly shift the text position */
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg);
+  }
+  20% {
+    transform: skew(0deg);
+  }
+  22% {
+    transform: skew(10deg);
+  }
+  24% {
+    transform: skew(-10deg);
+  }
+  26% {
+    transform: skew(0deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+/* Shift the Blue layer */
+@keyframes glitch-anim-1 {
+  0% {
+    clip-path: inset(20% 0 80% 0);
+    transform: translate(-2px, 0);
+  }
+  20% {
+    clip-path: inset(60% 0 10% 0);
+    transform: translate(2px, 0);
+  }
+  40% {
+    clip-path: inset(40% 0 50% 0);
+    transform: translate(-2px, 0);
+  }
+  60% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate(2px, 0);
+  }
+  80% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(-2px, 0);
+  }
+  100% {
+    clip-path: inset(30% 0 50% 0);
+    transform: translate(2px, 0);
+  }
+}
+
+/* Shift the Red layer */
+@keyframes glitch-anim-2 {
+  0% {
+    clip-path: inset(10% 0 60% 0);
+    transform: translate(2px, 0);
+  }
+  20% {
+    clip-path: inset(30% 0 20% 0);
+    transform: translate(-2px, 0);
+  }
+  40% {
+    clip-path: inset(70% 0 10% 0);
+    transform: translate(2px, 0);
+  }
+  60% {
+    clip-path: inset(20% 0 50% 0);
+    transform: translate(-2px, 0);
+  }
+  80% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(2px, 0);
+  }
+  100% {
+    clip-path: inset(0% 0 80% 0);
+    transform: translate(-2px, 0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .glitch-text {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+  .glitch-wrapper {
+    align-items: center; /* Center align on smaller screens */
+  }
 }

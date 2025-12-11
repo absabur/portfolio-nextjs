@@ -1,59 +1,72 @@
 'use client'
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
-export default function RoleScroller() {
+export default function GlitchText() {
   const roles = [
-    "MERN Stack Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "MERN Stack Developer"
+    "MERN DEVELOPER",
+    "REACT SPECIALIST",
+    "Next.js DEVELOPER", 
+    "Frontend DEVELOPER",
+    "Full Stack DEVELOPER",
+    "BACKEND DEVELOPER"
   ];
 
-  const containerRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [displayText, setDisplayText] = useState(roles[0]);
+  const [index, setIndex] = useState(0);
+  
+  // Characters to use for the scrambling effect
+  const chars = "!<>-_\\/[]{}—=+*^?#________"; 
 
-  // Auto-scroll logic
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (!isHovered) {
-        setCurrentIndex((prev) => (prev + 1) % roles.length);
+    let interval;
+    let iteration = 0;
+    
+    // The target word we want to show
+    const targetText = roles[index];
+
+    // Start the scrambling animation
+    interval = setInterval(() => {
+      setDisplayText((prev) => 
+        targetText
+          .split("")
+          .map((letter, i) => {
+            // If the loop has passed this letter index, "lock" the correct letter in
+            if (i < iteration) {
+              return targetText[i];
+            }
+            // Otherwise show a random high-tech symbol
+            return chars[Math.floor(Math.random() * chars.length)];
+          })
+          .join("")
+      );
+
+      // Stop animation when the whole word is revealed
+      if (iteration >= targetText.length) { 
+        clearInterval(interval);
       }
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [isHovered, roles.length]);
-
-  // Smooth scroll to current role
-  useEffect(() => {
-    if (containerRef.current) {
-      const container = containerRef.current;
-      const selectedTag = container.children[currentIndex];
-      const scrollPos = selectedTag.offsetLeft - (container.offsetWidth / 2 - selectedTag.offsetWidth / 2);
       
-      container.scrollTo({
-        left: scrollPos,
-        behavior: "smooth",
-      });
-    }
-  }, [currentIndex]);
+      // Speed of decryption (higher += faster)
+      iteration += 1 / 3; 
+    }, 30);
+
+    // Wait 3.5 seconds, then move to the next word
+    const timeout = setTimeout(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % roles.length);
+    }, 3500);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
+  }, [index]); // Re-run this effect whenever 'index' changes
 
   return (
-    <div className="role-scroller-wrapper">
-      <div
-        ref={containerRef}
-        className="role-scroller-container"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        {roles.map((role, index) => (
-          <div
-            key={index}
-            className={`role-tag ${index === currentIndex ? "active" : ""}`}
-          >
-            {role}
-          </div>
-        ))}
+    <div className="glitch-wrapper">
+      <div className="glitch-container">
+        {/* data-text attribute is needed for the CSS glitch effect */}
+        <h1 className="glitch-text" data-text={displayText}>
+          {displayText}
+        </h1>
       </div>
     </div>
   );
