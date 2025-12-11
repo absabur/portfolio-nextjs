@@ -23,6 +23,8 @@ export default function RootLayout({
   skills,
   projects,
   education,
+  experience,
+  certifications,
   contact,
 }) {
   const setInitialTheme = `
@@ -97,6 +99,8 @@ export default function RootLayout({
               {about}
               {skills}
               {projects}
+              {experience}
+              {certifications}
               {education}
               {contact}
             </div>

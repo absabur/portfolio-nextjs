@@ -6,6 +6,8 @@ import {
   FaEnvelopeOpenText,
   FaGraduationCap,
   FaHome,
+  FaAward,
+  FaBriefcase,
 } from "react-icons/fa";
 import { TbInfoSquareRoundedFilled } from "react-icons/tb";
 import { GrTasks } from "react-icons/gr";
@@ -79,6 +81,22 @@ const Header = () => {
         element1?.getBoundingClientRect().top + window.pageYOffset - lessScroll,
     });
   };
+  const scrollToExperience = () => {
+    let element1 = document.querySelector(".experience-section-scroll");
+    window.scrollTo({
+      behavior: "smooth",
+      top:
+        element1?.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+    });
+  };
+  const scrollToCertifications = () => {
+    let element1 = document.querySelector(".certifications-section-scroll");
+    window.scrollTo({
+      behavior: "smooth",
+      top:
+        element1?.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+    });
+  };
   const navItems = [
     {
       label: "Home",
@@ -87,13 +105,13 @@ const Header = () => {
       icon: <FaHome />,
       section: "home",
     },
-    {
-      label: "About",
-      onClick: scrollToAbout,
-      tooltipContent: "About",
-      icon: <TbInfoSquareRoundedFilled />,
-      section: "about",
-    },
+    // {
+    //   label: "About",
+    //   onClick: scrollToAbout,
+    //   tooltipContent: "About",
+    //   icon: <TbInfoSquareRoundedFilled />,
+    //   section: "about",
+    // },
     {
       label: "Skills",
       onClick: scrollToSkills,
@@ -109,12 +127,26 @@ const Header = () => {
       section: "project",
     },
     {
+      label: "Experience",
+      onClick: scrollToExperience,
+      tooltipContent: "Experience",
+      icon: <FaBriefcase />,
+      section: "experience",
+    },
+    {
       label: "Education",
       onClick: scrollToEducations,
       tooltipContent: "Education",
       icon: <FaGraduationCap />,
       section: "education",
     },
+    // {
+    //   label: "Certifications",
+    //   onClick: scrollToCertifications,
+    //   tooltipContent: "Certifications",
+    //   icon: <FaAward />,
+    //   section: "certifications",
+    // },
     {
       label: "Contact",
       onClick: scrollToContact,

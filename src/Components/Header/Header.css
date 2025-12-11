@@ -52,7 +52,7 @@
 .nav-bar-icons {
   border-radius: 10px;
   color: var(--color4);
-  margin: 0 5px;
+  margin: 0 3px;
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
@@ -70,14 +70,13 @@
   cursor: pointer;
 }
 
-#tooltip{
+#tooltip {
   display: none;
 }
 
 .nav-active-icon {
   animation: activetab 0.5s linear forwards !important;
 }
-
 
 .nav-bar-icons:hover {
   background-color: var(--color1-opacity-15);
@@ -91,18 +90,19 @@
   .inner-header {
     border-radius: 0;
     width: 100%;
+    padding: 0 10px;
   }
   .header-div {
     bottom: 0;
     padding: 0;
   }
-  .nav-details{
+  .nav-details {
     display: none;
   }
-  .nav-bar-icons{
+  .nav-bar-icons {
     font-size: 20px;
   }
-  #tooltip{
+  #tooltip {
     display: block;
   }
 }

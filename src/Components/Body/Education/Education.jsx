@@ -19,7 +19,14 @@ const educations = [
     duration: "2020 - Present",
     description:
       "Specializing in advanced mathematics and statistical analysis",
-    icon: "🎓",
+    icon: (
+      <img
+        width={30}
+        style={{ borderRadius: "4px", objectFit: "contain" }}
+        src="/azizul.jpg"
+        alt={`logo`}
+      />
+    ),
     color: "#4f46e5",
   },
   {
@@ -28,7 +35,14 @@ const educations = [
     institution: "Bogra Polytechnic Institute, Bangladesh",
     duration: "2018 - 2020",
     description: "Focused on software development and computer systems",
-    icon: "💻",
+    icon: (
+      <img
+        width={30}
+        style={{ borderRadius: "4px", objectFit: "contain" }}
+        src="/bpi.jpg"
+        alt={`logo`}
+      />
+    ),
     color: "#10b981",
   },
   {
@@ -38,7 +52,14 @@ const educations = [
     duration: "2016 - 2018",
     description:
       "Higher secondary education with physics, chemistry, and mathematics",
-    icon: "🔬",
+    icon: (
+      <img
+        width={30}
+        style={{ borderRadius: "4px", objectFit: "contain" }}
+        src="/gssc.jpg"
+        alt={`logo`}
+      />
+    ),
     color: "#f59e0b",
   },
   {
@@ -47,7 +68,14 @@ const educations = [
     institution: "Mortuzapur High School, Dupchanchis, Bogra",
     duration: "2014 - 2016",
     description: "Secondary school certificate with science concentration",
-    icon: "📚",
+    icon: (
+      <img
+        width={30}
+        style={{ borderRadius: "4px", objectFit: "contain" }}
+        src="/mhs.jpg"
+        alt={`logo`}
+      />
+    ),
     color: "#ec4899",
   },
 ];
@@ -78,9 +106,9 @@ const Element = ({ education }) => (
       color: "var(--color4)",
       borderLeft: "var(--color1) 5px solid",
       borderRight: "var(--color5) 5px solid",
-      borderRadius: "20px"
+      borderRadius: "20px",
     }}
-    contentArrowStyle={{ borderRight: "20px solid  var(--color2)" }}
+    contentArrowStyle={{ borderRight: "20px solid var(--color2)" }}
     date={education.duration}
     iconStyle={{
       background: "var(--color3)",
@@ -96,10 +124,7 @@ const Element = ({ education }) => (
     <p className="vertical-timeline-element-subtitle h-4">
       {education.institution}
     </p>
-    <p
-      style={{ fontWeight: "300" }}
-      className="vertical-timeline-element-subtitle"
-    >
+    <p className="vertical-timeline-element-subtitle exp-desc">
       {education.description}
     </p>
   </VerticalTimelineElement>

@@ -51,7 +51,15 @@
 
 .h-4 {
   font-size: 17px;
+  font-weight: 400 !important;
+  opacity: 0.85;
+  margin-top: 0 !important;
 }
+
+.exp-desc {
+  font-weight: 500 !important;
+}
+
 .vertical-timeline-element-content {
   box-shadow: none !important;
 }

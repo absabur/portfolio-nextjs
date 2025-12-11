@@ -1,0 +1,43 @@
+.experience-section {
+  padding: 0 10px;
+}
+.experience-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--color4);
+}
+.experience-timeline {
+  max-width: 100%;
+}
+.exp-position {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--color4);
+}
+.exp-company {
+  margin: 0.25rem 0 0.25rem;
+  font-weight: 300;
+  color: var(--color4) !important;
+}
+.exp-company a {
+  color: var(--color4) !important;
+  text-decoration: none;
+}
+.exp-company a:hover {
+  text-decoration: underline;
+}
+.exp-location {
+  font-weight: 400;
+  opacity: 0.85;
+}
+.exp-desc {
+  font-weight: 300;
+  color: var(--color4);
+}
+
+@media (max-width: 760px) {
+  .experience-timeline .vertical-timeline-element-content {
+    border-radius: 12px;
+  }
+}
