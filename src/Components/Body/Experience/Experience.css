@@ -1,12 +1,19 @@
 .experience-section {
   padding: 0 10px;
+  text-align: center;
 }
 .experience-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
+  font-family: var(--font-base);
+  font-size: 35px;
   color: var(--color4);
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  box-shadow: 0 0 180px 1px var(--color1);
+  border-radius: 10px;
+  display: inline-block;
 }
+
 .experience-timeline {
   max-width: 100%;
 }
