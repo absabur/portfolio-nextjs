@@ -75,28 +75,58 @@ a {
 }
 
 .design-bg {
-  background-image: repeating-linear-gradient(
-      45deg,
-      var(--color1-opacity-05) 0,
-      var(--color1-opacity-05) 1px,
-      transparent 1px,
-      transparent 12px
+  background-color: transparent;
+  background-image: linear-gradient(
+      30deg,
+      var(--color1-opacity-05) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color1-opacity-05) 87.5%,
+      var(--color1-opacity-05)
     ),
-    repeating-linear-gradient(
-      -45deg,
-      var(--color1-opacity-05) 0,
-      var(--color1-opacity-05) 1px,
-      transparent 1px,
-      transparent 12px
+    linear-gradient(
+      150deg,
+      var(--color1-opacity-05) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color1-opacity-05) 87.5%,
+      var(--color1-opacity-05)
     ),
-    repeating-linear-gradient(
-      90deg,
-      var(--color5-opacity-03) 0,
-      var(--color5-opacity-03) 1px,
-      transparent 1px,
-      transparent 4px
+    linear-gradient(
+      30deg,
+      var(--color1-opacity-05) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color1-opacity-05) 87.5%,
+      var(--color1-opacity-05)
+    ),
+    linear-gradient(
+      150deg,
+      var(--color1-opacity-05) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--color1-opacity-05) 87.5%,
+      var(--color1-opacity-05)
+    ),
+    linear-gradient(
+      60deg,
+      var(--color5-opacity-03) 25%,
+      transparent 25.5%,
+      transparent 75%,
+      var(--color5-opacity-03) 75%,
+      var(--color5-opacity-03)
+    ),
+    linear-gradient(
+      60deg,
+      var(--color5-opacity-03) 25%,
+      transparent 25.5%,
+      transparent 75%,
+      var(--color5-opacity-03) 75%,
+      var(--color5-opacity-03)
     );
-  background-size: 24px 24px, 24px 24px, 8px 8px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  background-size: 80px 140px;
+  background-attachment: fixed;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
