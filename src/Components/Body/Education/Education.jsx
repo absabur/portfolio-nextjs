@@ -8,79 +8,27 @@ import {
 
 import "react-vertical-timeline-component/style.min.css";
 
-import { PiGraduationCapFill } from "react-icons/pi";
 import SectionsHead from "../SectionsTop";
 
-const educations = [
-  {
-    id: 1,
-    degree: "BSC (HONS) in Mathematics",
-    institution: "Govt Azizul Haque College, National University, Bangladesh",
-    duration: "2020 - Present",
-    description:
-      "Specializing in advanced mathematics and statistical analysis",
-    icon: (
-      <img
-        width={30}
-        style={{ borderRadius: "4px", objectFit: "contain" }}
-        src="/azizul.jpg"
-        alt={`logo`}
-      />
-    ),
-    color: "#4f46e5",
-  },
-  {
-    id: 2,
-    degree: "Diploma in Computer Science and Technology",
-    institution: "Bogra Polytechnic Institute, Bangladesh",
-    duration: "2018 - 2020",
-    description: "Focused on software development and computer systems",
-    icon: (
-      <img
-        width={30}
-        style={{ borderRadius: "4px", objectFit: "contain" }}
-        src="/bpi.jpg"
-        alt={`logo`}
-      />
-    ),
-    color: "#10b981",
-  },
-  {
-    id: 3,
-    degree: "HSC in Science",
-    institution: "Govt Shah Sultan College, Bogra",
-    duration: "2016 - 2018",
-    description:
-      "Higher secondary education with physics, chemistry, and mathematics",
-    icon: (
-      <img
-        width={30}
-        style={{ borderRadius: "4px", objectFit: "contain" }}
-        src="/gssc.jpg"
-        alt={`logo`}
-      />
-    ),
-    color: "#f59e0b",
-  },
-  {
-    id: 4,
-    degree: "SSC in Science",
-    institution: "Mortuzapur High School, Dupchanchis, Bogra",
-    duration: "2014 - 2016",
-    description: "Secondary school certificate with science concentration",
-    icon: (
-      <img
-        width={30}
-        style={{ borderRadius: "4px", objectFit: "contain" }}
-        src="/mhs.jpg"
-        alt={`logo`}
-      />
-    ),
-    color: "#ec4899",
-  },
-];
+import { useEffect, useState } from "react";
 
 const Education = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("/api/education");
+        if (!res.ok) throw new Error("Failed to fetch education");
+        const data = await res.json();
+        setItems((data.educations || []).filter((e) => e.is_active));
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <div className="education-section" id="education">
       <SectionsHead section="education" />
@@ -88,8 +36,8 @@ const Education = () => {
 
       <div className="educations">
         <VerticalTimeline>
-          {educations.map((education, i) => (
-            <Element key={i} education={education} />
+          {items.map((education, i) => (
+            <Element key={education._id || i} education={education} />
           ))}
         </VerticalTimeline>
       </div>
@@ -118,7 +66,14 @@ const Element = ({ education }) => (
       alignItems: "center",
       justifyContent: "center",
     }}
-    icon={education.icon}
+    icon={
+      <img
+        width={30}
+        style={{ borderRadius: "4px", objectFit: "contain" }}
+        src={education.icon}
+        alt={`logo`}
+      />
+    }
   >
     <h3 className="vertical-timeline-element-title h-3">{education.degree}</h3>
     <p className="vertical-timeline-element-subtitle h-4">

@@ -1,5 +1,4 @@
 "use client";
-import { FaPlus } from "react-icons/fa6";
 import "./admin.css";
 
 import Link from "next/link";
@@ -9,15 +8,20 @@ export default function Dashboard() {
     <div className="dashboard-container">
       <h1 className="dashboard-title">Dashboard</h1>
       <div className="links-container">
-        <Link href="/admin/project/add" className="dashboard-card">
-          <FaPlus fontSize={30} />
-          <h2>Add Project</h2>
-          <p>Create a new project in the system</p>
+        <Link href="/admin/project" className="dashboard-card">
+          <h2>Project</h2>
         </Link>
-        <Link href="/admin/skill/add" className="dashboard-card">
-          <FaPlus fontSize={30} />
-          <h2>Add Skill</h2>
-          <p>Add a new skill to your profile</p>
+        <Link href="/admin/skill" className="dashboard-card">
+          <h2>Skill</h2>
+        </Link>
+        <Link href="/admin/experience" className="dashboard-card">
+          <h2>Experience</h2>
+        </Link>
+        <Link href="/admin/certifications" className="dashboard-card">
+          <h2>Certification</h2>
+        </Link>
+        <Link href="/admin/education" className="dashboard-card">
+          <h2>Education</h2>
         </Link>
       </div>
     </div>

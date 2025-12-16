@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import "./addProject.css";
+import "../css/addProject.css";
 import { clientCloudinary } from "@/config/cloudinaryClient";
 import { revalidate } from "../action";
 import { useRouter } from "next/navigation";

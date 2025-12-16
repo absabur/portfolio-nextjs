@@ -1,0 +1,575 @@
+/* --- Global Color/Font Variables are assumed to be defined --- */
+
+/* 1. Container and General Layout */
+.edu-list-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--color6);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--color2);
+  font-family: var(--font-alt);
+  color: var(--color2);
+  border: 1px solid var(--color1-opacity-15);
+}
+
+.edu-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--color1-opacity-15);
+}
+
+.edu-list-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color1);
+  font-family: var(--font-base);
+}
+
+/* 2. Button Styling */
+.edu-list-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-family: var(--font-alt);
+}
+
+.edu-list-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Primary Button (Add Education) */
+.edu-list-btn-primary {
+  background-color: var(--color1);
+  color: var(--color6);
+  border: 1px solid var(--color1);
+}
+.edu-list-btn-primary:hover {
+  background-color: var(--color5);
+  box-shadow: 0 4px 10px var(--color5-opacity-15);
+  transform: translateY(-1px);
+}
+
+/* Secondary Button (Edit) */
+.edu-list-btn-secondary {
+  background-color: var(--color2);
+  color: var(--color3);
+  font-size: 0.9em;
+}
+.edu-list-btn-secondary:hover {
+  background-color: var(--color2);
+  box-shadow: 0 2px 5px var(--color2);
+  opacity: 0.9;
+}
+
+/* Danger Button (Delete) */
+.edu-list-btn-danger {
+  background-color: transparent;
+  color: var(--color2);
+  border: 1px solid var(--color2);
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+.edu-list-btn-danger:hover {
+  background-color: var(--color2);
+  color: var(--color3);
+}
+
+/* 3. Education List Styling */
+.edu-list-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edu-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color1-opacity-05);
+  transition: background-color 0.15s ease;
+}
+
+.edu-list-item:hover {
+  background-color: var(--color5-opacity-03);
+}
+
+.edu-list-item:last-child {
+  border-bottom: none;
+}
+
+/* Item Details Section */
+.edu-list-item-details {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+.edu-list-degree-text {
+  font-size: 1.25rem;
+  color: var(--color1);
+  margin-right: 5px;
+  font-weight: 700;
+  font-family: var(--font-base);
+}
+
+.edu-list-institution {
+  font-size: 1.15rem;
+  color: var(--color2);
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.edu-list-item-meta {
+  font-size: 0.9rem;
+  color: var(--color2);
+  opacity: 0.8;
+  margin: 8px 0 10px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.edu-list-item-description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color2);
+  opacity: 0.7;
+  max-width: 800px;
+}
+
+/* Status Badge (Active/Inactive) */
+.edu-list-status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 15px;
+}
+
+.edu-list-status-active {
+  background-color: var(--color1);
+  color: var(--color6);
+}
+
+.edu-list-status-inactive {
+  background-color: var(--color2);
+  color: var(--color2);
+}
+
+/* Actions Section */
+.edu-list-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Empty State */
+.edu-list-empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--color2);
+  opacity: 0.5;
+  font-style: italic;
+  font-size: 1.1rem;
+  background-color: var(--color1-opacity-05);
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* ===================== */
+
+/* --- Global Color/Font Variables are assumed to be defined --- */
+
+/* 1. Container and Form Layout */
+.edu-add-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--color6);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--color2);
+  font-family: var(--font-alt);
+  border: 1px solid var(--color1-opacity-15);
+}
+
+.edu-add-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--color1);
+  font-family: var(--font-base);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color1-opacity-15);
+}
+
+.edu-add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive Grid for Two Columns */
+.edu-add-group-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .edu-add-group-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 2. Form Group and Labels */
+.edu-add-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-add-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color2);
+  font-size: 1rem;
+}
+
+/* 3. Input Fields (Text, Number, Textarea) */
+.edu-add-input,
+.edu-add-textarea {
+  padding: 12px 15px;
+  border: 1px solid var(--color2);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--color3);
+  color: var(--color2);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.edu-add-input:focus,
+.edu-add-textarea:focus {
+  border-color: var(--color1);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color1-opacity-15);
+}
+
+.edu-add-textarea {
+  resize: vertical;
+}
+
+/* Error Messages */
+.edu-add-error-message {
+  color: #ff4d4f; /* Standard error color */
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* 4. Checkbox Styling (Active Status) */
+.edu-add-checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding-top: 15px;
+}
+
+.edu-add-label-checkbox {
+  margin: 0;
+  order: 2;
+}
+
+.edu-add-input-checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid var(--color2);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  order: 1;
+}
+
+.edu-add-input-checkbox:checked {
+  background-color: var(--color1);
+  border-color: var(--color1);
+}
+
+.edu-add-input-checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color6);
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* 5. Icon/Image Upload and Preview */
+.edu-add-input-file {
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+}
+
+.edu-add-image-preview-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-top: 15px;
+  border: 1px solid var(--color2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.edu-add-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edu-add-remove-image-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--color2);
+  color: var(--color4);
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 1;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.edu-add-remove-image-btn:hover {
+  background-color: var(--color1);
+}
+
+/* 6. Submit Button */
+.edu-add-submit-btn {
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: var(--color1);
+  color: var(--color6);
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.edu-add-submit-btn:hover:not(:disabled) {
+  background-color: var(--color5);
+  opacity: 0.9;
+}
+
+.edu-add-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+/* ================================= */
+/* --- Global Color/Font Variables are assumed to be defined --- */
+
+/* 1. Container and Form Layout */
+.edu-edit-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--color6);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--color2);
+  font-family: var(--font-alt);
+  border: 1px solid var(--color1-opacity-15);
+}
+
+.edu-edit-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--color1);
+  font-family: var(--font-base);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color1-opacity-15);
+}
+
+.edu-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive Grid for Two Columns */
+.edu-edit-group-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .edu-edit-group-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 2. Form Group and Labels */
+.edu-edit-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-edit-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color2);
+  font-size: 1rem;
+}
+
+/* 3. Input Fields (Text, Number, Textarea) */
+.edu-edit-input,
+.edu-edit-textarea {
+  padding: 12px 15px;
+  border: 1px solid var(--color2);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--color3);
+  color: var(--color2);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.edu-edit-input:focus,
+.edu-edit-textarea:focus {
+  border-color: var(--color1);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color1-opacity-15);
+}
+
+.edu-edit-textarea {
+  resize: vertical;
+}
+
+/* 4. Checkbox Styling (Active Status) */
+.edu-edit-checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding-top: 15px;
+}
+
+.edu-edit-label-checkbox {
+  margin: 0;
+  order: 2;
+}
+
+.edu-edit-input-checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid var(--color2);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  order: 1;
+}
+
+.edu-edit-input-checkbox:checked {
+  background-color: var(--color1);
+  border-color: var(--color1);
+}
+
+.edu-edit-input-checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color6);
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* 5. Icon/Image Upload and Preview */
+.edu-edit-input-file {
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+}
+
+.edu-edit-image-preview-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-top: 15px;
+  border: 1px solid var(--color2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.edu-edit-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edu-edit-remove-image-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--color2);
+  color: var(--color4);
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 1;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.edu-edit-remove-image-btn:hover {
+  background-color: var(--color1);
+}
+
+/* 6. Submit Button */
+.edu-edit-submit-btn {
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: var(--color1);
+  color: var(--color6);
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.edu-edit-submit-btn:hover:not(:disabled) {
+  background-color: var(--color5);
+  opacity: 0.9;
+}
+
+.edu-edit-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

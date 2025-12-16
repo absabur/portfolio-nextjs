@@ -34,11 +34,11 @@ export async function PUT(request, { params }) {
 
     await Skill.findByIdAndUpdate(id, {
       ...data,
-      published: data.published === "true" || data.published === true, 
+      published: data.published === "true" || data.published === true,
       updateDate: localTime(),
     });
 
-    if (data.images.public_id) {
+    if (data.images && data.images.public_id) {
       await cloudinary.uploader.destroy(exists.images.public_id);
     }
 
@@ -49,6 +49,32 @@ export async function PUT(request, { params }) {
   } catch (error) {
     return NextResponse.json(
       { error: error.message || "Can't update Skill" },
+      { status: 401 }
+    );
+  }
+}
+
+// DELETE a Skill by ID
+export async function DELETE(request, { params }) {
+  try {
+    const { id } = await params;
+    await connectDB();
+    const exists = await Skill.findById(id);
+    if (!exists) throw new Error("Skill doesn't exist");
+
+    if (exists.images && exists.images.public_id) {
+      await cloudinary.uploader.destroy(exists.images.public_id);
+    }
+
+    await Skill.findByIdAndDelete(id);
+
+    return NextResponse.json(
+      { message: "Skill deleted successfully" },
+      { status: 200 }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      { error: error.message || "Can't delete Skill" },
       { status: 401 }
     );
   }

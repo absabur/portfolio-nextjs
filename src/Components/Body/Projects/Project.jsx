@@ -1,7 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import { AllProjects } from "../../../serverAction";
 import SectionsHead from "../SectionsTop";
-import AllProjectForAdmin from "./AllProjectForAdmin";
 
 const Project = async () => {
   const { projects } = await AllProjects();
@@ -14,7 +13,6 @@ const Project = async () => {
       <SectionsHead section="project" />
       <h1 className="projects-header">Projects</h1>
       <div className="all-projects">
-        <AllProjectForAdmin safeProjects={safeProjects}/>
         <div className="project2">
           {safeProjects
             ?.sort((a, b) => a.order - b.order)

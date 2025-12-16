@@ -8,19 +8,35 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { FaBriefcase } from "react-icons/fa";
 
-import { experienceData } from "./experienceData";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Experience = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("/api/experiences");
+        if (!res.ok) throw new Error("Failed to fetch experiences");
+        const data = await res.json();
+        setItems((data.experiences || []).filter((e) => e.is_active));
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <section id="experience" className="experience-section">
       <SectionsHead section="experience" />
       <h1 className="experience-header">Experience</h1>
       <div className="experience-timeline">
         <VerticalTimeline>
-          {experienceData.map((exp) => (
+          {items.map((exp) => (
             <VerticalTimelineElement
-              key={exp.id}
+              key={exp._id}
               date={exp.duration}
               iconStyle={{
                 background: "var(--color1)",

@@ -33,7 +33,7 @@ export async function PUT(request, { params }) {
       updateDate: localTime(),
     });
 
-    if (data.images.length) {
+    if (data.images && data.images.length) {
       const deleted = exists.images.map((item) => {
         return cloudinary.uploader.destroy(item.public_id);
       });
@@ -49,5 +49,26 @@ export async function PUT(request, { params }) {
       { error: error.message || "Can't update Project" },
       { status: 401 }
     );
+  }
+}
+
+// DELETE project
+export async function DELETE(request, { params }) {
+  try {
+    const { id } = await params;
+    await connectDB();
+    const exists = await Project.findById(id);
+    if (!exists) throw new Error("Project doesn't exist");
+
+    if (exists.images && exists.images.length) {
+      const deleted = exists.images.map((item) => cloudinary.uploader.destroy(item.public_id));
+      await Promise.all(deleted);
+    }
+
+    await Project.findByIdAndDelete(id);
+
+    return NextResponse.json({ message: "Project deleted" }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ error: error.message || "Can't delete Project" }, { status: 401 });
   }
 }

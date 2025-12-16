@@ -3,7 +3,6 @@ import "./Skills.css"; // Import your CSS styles
 import SectionsHead from "../SectionsTop";
 import { AllSkills } from "@/serverAction";
 import SkillCard from "./SkillCard";
-import AllSkillForAdmin from "./AllSkillForAdmin";
 
 const SkillsSection = async () => {
   const { skills } = JSON.parse(JSON.stringify(await AllSkills()));
@@ -14,7 +13,6 @@ const SkillsSection = async () => {
       <h1 className="skills-header">Skills</h1>
       <section className="skills-section" id="skills">
         <div className="container">
-          <AllSkillForAdmin skills={skills} />
           <div className="skills-grid">
             {skills
               ?.sort((a, b) => a.order - b.order)

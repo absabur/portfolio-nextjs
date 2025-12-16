@@ -162,6 +162,47 @@ const Header = () => {
       tooltipContent: "Home",
       icon: <FaHome />,
       section: "home",
+      path: "/",
+    },
+    {
+      label: "Project",
+      onClick: scrollToTop,
+      tooltipContent: "Project",
+      icon: <FaHome />,
+      section: "project",
+      path: "/admin/project",
+    },
+    {
+      label: "Skill",
+      onClick: scrollToTop,
+      tooltipContent: "Skill",
+      icon: <FaHome />,
+      section: "skill",
+      path: "/admin/skill",
+    },
+    {
+      label: "Experience",
+      onClick: scrollToTop,
+      tooltipContent: "Experience",
+      icon: <FaHome />,
+      section: "experience",
+      path: "/admin/experience",
+    },
+    {
+      label: "Certification",
+      onClick: scrollToTop,
+      tooltipContent: "Certification",
+      icon: <FaHome />,
+      section: "certification",
+      path: "/admin/certifications",
+    },
+    {
+      label: "Education",
+      onClick: scrollToTop,
+      tooltipContent: "Education",
+      icon: <FaHome />,
+      section: "education",
+      path: "/admin/education",
     },
   ];
   return (
@@ -206,7 +247,7 @@ const Header = () => {
               : homeOnly.map((item, index) => (
                   <Link
                     key={index}
-                    href={`/`}
+                    href={item.path}
                     data-tooltip-id="tooltip"
                     data-tooltip-content={item.tooltipContent}
                     className={`nav-bar-icons ${

@@ -2,16 +2,32 @@
 import SectionsHead from "../SectionsTop";
 import "./Certifications.css";
 import { FaAward } from "react-icons/fa";
-import { certificationsData } from "./certificationsData";
+import { useEffect, useState } from "react";
 
 const Certifications = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("/api/certifications");
+        if (!res.ok) throw new Error("Failed to fetch certifications");
+        const data = await res.json();
+        setItems((data.certifications || []).filter((c) => c.is_active));
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <section id="certifications" className="certifications-section">
       <SectionsHead section="certifications" />
       <h1 className="certifications-header">Certifications</h1>
       <div className="certs-container">
-        {certificationsData.map((c) => (
-          <article key={c.id} className="cert-card">
+        {items.map((c) => (
+          <article key={c._id} className="cert-card">
             <div className="cert-card-left">
               <div className="cert-icon">
                 <img

@@ -1,0 +1,572 @@
+.experience-list-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--color6);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--color4);
+  font-family: var(--font-alt);
+  color: var(--color4);
+  border: 1px solid var(--color1-opacity-15);
+}
+
+.experience-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--color1-opacity-15);
+}
+
+.experience-list-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color1); /* Highlight title with primary color */
+  font-family: var(--font-base);
+}
+
+/* 2. Button Styling (Reusing styles from previous pattern, adapted for unique names) */
+.experience-list-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-family: var(--font-alt);
+}
+
+.experience-list-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+/* Primary Button (Add Experience) */
+.experience-list-btn-primary {
+  background-color: var(--color1);
+  color: var(--color6);
+  border: 1px solid var(--color1);
+}
+.experience-list-btn-primary:hover {
+  background-color: var(--color5);
+  box-shadow: 0 4px 10px var(--color5-opacity-15);
+  transform: translateY(-1px);
+}
+
+/* Secondary Button (Edit) */
+.experience-list-btn-secondary {
+  background-color: var(--color2);
+  color: var(--color3);
+  font-size: 0.9em;
+}
+.experience-list-btn-secondary:hover {
+  background-color: var(--color2);
+  box-shadow: 0 2px 5px var(--color4);
+  opacity: 0.9;
+}
+
+/* Danger Button (Delete) */
+.experience-list-btn-danger {
+  background-color: transparent;
+  color: var(--color4);
+  border: 1px solid var(--color4);
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+.experience-list-btn-danger:hover {
+  background-color: var(--color3);
+  color: var(--color4);
+}
+
+/* 3. Experience List Styling */
+.experience-list-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color1-opacity-05);
+  transition: background-color 0.15s ease;
+}
+
+.experience-list-item:hover {
+  background-color: var(--color5-opacity-03);
+}
+
+.experience-list-item:last-child {
+  border-bottom: none;
+}
+
+/* Item Details Section */
+.experience-list-item-details {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+.experience-list-role {
+  font-size: 1.25rem;
+  color: var(--color1);
+  margin-right: 5px;
+  font-weight: 700;
+  font-family: var(--font-base);
+}
+
+.experience-list-company {
+  font-size: 1.15rem;
+  color: var(--color4);
+  opacity: 0.9;
+  font-weight: 600;
+  font-style: normal; /* Override default italic */
+}
+
+.experience-list-item-meta {
+  font-size: 0.9rem;
+  color: var(--color4);
+  opacity: 0.8;
+  margin: 8px 0 10px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.experience-list-item-description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color2);
+  opacity: 0.7;
+  max-width: 800px;
+}
+
+/* Status Badge (Active/Inactive) */
+.experience-list-status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 15px;
+}
+
+.experience-list-status-active {
+  background-color: var(--color1);
+  color: var(--color6);
+}
+
+.experience-list-status-inactive {
+  background-color: var(--color2);
+  color: var(--color4);
+}
+
+/* Actions Section */
+.experience-list-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Empty State */
+.experience-list-empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--color4);
+  opacity: 0.5;
+  font-style: italic;
+  font-size: 1.1rem;
+  background-color: var(--color1-opacity-05);
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* --- Global Color/Font Variables are assumed to be defined --- */
+
+/* 1. Container and Form Layout */
+.experience-add-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--color6); /* Background for the container */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--color4);
+  font-family: var(--font-alt);
+  border: 1px solid var(--color1-opacity-15);
+}
+
+.experience-add-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--color1);
+  font-family: var(--font-base);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color1-opacity-15);
+}
+
+.experience-add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive Grid for Two Columns */
+.experience-add-group-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .experience-add-group-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 2. Form Group and Labels */
+.experience-add-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-add-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color4);
+  font-size: 1rem;
+}
+
+/* 3. Input Fields (Text, Number) */
+.experience-add-input,
+.experience-add-textarea {
+  padding: 12px 15px;
+  border: 1px solid var(--color2);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--color3); /* White background for inputs */
+  color: var(--color4);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.experience-add-input:focus,
+.experience-add-textarea:focus {
+  border-color: var(--color1);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color1-opacity-15);
+}
+
+.experience-add-textarea {
+  resize: vertical;
+}
+
+/* Error Messages */
+.experience-add-error-message {
+  color: #ff4d4f; /* Red-like color, since no specific error variable was provided, using standard */
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* 4. Checkbox Styling (Active Status) */
+.experience-add-checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding-top: 15px;
+}
+
+.experience-add-label-checkbox {
+  margin: 0;
+  order: 2; /* Put label after checkbox visually */
+}
+
+.experience-add-input-checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid var(--color4);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  order: 1; /* Put checkbox first */
+}
+
+.experience-add-input-checkbox:checked {
+  background-color: var(--color1);
+  border-color: var(--color1);
+}
+
+.experience-add-input-checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color6);
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* 5. Image Upload and Preview */
+.experience-add-input-file {
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+}
+
+.experience-add-image-preview-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-top: 15px;
+  border: 1px solid var(--color2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.experience-add-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-add-remove-image-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--color3);
+  color: var(--color4);
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 1;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.experience-add-remove-image-btn:hover {
+  background-color: var(--color1);
+}
+
+/* 6. Submit Button */
+.experience-add-submit-btn {
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: var(--color1);
+  color: var(--color6);
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.experience-add-submit-btn:hover:not(:disabled) {
+  background-color: var(--color5);
+  opacity: 0.9;
+}
+
+.experience-add-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- Global Color/Font Variables are assumed to be defined --- */
+
+/* 1. Container and Form Layout */
+.experience-edit-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--color6);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--color4);
+  font-family: var(--font-alt);
+  border: 1px solid var(--color1-opacity-15);
+}
+
+.experience-edit-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--color1);
+  font-family: var(--font-base);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color1-opacity-15);
+}
+
+.experience-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive Grid for Two Columns */
+.experience-edit-group-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .experience-edit-group-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 2. Form Group and Labels */
+.experience-edit-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-edit-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color4);
+  font-size: 1rem;
+}
+
+/* 3. Input Fields (Text, Number, Textarea) */
+.experience-edit-input,
+.experience-edit-textarea {
+  padding: 12px 15px;
+  border: 1px solid var(--color2);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--color3); /* White background for inputs */
+  color: var(--color4);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.experience-edit-input:focus,
+.experience-edit-textarea:focus {
+  border-color: var(--color1);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color1-opacity-15);
+}
+
+.experience-edit-textarea {
+  resize: vertical;
+}
+
+/* 4. Checkbox Styling (Active Status) */
+.experience-edit-checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding-top: 15px;
+}
+
+.experience-edit-label-checkbox {
+  margin: 0;
+  order: 2;
+}
+
+.experience-edit-input-checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid var(--color4);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  order: 1;
+}
+
+.experience-edit-input-checkbox:checked {
+  background-color: var(--color1);
+  border-color: var(--color1);
+}
+
+.experience-edit-input-checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color6);
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* 5. Image Upload and Preview */
+.experience-edit-input-file {
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+}
+
+.experience-edit-image-preview-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-top: 15px;
+  border: 1px solid var(--color2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.experience-edit-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-edit-remove-image-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--color3);
+  color: var(--color4);
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 1;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.experience-edit-remove-image-btn:hover {
+  background-color: var(--color1);
+}
+
+/* 6. Submit Button */
+.experience-edit-submit-btn {
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: var(--color1);
+  color: var(--color6);
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.experience-edit-submit-btn:hover:not(:disabled) {
+  background-color: var(--color5);
+  opacity: 0.9;
+}
+
+.experience-edit-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

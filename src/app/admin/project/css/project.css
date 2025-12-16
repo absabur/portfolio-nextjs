@@ -1,0 +1,192 @@
+/* --- Project List Styles (PL) --- */
+
+/* 1. Container and General Layout */
+.project-list-list-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--color6); /* Background for the container */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--color2); /* Subtle shadow using dark color */
+  font-family: var(--font-alt);
+  color: var(--color2);
+  border: 1px solid var(--color1-opacity-15);
+}
+
+.project-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--color1-opacity-15); /* Light blue divider */
+}
+
+.project-list-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color2);
+  font-family: var(--font-base);
+}
+
+/* 2. Button Styling */
+.project-list-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-family: var(--font-alt);
+}
+
+.project-list-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: scale(1); /* Disable hover effect when loading */
+}
+
+/* Primary Button (Add Project) - Uses Color1/5 */
+.project-list-btn-primary {
+  background-color: var(--color1);
+  color: var(--color6); /* Text should contrast, use light background color */
+  border: 1px solid var(--color1);
+}
+.project-list-btn-primary:hover {
+  background-color: var(--color5);
+  box-shadow: 0 4px 10px var(--color5-opacity-15);
+  transform: translateY(-1px);
+}
+
+/* Secondary Button (Edit) - Subtle, uses Color2 for contrast */
+.project-list-btn-secondary {
+  background-color: var(--color2);
+  color: var(--color3); /* Dark text on light button */
+  font-size: 0.9em;
+}
+.project-list-btn-secondary:hover {
+  background-color: var(--color2);
+  box-shadow: 0 2px 5px var(--color2);
+  opacity: 0.9;
+}
+
+/* Danger Button (Delete) - Use Color3 for high contrast/alert on primary background */
+.project-list-btn-danger {
+  background-color: transparent;
+  color: var(--color2);
+  border: 1px solid var(--color2);
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+.project-list-btn-danger:hover {
+  background-color: var(--color2);
+  color: var(--color3); /* White text on hover */
+}
+
+/* 3. Project List Styling */
+.project-list-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color1-opacity-05); /* Very light divider */
+  transition: background-color 0.15s ease;
+}
+
+.project-list-item:hover {
+  background-color: var(--color5-opacity-03); /* Subtle row highlighting */
+}
+
+.project-list-item:last-child {
+  border-bottom: none;
+}
+
+/* Item Details Section */
+.project-list-item-details {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+.project-list-item-title {
+  font-size: 1.2rem;
+  color: var(--color1); /* Highlight title with primary color */
+  margin-bottom: 8px;
+  display: block;
+  font-weight: 700;
+  font-family: var(--font-base);
+}
+
+.project-list-item-meta {
+  font-size: 0.9rem;
+  color: var(--color2);
+  margin-bottom: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.project-list-meta-value {
+  font-weight: bold;
+  color: var(--color2);
+}
+
+.project-list-item-description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color4);
+  opacity: 0.7;
+  max-width: 800px;
+}
+
+/* Status Badge */
+.project-list-status-badge {
+  padding: 4px 10px;
+  border-radius: 12px; /* Pill shape */
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-list-status-published {
+  background-color: var(--color1);
+  color: var(--color6);
+}
+
+.project-list-status-draft {
+  background-color: var(--color2);
+  color: var(--color2);
+}
+
+/* Actions Section */
+.project-list-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Empty State */
+.project-list-empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--color2);
+  opacity: 0.5;
+  font-style: italic;
+  font-size: 1.1rem;
+  background-color: var(--color1-opacity-05);
+  border-radius: 8px;
+  margin-top: 15px;
+}

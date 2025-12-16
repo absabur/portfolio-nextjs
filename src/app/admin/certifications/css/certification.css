@@ -1,0 +1,596 @@
+/* --- Global Color/Font Variables are assumed to be defined --- */
+
+/* 1. Container and General Layout */
+.cert-list-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--color6);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--color4);
+  font-family: var(--font-alt);
+  color: var(--color4);
+  border: 1px solid var(--color1-opacity-15);
+}
+
+.cert-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--color1-opacity-15);
+}
+
+.cert-list-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color1);
+  font-family: var(--font-base);
+}
+
+/* 2. Button Styling */
+.cert-list-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-family: var(--font-alt);
+}
+
+.cert-list-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Primary Button (Add Certification) */
+.cert-list-btn-primary {
+  background-color: var(--color1);
+  color: var(--color6);
+  border: 1px solid var(--color1);
+}
+.cert-list-btn-primary:hover {
+  background-color: var(--color5);
+  box-shadow: 0 4px 10px var(--color5-opacity-15);
+  transform: translateY(-1px);
+}
+
+/* Secondary Button (Edit) */
+.cert-list-btn-secondary {
+  background-color: var(--color2);
+  color: var(--color3);
+  font-size: 0.9em;
+}
+.cert-list-btn-secondary:hover {
+  background-color: var(--color2);
+  box-shadow: 0 2px 5px var(--color4);
+  opacity: 0.9;
+}
+
+/* Danger Button (Delete) */
+.cert-list-btn-danger {
+  background-color: transparent;
+  color: var(--color4);
+  border: 1px solid var(--color4);
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+.cert-list-btn-danger:hover {
+  background-color: var(--color3);
+  color: var(--color4);
+}
+
+/* 3. Certification List Styling */
+.cert-list-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cert-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color1-opacity-05);
+  transition: background-color 0.15s ease;
+}
+
+.cert-list-item:hover {
+  background-color: var(--color5-opacity-03);
+}
+
+.cert-list-item:last-child {
+  border-bottom: none;
+}
+
+/* Item Details Section */
+.cert-list-item-details {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+.cert-list-title-text {
+  font-size: 1.25rem;
+  color: var(--color1);
+  margin-right: 5px;
+  font-weight: 700;
+  font-family: var(--font-base);
+}
+
+.cert-list-issuer {
+  font-size: 1.15rem;
+  color: var(--color4);
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.cert-list-item-meta {
+  font-size: 0.9rem;
+  color: var(--color4);
+  opacity: 0.8;
+  margin: 8px 0 10px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.cert-list-item-description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color4);
+  opacity: 0.7;
+  max-width: 800px;
+}
+
+/* Status Badge (Active/Inactive) */
+.cert-list-status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 15px;
+}
+
+.cert-list-status-active {
+  background-color: var(--color1);
+  color: var(--color6);
+}
+
+.cert-list-status-inactive {
+  background-color: var(--color2);
+  color: var(--color4);
+}
+
+/* Actions Section */
+.cert-list-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Empty State */
+.cert-list-empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--color4);
+  opacity: 0.5;
+  font-style: italic;
+  font-size: 1.1rem;
+  background-color: var(--color1-opacity-05);
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* ================================== */
+
+/* --- Global Color/Font Variables are assumed to be defined --- */
+
+/* 1. Container and Form Layout */
+.cert-add-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--color6);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--color2);
+  font-family: var(--font-alt);
+  border: 1px solid var(--color1-opacity-15);
+}
+
+.cert-add-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--color1);
+  font-family: var(--font-base);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color1-opacity-15);
+}
+
+.cert-add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive Grid for Columns */
+.cert-add-group-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+/* Two columns for most grids */
+@media (min-width: 768px) {
+  .cert-add-group-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Three columns for Title, Issuer, Date */
+.cert-add-group-grid-three {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .cert-add-group-grid-three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2. Form Group and Labels */
+.cert-add-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-add-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color2);
+  font-size: 1rem;
+}
+
+/* 3. Input Fields (Text, Number, Textarea) */
+.cert-add-input,
+.cert-add-textarea {
+  padding: 12px 15px;
+  border: 1px solid var(--color2);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--color3);
+  color: var(--color2);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.cert-add-input:focus,
+.cert-add-textarea:focus {
+  border-color: var(--color1);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color1-opacity-15);
+}
+
+.cert-add-textarea {
+  resize: vertical;
+}
+
+/* Error Messages */
+.cert-add-error-message {
+  color: #ff4d4f; /* Standard error color */
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* 4. Checkbox Styling (Active Status) */
+.cert-add-checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding-top: 15px;
+}
+
+.cert-add-label-checkbox {
+  margin: 0;
+  order: 2;
+}
+
+.cert-add-input-checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid var(--color2);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  order: 1;
+}
+
+.cert-add-input-checkbox:checked {
+  background-color: var(--color1);
+  border-color: var(--color1);
+}
+
+.cert-add-input-checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color6);
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* 5. Image Upload and Preview */
+.cert-add-input-file {
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+}
+
+.cert-add-image-preview-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-top: 15px;
+  border: 1px solid var(--color2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cert-add-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-add-remove-image-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--color2);
+  color: var(--color4);
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 1;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cert-add-remove-image-btn:hover {
+  background-color: var(--color1);
+}
+
+/* 6. Submit Button */
+.cert-add-submit-btn {
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: var(--color1);
+  color: var(--color6);
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.cert-add-submit-btn:hover:not(:disabled) {
+  background-color: var(--color5);
+  opacity: 0.9;
+}
+
+.cert-add-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========================= */
+/* --- Global Color/Font Variables are assumed to be defined --- */
+
+/* 1. Container and Form Layout */
+.cert-edit-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--color6);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--color2);
+  font-family: var(--font-alt);
+  border: 1px solid var(--color1-opacity-15);
+}
+
+.cert-edit-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--color1);
+  font-family: var(--font-base);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color1-opacity-15);
+}
+
+.cert-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive Grid for Columns */
+.cert-edit-group-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+/* Two columns for most grids */
+@media (min-width: 768px) {
+  .cert-edit-group-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Three columns for Title, Issuer, Date */
+.cert-edit-group-grid-three {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .cert-edit-group-grid-three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2. Form Group and Labels */
+.cert-edit-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-edit-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color2);
+  font-size: 1rem;
+}
+
+/* 3. Input Fields (Text, Number, Textarea) */
+.cert-edit-input,
+.cert-edit-textarea {
+  padding: 12px 15px;
+  border: 1px solid var(--color2);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--color3);
+  color: var(--color2);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.cert-edit-input:focus,
+.cert-edit-textarea:focus {
+  border-color: var(--color1);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color1-opacity-15);
+}
+
+.cert-edit-textarea {
+  resize: vertical;
+}
+
+/* 4. Checkbox Styling (Active Status) */
+.cert-edit-checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding-top: 15px;
+}
+
+.cert-edit-label-checkbox {
+  margin: 0;
+  order: 2;
+}
+
+.cert-edit-input-checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid var(--color2);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  order: 1;
+}
+
+.cert-edit-input-checkbox:checked {
+  background-color: var(--color1);
+  border-color: var(--color1);
+}
+
+.cert-edit-input-checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color6);
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* 5. Image Upload and Preview */
+.cert-edit-input-file {
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+}
+
+.cert-edit-image-preview-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-top: 15px;
+  border: 1px solid var(--color2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cert-edit-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-edit-remove-image-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--color2);
+  color: var(--color4);
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 1;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cert-edit-remove-image-btn:hover {
+  background-color: var(--color1);
+}
+
+/* 6. Submit Button */
+.cert-edit-submit-btn {
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: var(--color1);
+  color: var(--color6);
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.cert-edit-submit-btn:hover:not(:disabled) {
+  background-color: var(--color5);
+  opacity: 0.9;
+}
+
+.cert-edit-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

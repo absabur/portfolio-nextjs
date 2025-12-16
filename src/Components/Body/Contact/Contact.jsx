@@ -27,7 +27,7 @@ const Contact = () => {
             <div className="links-body">
               <span className="link-head">Address</span>
               <span className="copy-text" style={{ cursor: "default" }}>
-                Bosila, Mohammodpur, Dhaka - (1207), Bangladesh
+                Godarpara, Bogura Sadar, Bogura - 5800
               </span>
             </div>
           </div>
