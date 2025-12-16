@@ -23,6 +23,9 @@ export default function Dashboard() {
         <Link href="/admin/education" className="dashboard-card">
           <h2>Education</h2>
         </Link>
+        <Link href="/admin/messages" className="dashboard-card">
+          <h2>Messages</h2>
+        </Link>
       </div>
     </div>
   );

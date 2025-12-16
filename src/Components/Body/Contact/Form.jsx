@@ -4,6 +4,7 @@ import { toast } from "sonner";
 const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
@@ -20,33 +21,31 @@ const Form = () => {
       toast.warning("Write some message");
       return;
     }
-    const sendMessage = async (name, email, message) => {
+    const sendMessage = async (name, email, subject, message) => {
       const data = {
         name: name,
         email: email,
+        subject: subject,
         message: message,
       };
-      const response = await fetch(
-        "https://abs-hotel-default-rtdb.firebaseio.com/contactmessageportfolio.json",
-        {
+      try {
+        const response = await fetch("/api/contact-messages", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
-        }
-      );
-      const result = await response.json();
-      if (result.name) {
+        });
+        if (!response.ok) throw new Error("Failed to send message");
         toast.success("Thank you for contacting me.");
         setEmail("");
         setMessage("");
         setName("");
-      } else {
-        toast.error("Somthing Went Wrong!");
+        setSubject("");
+      } catch (err) {
+        console.error(err);
+        toast.error("Something went wrong!");
       }
     };
-    sendMessage(name, email, message);
+    sendMessage(name, email, subject, message);
   };
   return (
     <form
@@ -91,6 +90,20 @@ const Form = () => {
           value={email}
         />
       </div>
+      <div className="input">
+        <span className={`label ${subject ? "label-active" : ""}`}>
+          Subject (optional)
+        </span>
+        <input
+          autoComplete="off"
+          type="text"
+          name="subject"
+          placeholder="Subject (optional)"
+          onChange={(e) => setSubject(e.target.value)}
+          value={subject}
+        />
+      </div>
+
       <div className="input">
         <span className={`label ${message ? "label-active" : ""}`}>
           Type Your Message
