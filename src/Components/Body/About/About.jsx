@@ -52,7 +52,7 @@ const About = () => {
               <div className="about-skill-content">
                 Specializing in the{" "}
                 <span className="about-highlight">React.js</span> and{" "}
-                <span className="about-highlight">Next.js</span>, I excel in
+                <span className="about-highlight">Next.js</span> I excel in
                 building scalable and efficient web applications.
               </div>
             </div>
@@ -66,9 +66,9 @@ const About = () => {
               </div>
               <div className="about-skill-content">
                 Experience in <span className="about-highlight">Node</span>
-                {", "}
+                {" "}
                 <span className="about-highlight">Express</span> and{" "}
-                <span className="about-highlight">Django</span>, I excel in
+                <span className="about-highlight">Django</span> I excel in
                 building scalable and efficient web applications.
               </div>
             </div>
@@ -84,9 +84,9 @@ const About = () => {
                 Full Stack Web Application using{" "}
                 <span className="about-highlight">React.js</span>{" "}
                 <span className="about-highlight">Next.js</span>{" "}
-                <span className="about-highlight">Node</span>,{" "}
+                <span className="about-highlight">Node</span>{" "}
                 <span className="about-highlight">Express</span> and{" "}
-                <span className="about-highlight">MongoDB</span> via
+                <span className="about-highlight">MongoDB</span> via{" "}
                 <span className="about-highlight"> REST Api</span>{" "}
               </div>
             </div>
@@ -100,8 +100,7 @@ const About = () => {
               </div>
               <div className="about-skill-content">
                 Proficient in extracting valuable insights and data using tools
-                like <span className="about-highlight">Python</span>
-                {", "}
+                like <span className="about-highlight">Python</span>{" "}
                 <span className="about-highlight">Selenium</span> and{" "}
                 <span className="about-highlight">Beautiful Soup</span>.
               </div>
