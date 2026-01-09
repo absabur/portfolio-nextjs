@@ -104,7 +104,8 @@
   padding: 2px 5px;
   border-radius: 5px;
   color: var(--color3);
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .skill-card:hover {

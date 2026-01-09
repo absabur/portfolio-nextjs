@@ -10,6 +10,7 @@ import { FaBriefcase } from "react-icons/fa";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Experience = () => {
   const [items, setItems] = useState([]);
@@ -31,7 +32,7 @@ const Experience = () => {
   return (
     <section id="experience" className="experience-section">
       <SectionsHead section="experience" />
-      <h1 className="experience-header">Experience</h1>
+      <h2 className="experience-header">Experience</h2>
       <div className="experience-timeline">
         <VerticalTimeline>
           {items.map((exp) => (
@@ -46,11 +47,12 @@ const Experience = () => {
                 justifyContent: "center",
               }}
               icon={
-                <img
-                  width={30}
-                  style={{ borderRadius: "4px", objectFit: "contain" }}
+                <Image
                   src={exp.logo}
                   alt={`${exp.company} logo`}
+                  width={30}
+                  height={30} // Next.js requires height to maintain aspect ratio/prevent layout shift
+                  style={{ borderRadius: "4px", objectFit: "contain" }}
                 />
               }
               contentArrowStyle={{ borderRight: "20px solid var(--color2)" }}
@@ -63,13 +65,13 @@ const Experience = () => {
                 borderRight: "var(--color5) 5px solid",
               }}
             >
-              <h3 className="exp-position">{exp.role}</h3>
-              <h4 className="exp-company">
+              <p className="exp-position">{exp.role}</p>
+              <p className="exp-company">
                 <Link target="_blank" href={exp.companyUrl}>
                   {exp.company}
                 </Link>
                 , <span className="exp-location">{exp.location}</span>
-              </h4>
+              </p>
               <p className="exp-desc">{exp.description}</p>
             </VerticalTimelineElement>
           ))}

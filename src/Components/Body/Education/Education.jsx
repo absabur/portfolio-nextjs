@@ -11,6 +11,7 @@ import "react-vertical-timeline-component/style.min.css";
 import SectionsHead from "../SectionsTop";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Education = () => {
   const [items, setItems] = useState([]);
@@ -32,7 +33,7 @@ const Education = () => {
   return (
     <div className="education-section" id="education">
       <SectionsHead section="education" />
-      <h1 className="education-header">Education</h1>
+      <h2 className="education-header">Education</h2>
 
       <div className="educations">
         <VerticalTimeline>
@@ -67,15 +68,19 @@ const Element = ({ education }) => (
       justifyContent: "center",
     }}
     icon={
-      <img
-        width={30}
-        style={{ borderRadius: "4px", objectFit: "contain" }}
+      <Image
         src={education.icon}
-        alt={`logo`}
+        alt={`${education.school || "School"} logo`} // Improved accessibility
+        width={30}
+        height={30} // Next.js requires height to prevent Layout Shift
+        style={{
+          borderRadius: "4px",
+          objectFit: "contain",
+        }}
       />
     }
   >
-    <h3 className="vertical-timeline-element-title h-3">{education.degree}</h3>
+    <p className="vertical-timeline-element-title h-3">{education.degree}</p>
     <p className="vertical-timeline-element-subtitle h-4">
       {education.institution}
     </p>

@@ -231,6 +231,7 @@ const Header = () => {
               ? navItems.map((item, index) => (
                   <button
                     key={index}
+                    aria-label={item.label}
                     onClick={item.onClick}
                     data-tooltip-id="tooltip"
                     data-tooltip-content={item.tooltipContent}

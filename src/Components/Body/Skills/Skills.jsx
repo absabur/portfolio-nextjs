@@ -3,6 +3,7 @@ import "./Skills.css"; // Import your CSS styles
 import SectionsHead from "../SectionsTop";
 import { AllSkills } from "@/serverAction";
 import SkillCard from "./SkillCard";
+import Image from "next/image";
 
 const SkillsSection = async () => {
   const { skills } = JSON.parse(JSON.stringify(await AllSkills()));
@@ -10,7 +11,7 @@ const SkillsSection = async () => {
   return (
     <div>
       <SectionsHead section="skills" />
-      <h1 className="skills-header">Skills</h1>
+      <h2 className="skills-header">Skills</h2>
       <section className="skills-section" id="skills">
         <div className="container">
           <div className="skills-grid">
@@ -38,9 +39,15 @@ const SkillsSection = async () => {
                           {skill.type}
                         </p>
                         <div className="skill-icon">
-                          <img src={skill?.images?.url} alt={skill?.name} />
+                          <Image
+                            src={skill?.images?.url}
+                            alt={skill?.name || "Skill icon"}
+                            width={60} // Required: Set based on your design
+                            height={60} // Required: Set based on your design
+                            className="your-skill-icon-class"
+                          />
                         </div>
-                        <h3 className="skill-title">{skill?.name}</h3>
+                        <p className="skill-title">{skill?.name}</p>
                         <div className="skill-progress">
                           <div
                             className="progress-bar"

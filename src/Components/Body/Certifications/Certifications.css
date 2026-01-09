@@ -94,6 +94,7 @@
   text-decoration: none;
   font-weight: 600;
   order: 1;
+  font-size: 15px;
 }
 .credential-id {
   font-size: 0.85rem;

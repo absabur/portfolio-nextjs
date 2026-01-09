@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const SkillCard = ({ children, skill }) => {
@@ -19,8 +20,14 @@ const SkillCard = ({ children, skill }) => {
             </button>
             <div className="modal-content">
               <div className="modal-header">
-                <img src={skill.images.url} alt={skill.name} />
-                <h3>{skill.name}</h3>
+                <Image
+                  src={skill.images.url}
+                  alt={skill.name}
+                  width={50} // Required for remote images
+                  height={50} // Required for remote images
+                  className="your-class-name"
+                />
+                <p>{skill.name}</p>
               </div>
               <div className="modal-body">
                 <p>{skill.description}</p>

@@ -64,9 +64,9 @@ export default function GlitchText() {
     <div className="glitch-wrapper">
       <div className="glitch-container">
         {/* data-text attribute is needed for the CSS glitch effect */}
-        <h1 className="glitch-text" data-text={displayText}>
+        <h2 className="glitch-text" data-text={displayText}>
           {displayText}
-        </h1>
+        </h2>
       </div>
     </div>
   );

@@ -75,7 +75,7 @@ export default function RootLayout({
       </head>
       <body>
         <AuthProvider>
-          <div className="design-bg">
+          <main className="design-bg">
             <ProtectedButton>
               <Link
                 style={{
@@ -112,7 +112,7 @@ export default function RootLayout({
                 backgroundColor: "transpatrent",
               }}
             ></div>
-          </div>
+          </main>
         </AuthProvider>
       </body>
     </html>

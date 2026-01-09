@@ -11,9 +11,9 @@ const About = () => {
     <div className="about" id="about">
       <SectionsHead section="about" />
       <div className="about-head">
-        <h1 className="about-section-header">
+        <h2 className="about-section-header">
           About <span className="me">Me</span>
-        </h1>
+        </h2>
       </div>
 
       <div className="about-about-card">

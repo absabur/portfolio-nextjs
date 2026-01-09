@@ -11,7 +11,7 @@ const Project = async () => {
   return (
     <div className="project-section" id="projects">
       <SectionsHead section="project" />
-      <h1 className="projects-header">Projects</h1>
+      <h2 className="projects-header">Projects</h2>
       <div className="all-projects">
         <div className="project2">
           {safeProjects

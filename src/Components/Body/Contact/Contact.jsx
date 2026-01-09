@@ -9,9 +9,9 @@ const Contact = () => {
   return (
     <div className="contact-section">
       <SectionsHead section="contact" />
-      <h1 className="contact-heading">
+      <h2 className="contact-heading">
         Contact <span className="me">Me</span>
-      </h1>
+      </h2>
       <div className="contact-form">
         <div className="links">
           <Copy
@@ -37,6 +37,7 @@ const Contact = () => {
               width="100%"
               height="100%"
               loading="lazy"
+              title="Location"
             ></iframe>
           </section>
         </div>

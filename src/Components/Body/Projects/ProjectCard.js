@@ -41,7 +41,7 @@ export default function ProjectCard({ project }) {
           </div>
         </div>
         <div className="info">
-          <h3>{project?.title}</h3>
+          <p>{project?.title}</p>
           <div className="cta">View Details →</div>
         </div>
       </div>
@@ -78,10 +78,13 @@ const ProjectModal = ({ project, setIsOpen }) => {
             </Link>
           </ProtectedButton>
           <div className={`ic-modalImageContainer`}>
-            <img
+            <Image
               src={project?.images[0].url}
-              alt={project?.title}
-              className={`ic-modalImage`}
+              alt={project?.title || "Project screenshot"}
+              width={800} // Set a base width
+              height={450} // Set a base height (e.g., 16:9 ratio)
+              className="ic-modalImage"
+              style={{ objectFit: "cover" }} // Ensures the image fills the area without stretching
             />
           </div>
 
@@ -95,7 +98,7 @@ const ProjectModal = ({ project, setIsOpen }) => {
             </div>
 
             <div className={`ic-section`}>
-              <h3>Description</h3>
+              <p>Description</p>
               <p>{project?.description}</p>
             </div>
 
@@ -153,7 +156,7 @@ const ProjectModal = ({ project, setIsOpen }) => {
             </div>
             {project?.user && (
               <div className={`ic-demoCredentials`}>
-                <h3>Demo Credentials</h3>
+                <p>Demo Credentials</p>
                 <div className={`ic-credentialItem`}>
                   <span className={`ic-credentialLabel`}>
                     <RiAdminFill /> / <IoIosMailOpen />:

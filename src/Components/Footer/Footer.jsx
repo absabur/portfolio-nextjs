@@ -47,6 +47,7 @@ const Footer = () => {
               target="_blank"
               key={index}
               className={`footer-icon ${link.name}`}
+              aria-label={link.name}
             >
               <span>{link.icon}</span>
             </Link>

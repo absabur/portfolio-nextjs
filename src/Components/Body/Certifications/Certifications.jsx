@@ -3,6 +3,7 @@ import SectionsHead from "../SectionsTop";
 import "./Certifications.css";
 import { FaAward } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Certifications = () => {
   const [items, setItems] = useState([]);
@@ -24,21 +25,27 @@ const Certifications = () => {
   return (
     <section id="certifications" className="certifications-section">
       <SectionsHead section="certifications" />
-      <h1 className="certifications-header">Certifications</h1>
+      <h2 className="certifications-header">Certifications</h2>
       <div className="certs-container">
         {items.map((c) => (
           <article key={c._id} className="cert-card">
             <div className="cert-card-left">
               <div className="cert-icon">
-                <img
-                  width={40}
-                  style={{ borderRadius: "4px", objectFit: "contain" }}
+                <Image
                   src={c.logo}
                   alt={`${c.issuer} logo`}
+                  width={40}
+                  height={40} // Added height to satisfy Next.js requirements
+                  style={{
+                    borderRadius: "4px",
+                    objectFit: "contain",
+                  }}
+                  // Optional: adds a blurry placeholder while loading if you have the dimensions
+                  // placeholder="blur"
                 />
               </div>
               <div className="cert-meta">
-                <h3 className="cert-title">{c.title}</h3>
+                <p className="cert-title">{c.title}</p>
                 <p className="cert-issuer">
                   {c.issuer} • {c.date}
                 </p>
