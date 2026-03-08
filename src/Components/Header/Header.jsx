@@ -86,7 +86,9 @@ const Header = () => {
     window.scrollTo({
       behavior: "smooth",
       top:
-        element1?.getBoundingClientRect().top + window.pageYOffset - lessScroll,
+        element1?.getBoundingClientRect().top +
+        window.pageYOffset -
+        lessScroll * 2.5,
     });
   };
   const scrollToCertifications = () => {

@@ -186,6 +186,12 @@
   text-align: center;
 }
 
+.info p,
+.ic-demoCredentials p {
+  color: var(--color4);
+  margin-bottom: 10px;
+}
+
 .ic-techStack {
   display: flex;
   justify-content: center;
@@ -309,7 +315,7 @@
   .ic-buttonGroup {
     flex-direction: column;
   }
-  
+
   .ic-buttonGroup a {
     width: 100%;
   }
